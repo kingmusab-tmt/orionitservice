@@ -24,7 +24,7 @@ const Footer = () => {
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 4 }}>
             <Typography variant="h6" gutterBottom>
-              Orion IT Services
+              Orion IT Service
             </Typography>
             <Typography variant="body2" paragraph>
               Providing comprehensive cybersecurity and networking solutions to
@@ -90,7 +90,7 @@ const Footer = () => {
         <Divider sx={{ my: 4, bgcolor: "rgba(255,255,255,0.1)" }} />
 
         <Typography variant="body2" align="center">
-          © {new Date().getFullYear()} Orion IT Services. All rights reserved.
+          © {new Date().getFullYear()} Orion IT Service. All rights reserved.
         </Typography>
       </Container>
     </Box>

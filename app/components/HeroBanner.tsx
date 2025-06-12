@@ -15,13 +15,13 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   subtitle,
   ctaText,
   ctaLink,
-  image = "/images/hero-bg.webp",
+  image = "/images/avatar5.jpg", // Default image
 }) => {
   return (
     <Box
       sx={{
         position: "relative",
-        height: "60vh",
+        height: "100vh",
         minHeight: 500,
         display: "flex",
         alignItems: "center",
@@ -67,7 +67,8 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           component="h1"
           gutterBottom
           sx={{
-            fontWeight: 700,
+            fontWeight: 900,
+            fontSize: { xs: "2.5rem", sm: "3rem", md: "5rem" },
             textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
           }}
         >

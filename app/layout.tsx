@@ -16,23 +16,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Orion IT Services | Cybersecurity & Networking Solutions",
+  title: "Orion IT Service | Cybersecurity & Networking Solutions",
   description:
     "Professional IT services including cybersecurity awareness training and business networking solutions. Protect and optimize your digital infrastructure.",
   keywords:
     "IT services, cybersecurity training, network solutions, phishing prevention, business networking",
-  authors: [{ name: "Orion IT Services" }],
+  authors: [{ name: "Orion IT Service" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.orionitservices.com",
-    siteName: "Orion IT Services",
+    siteName: "",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Orion IT Services",
+        alt: "Orion IT Service",
       },
     ],
   },

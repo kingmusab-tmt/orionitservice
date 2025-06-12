@@ -45,7 +45,7 @@ export default function About() {
   return (
     <>
       <HeroBanner
-        title="About Orion IT Services"
+        title="About Orion IT Service"
         subtitle="Your trusted technology partner since 2012"
         image="/images/avatar7.jpg"
       />
@@ -59,7 +59,7 @@ export default function About() {
             gutterBottom
             sx={{ fontWeight: 700, mb: 4 }}
           >
-            Our Story
+            About Us
           </Typography>
           <Grid container spacing={6}>
             <Grid size={{ xs: 12, md: 6 }}>
@@ -68,21 +68,30 @@ export default function About() {
                 paragraph
                 sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}
               >
-                Founded in 2012, Orion IT Services began as a small team of
-                cybersecurity experts passionate about making digital protection
-                accessible to businesses of all sizes. What started as a
-                consultancy has grown into a full-service IT solutions provider
-                serving over 500 clients nationwide.
+                ORION IT SERVICE provides top-notch network support services
+                offering reliable solutions to optimize your business
+                connectivity. We design, deploy, manage, and secure networks
+                that power your operations ensuring speed, stability, and
+                scalability. With deep expertise in wired and wireless
+                networking, firewall and security configurations, VPN and remote
+                access, and infrastructure optimization, we deliver tailored
+                solutions that align with your business goals and technical
+                requirements.
               </Typography>
               <Typography
                 variant="body1"
                 paragraph
                 sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}
               >
-                After witnessing countless businesses fall victim to preventable
-                cyber attacks, our founder Alex Johnson set out to create a
-                company that would bridge the gap between complex security
-                protocols and practical, actionable protection.
+                Our Team is the backbone of digital connectivity, specializing
+                in the design, implementation, security, and optimization of
+                both small and medium-scale network infrastructures. With our
+                combination of technical expertise, strategic planning, and
+                hands-on experience, our engineers ensure that every system we
+                touch is secure, efficient, and future-ready. From setting up
+                complex LAN/WAN environments, to deploying VPNs, configuring
+                firewalls and switches, and ensuring redundancy and uptime, our
+                engineers handle every layer of the network with precision.
               </Typography>
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
@@ -98,7 +107,7 @@ export default function About() {
               >
                 <img
                   src="/images/networkatwork.png"
-                  alt="Orion IT Services team working"
+                  alt="Orion IT Service team working"
                   style={{
                     width: "100%",
                     height: "100%",

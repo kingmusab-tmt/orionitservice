@@ -37,8 +37,8 @@ const Header = () => {
             style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
           >
             <Image
-              src="/images/logo.jpeg"
-              alt="Orion IT Services Logo"
+              src="/images/logo.png"
+              alt="Orion IT Service Logo"
               width={50}
               height={50}
               priority
@@ -48,7 +48,7 @@ const Header = () => {
               component="div"
               sx={{ ml: 2, fontWeight: "bold" }}
             >
-              Orion IT Services
+              Orion IT Service
             </Typography>
           </div>
         </Link>

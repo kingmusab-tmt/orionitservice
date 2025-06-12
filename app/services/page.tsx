@@ -61,7 +61,7 @@ export default function Services() {
       title: "Managed IT Services",
       description: "Proactive IT management so you can focus on your business",
       icon: "computer",
-      link: "/services/managed",
+      link: "/services/managed-it",
       features: [
         "Help desk support",
         "Patch management",
@@ -100,7 +100,7 @@ export default function Services() {
       <HeroBanner
         title="Our IT Services"
         subtitle="Comprehensive solutions tailored to your business needs"
-        image="/images/services.jpeg"
+        image="/images/avatar2.png"
       />
 
       <Container maxWidth="lg" sx={{ py: 8 }}>

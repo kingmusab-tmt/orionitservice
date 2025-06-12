@@ -7,7 +7,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "CEO, TechStart Inc.",
     content:
-      "Orion IT Services transformed our cybersecurity posture. Their training program was engaging and effective, reducing our phishing susceptibility by 80%.",
+      "Orion IT Service transformed our cybersecurity posture. Their training program was engaging and effective, reducing our phishing susceptibility by 80%.",
     rating: 5,
     avatar: "/images/avatar1.png",
   },
