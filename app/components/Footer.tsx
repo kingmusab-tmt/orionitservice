@@ -71,9 +71,9 @@ const Footer = () => {
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
               <LocationOn sx={{ mr: 1 }} />
               <Typography variant="body2">
-                123 Tech Street, Suite 456
+                304 S. Jones Blvd #4809
                 <br />
-                San Francisco, CA 94107
+                Las Vegas, NV 89107
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
@@ -82,7 +82,7 @@ const Footer = () => {
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
               <Email sx={{ mr: 1 }} />
-              <Typography variant="body2">info@orionitservices.com</Typography>
+              <Typography variant="body2">info@orionitservice.com</Typography>
             </Box>
           </Grid>
         </Grid>

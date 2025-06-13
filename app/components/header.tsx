@@ -114,7 +114,7 @@ const Header = () => {
               color="secondary"
               sx={{ ml: 2 }}
               component={Link}
-              href="/contact"
+              href="/get-quote"
             >
               Get a Quote
             </Button>

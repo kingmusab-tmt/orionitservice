@@ -194,13 +194,13 @@ export default function PrivacyPolicy() {
             <strong>[Your Company Name]</strong>
             <br />
             Email:{" "}
-            <Link href="mailto:privacy@orionitservices.com.">
-              privacy@orionitservices.com.
+            <Link href="mailto:privacy@orionitservice.com.">
+              privacy@orionitservice.com.
             </Link>
             <br />
             Phone: [Your Contact Number]
             <br />
-            Address: [Your Company Address]
+            Address: 304 S. Jones Blvd #4809 Las Vegas, NV 89107
           </Typography>
         </Box>
       </Container>
