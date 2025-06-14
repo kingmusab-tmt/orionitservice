@@ -1,22 +1,28 @@
-"use client";
 import HeroBanner from "../components/HeroBanner";
-import {
-  Box,
-  Container,
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  Avatar,
-  Divider,
-} from "@mui/material";
-import {
-  CheckCircle,
-  Groups,
-  Security,
-  EmojiObjects,
-  Handshake,
-} from "@mui/icons-material";
+import { Box, Container, Typography, Grid, Divider } from "@mui/material";
+import { Groups, Security, EmojiObjects, Handshake } from "@mui/icons-material";
+
+export const metadata = {
+  title: "About Orion IT Service | Your Trusted Technology Partner",
+  description:
+    "Learn about Orion IT Service - providing expert network support, security solutions, and IT services with satisfied clients.",
+  alternates: {
+    canonical: "https://orionitservice.com/about", // Add this line
+  },
+  openGraph: {
+    title: "About Orion IT Service | Your Trusted Technology Partner",
+    description: "Providing expert IT solutions with security-first approach.",
+    url: "https://orionitservice.com/about", // Also good for OpenGraph
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Orion IT Service",
+      },
+    ],
+  },
+};
 
 export default function About() {
   const values = [

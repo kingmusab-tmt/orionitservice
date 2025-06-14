@@ -1,4 +1,3 @@
-"use client";
 import HeroBanner from "../components/HeroBanner";
 import ServiceCard from "../components/ServiceCard";
 import {
@@ -13,6 +12,112 @@ import {
   Divider,
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
+
+export const metadata = {
+  title: "IT Services & Solutions | Cybersecurity, Networking & Managed IT",
+  description:
+    "Professional IT services including cybersecurity protection, network infrastructure, and managed IT solutions. Custom technology services for businesses of all sizes.",
+  alternates: {
+    canonical: "https://orionitservice.com/services",
+  },
+  openGraph: {
+    title: "Comprehensive IT Services | Cybersecurity & Network Solutions",
+    description:
+      "Expert IT services to protect and optimize your business technology infrastructure",
+    url: "https://orionitservice.com/services",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Orion IT Service Solutions",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "IT Services",
+    provider: {
+      "@type": "Organization",
+      name: "Orion IT Service",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "IT Services",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "Cybersecurity Solutions",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Security Awareness Training",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Vulnerability Assessments",
+              },
+            },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Network Infrastructure",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Network Design & Implementation",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Performance Optimization",
+              },
+            },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Managed IT Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "24/7 Monitoring & Support",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Strategic IT Planning",
+              },
+            },
+          ],
+        },
+      ],
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "United States",
+    },
+  },
+};
 
 export default function Services() {
   const services = [

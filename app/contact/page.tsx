@@ -1,8 +1,61 @@
-"use client";
 import ContactForm from "../components/ContactForm";
 import HeroBanner from "../components/HeroBanner";
 import { Box, Typography, Grid } from "@mui/material";
 import { Phone, Email, LocationOn } from "@mui/icons-material";
+
+export const metadata = {
+  title: "Contact Orion IT Service | IT Support & Consultation",
+  description:
+    "Get in touch with our IT experts for network support, cybersecurity solutions, and managed IT services. Call, email, or message us today.",
+  alternates: {
+    canonical: "https://orionitservice.com/contact",
+  },
+  openGraph: {
+    title: "Contact Our IT Experts | Orion IT Service",
+    description:
+      "Reach out for professional IT support and technology consultation. We're here to help with your business technology needs.",
+    url: "https://orionitservice.com/contact",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Orion IT Service Contact Options",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact Orion IT Service",
+    description: "IT support and consultation contact information",
+    url: "https://orionitservice.com/contact",
+    telephone: "+1 (123) 456-7890",
+    email: "info@orionitservice.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "123 Tech Street",
+      addressLocality: "San Francisco",
+      addressRegion: "CA",
+      postalCode: "94107",
+      addressCountry: "US",
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    sameAs: [
+      "https://facebook.com/yourcompany",
+      "https://linkedin.com/company/yourcompany",
+    ],
+  },
+};
 
 export default function Contact() {
   return (

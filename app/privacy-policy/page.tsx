@@ -1,6 +1,32 @@
-"use client";
 import { Container, Typography, Box, Link } from "@mui/material";
 import HeroBanner from "../components/HeroBanner";
+
+export const metadata = {
+  title: "Privacy Policy | Orion IT Service | Data Protection Commitment",
+  description:
+    "Read Orion IT Service's Privacy Policy detailing how we collect, use, and protect your personal information. Learn about your data rights and our security measures.",
+  alternates: {
+    canonical: "https://orionitservice.com/privacy-policy", // Always use absolute URL
+  },
+  openGraph: {
+    title: "Privacy Policy | Orion IT Service Data Protection",
+    description:
+      "How we handle and protect your personal information - Orion IT Service's commitment to your privacy",
+    url: "https://orionitservice.com/privacy-policy",
+    images: [
+      {
+        url: "/images/logo.png", // Consider creating a privacy-specific OG image
+        width: 1200,
+        height: 630,
+        alt: "Orion IT Service Privacy Protection",
+      },
+    ],
+  },
+  robots: {
+    index: true, // Typically you want privacy pages indexed
+    follow: true,
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
