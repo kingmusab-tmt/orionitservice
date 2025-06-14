@@ -31,10 +31,13 @@ const Footer = () => {
               businesses of all sizes.
             </Typography>
             <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
-              <Link href="#" color="inherit">
+              <Link
+                href="https://web.facebook.com/profile.php?id=61577112279023"
+                color="inherit"
+              >
                 <Facebook />
               </Link>
-              <Link href="#" color="inherit">
+              <Link href="https://x.com/orionitservice" color="inherit">
                 <Twitter />
               </Link>
               <Link href="#" color="inherit">
@@ -78,7 +81,7 @@ const Footer = () => {
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
               <Phone sx={{ mr: 1 }} />
-              <Typography variant="body2">(555) 123-4567</Typography>
+              <Typography variant="body2"> +1 702-800-9182</Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
               <Email sx={{ mr: 1 }} />

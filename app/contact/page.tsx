@@ -34,7 +34,7 @@ export const metadata = {
     name: "Contact Orion IT Service",
     description: "IT support and consultation contact information",
     url: "https://orionitservice.com/contact",
-    telephone: "+1 (123) 456-7890",
+    telephone: "   +1 702-800-9182",
     email: "info@orionitservice.com",
     address: {
       "@type": "PostalAddress",
@@ -51,8 +51,9 @@ export const metadata = {
       closes: "18:00",
     },
     sameAs: [
-      "https://facebook.com/yourcompany",
+      "https://web.facebook.com/profile.php?id=61577112279023",
       "https://linkedin.com/company/yourcompany",
+      "https://x.com/orionitservice",
     ],
   },
 };
@@ -102,10 +103,10 @@ export default function Contact() {
                   <Phone color="primary" sx={{ mr: 1.5 }} />
                   <Typography
                     component="a"
-                    href="tel:+11234567890"
+                    href="tel:   +1 702-800-9182"
                     sx={{ textDecoration: "none", color: "inherit" }}
                   >
-                    +1 (123) 456-7890
+                    +1 702-800-9182
                   </Typography>
                 </Box>
 
@@ -113,10 +114,10 @@ export default function Contact() {
                   <Email color="primary" sx={{ mr: 1.5 }} />
                   <Typography
                     component="a"
-                    href="mailto:info@company.com"
+                    href="mailto:info@orionitservice.com"
                     sx={{ textDecoration: "none", color: "inherit" }}
                   >
-                    info@company.com
+                    info@orionitservice.com
                   </Typography>
                 </Box>
               </Box>
