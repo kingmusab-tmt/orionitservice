@@ -165,7 +165,7 @@ export default function PrivacyPolicy() {
           <Typography variant="body1" paragraph>
             To exercise these rights, please contact us at{" "}
             <Link href="mailto:privacy@orionitservices.com.">
-              privacy@orionitservices.com.
+              privacy@orionitservice.com.
             </Link>
             .
           </Typography>
