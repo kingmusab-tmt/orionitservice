@@ -44,15 +44,38 @@ export async function POST(req: NextRequest) {
 
     // Email content
     const mailOptions = {
-      from: `"Contact Form" <${process.env.SMTP_FROM_EMAIL}>`,
-      to: process.env.COMPANY_EMAIL,
+      from: `"Contact Form" <${process.env.SMTP_INFO_EMAIL}>`,
+      to: process.env.SMTP_CONTACT_EMAIL,
       subject: `New Contact Request from ${body.name}`,
       text: generateEmailText(body),
       html: generateEmailHTML(body),
     };
+    // Email to client
+    const clientMailOptions = {
+      from: `"Orion IT Support" <${process.env.SMTP_SUPPORT_EMAIL}>`,
+      to: body.email,
+      subject: "We Received Your Request",
+      html: `
+        <h2>Dear ${body.name}, Thank you for contacting Orion IT!</h2>
+        <p>We've received your request and one of our experts will contact you within 24 hours.</p>
+        <p>Here's a summary of your request:</p>
+        <ul>
+        <li><strong>Message:</strong> ${
+          body.message || "No additional message"
+        }</li>
+        </ul>
+        <p>If you have any immediate questions, please reply to this email or call us at +1 702-800-9182.</p>
+        <br/>
+        <p>Best regards,</p>
+        <p>The Orion IT Team</p>
+      `,
+    };
 
     // Send email
-    await transporter.sendMail(mailOptions);
+    await Promise.all([
+      await transporter.sendMail(mailOptions),
+      transporter.sendMail(clientMailOptions),
+    ]);
 
     return NextResponse.json(
       { success: true, message: "Contact request submitted successfully" },
@@ -78,8 +101,8 @@ function validateEnvironment(): string[] {
     "SMTP_SECURE",
     "SMTP_USER",
     "SMTP_PASSWORD",
-    "SMTP_FROM_EMAIL",
-    "COMPANY_EMAIL",
+    "SMTP_INFO_EMAIL",
+    "SMTP_SUPPORT_EMAIL",
   ];
 
   return requiredEnvVars.filter((envVar) => !process.env[envVar]);

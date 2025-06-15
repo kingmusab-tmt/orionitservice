@@ -1,8 +1,8 @@
 "use client";
 
 import HeroBanner from "./components/HeroBanner";
-import ServiceCard from "./components/ServiceCard";
-import Testimonials from "./components/Testimonials";
+// import ServiceCard from "./components/ServiceCard";
+// import Testimonials from "./components/Testimonials";
 import {
   Button,
   Container,
@@ -14,7 +14,7 @@ import {
   List,
   ListItem,
   ListItemIcon,
-  Divider,
+  // Divider,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
@@ -81,7 +81,7 @@ export default function Home() {
         "Network design & implementation",
         "Wireless solutions",
         "Performance optimization",
-        "24/7 monitoring",
+        "Regular maintenance",
         "Troubleshooting & support",
       ],
     },
@@ -92,8 +92,8 @@ export default function Home() {
       link: "/services/managed-it",
       features: [
         "Help desk support",
-        "Cloud management",
-        "Backup solutions",
+        "Remote Support",
+        "Backup and Recovery solutions",
         "Patch management",
         "Strategic IT planning",
       ],
@@ -103,7 +103,7 @@ export default function Home() {
   const stats = [
     { value: "99.9%", label: "Uptime Guarantee" },
     { value: "24/7", label: "Expert Support" },
-    { value: "100+", label: "Businesses Protected" },
+    // { value: "100+", label: "Businesses Protected" },
     { value: "30min", label: "Average Response Time" },
   ];
 
@@ -264,7 +264,7 @@ export default function Home() {
                 {[
                   "Certified IT professionals with 10+ years experience",
                   "Business-first approach to technology",
-                  "Proactive monitoring and maintenance",
+                  "Proactive troubleshooting and maintenance",
                   "Transparent pricing with no hidden fees",
                   "Custom solutions tailored to your needs",
                   "Local support with rapid response times",
@@ -294,7 +294,7 @@ export default function Home() {
                   Consultation
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3 }}>
-                  Schedule a 30-minute call with our technology experts to:
+                  Schedule a 15-minute call with our technology experts to:
                 </Typography>
                 <List dense>
                   {[
@@ -355,7 +355,7 @@ export default function Home() {
               {
                 step: "4",
                 title: "Ongoing Support",
-                desc: "24/7 monitoring and proactive maintenance",
+                desc: "24/7 Remote Support and proactive maintenance",
               },
             ].map((step) => (
               <Grid size={{ xs: 12, sm: 6, md: 3 }} key={step.step}>
@@ -552,7 +552,7 @@ export default function Home() {
           </Grid>
         </Container>
       </StyledSection>
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* Final CTA */}
       <StyledCTASection
         as="section"

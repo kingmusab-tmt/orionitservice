@@ -68,7 +68,7 @@ const ManagedItServices = () => {
       title: "Help Desk Support",
       description: "Your team's dedicated IT support partner",
       features: [
-        "Unlimited remote support",
+        "24/7 Remote Support",
         "Priority ticket handling",
         "Onsite assistance (if needed)",
         "Employee training",

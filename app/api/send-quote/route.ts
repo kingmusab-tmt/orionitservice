@@ -47,15 +47,47 @@ export async function POST(req: NextRequest) {
 
     // Email content
     const mailOptions = {
-      from: `"Quote Form" <${process.env.SMTP_FROM_EMAIL}>`,
-      to: process.env.COMPANY_EMAIL,
+      from: `"Quote Form" <${process.env.SMTP_CONTACT_EMAIL}>`,
+      to: process.env.SMTP_SUPPORT_EMAIL,
       subject: `New Quote Request from ${body.company}`,
       text: generateEmailText(body, servicesList),
       html: generateEmailHTML(body, servicesList),
     };
 
+    const clientMailOptions = {
+      from: `"Orion IT Support" <${process.env.SMTP_SUPPORT_EMAIL}>`,
+      to: body.email,
+      subject: "We Received Your Request for a Quote",
+      html: `
+        <h2>Dear ${body.name}, Thank you for contacting Orion IT!</h2>
+        <p>We've received your request for a Quote and one of our experts will get back to you within 24 hours.</p>
+        <p>Here's a summary of your request:</p>
+        <ul>
+          <li><strong>Name:</strong> ${body.name}</li>
+          <li><strong>Company:</strong> ${body.company}</li>
+          <li><strong>Email:</strong> ${body.email}</li>
+          <li><strong>Phone:</strong> ${body.phone || "Not provided"}</li>
+          <li><strong>Employees:</strong> ${
+            body.employees || "Not specified"
+          }</li>
+          <li><strong>Services Needed:</strong> ${servicesList}</li>
+          <li><strong>Timeline:</strong> ${
+            body.timeline || "Not specified"
+          }</li>
+          <li><strong>Budget:</strong> ${body.budget || "Not specified"}</li>
+          <li><strong>Message:</strong> ${
+            body.message || "No additional message"
+          }</li>
+        </ul>
+        <p>If you have any immediate questions, please reply to this email or call us at +1 702-800-9182.</p> 
+      `,
+    };
+
     // Send email
-    await transporter.sendMail(mailOptions);
+    await Promise.all([
+      await transporter.sendMail(mailOptions),
+      transporter.sendMail(clientMailOptions),
+    ]);
 
     return NextResponse.json(
       { success: true, message: "Quote request submitted successfully" },
@@ -81,8 +113,8 @@ function validateEnvironment(): string[] {
     "SMTP_SECURE",
     "SMTP_USER",
     "SMTP_PASSWORD",
-    "SMTP_FROM_EMAIL",
-    "COMPANY_EMAIL",
+    "SMTP_INFO_EMAIL",
+    "SMTP_SUPPORT_EMAIL",
   ];
 
   return requiredEnvVars.filter((envVar) => !process.env[envVar]);
@@ -124,7 +156,7 @@ function validateInput(body: any): string[] {
     const validServiceKeys = [
       "cybersecurity",
       "networking",
-      "cloud",
+      "manageit",
       "backup",
       "other",
     ];
@@ -194,8 +226,8 @@ function formatServices(services: any, otherService: string): string {
           return "Cybersecurity Training";
         case "networking":
           return "Network Solutions";
-        case "cloud":
-          return "Cloud Services";
+        case "manageit":
+          return "Managed IT Services";
         case "backup":
           return "Data Backup & Recovery";
         case "other":

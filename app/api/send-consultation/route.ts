@@ -34,8 +34,8 @@ export async function POST(request: NextRequest) {
 
     // Email to company
     const companyMailOptions = {
-      from: `"Orion IT Consultations" <${process.env.SMTP_FROM_EMAIL}>`,
-      to: process.env.COMPANY_EMAIL,
+      from: `"Orion IT Consultations" <${process.env.SMTP_CONSULTATION_EMAIL}>`,
+      to: process.env.SMTP_SUPPORT_EMAIL,
       subject: `New Consultation Request from ${formData.name}`,
       html: `
         <h2>New Consultation Request</h2>
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
 
     // Email to client
     const clientMailOptions = {
-      from: `"Orion IT Support" <${process.env.SMTP_FROM_EMAIL}>`,
+      from: `"Orion IT Support" <${process.env.SMTP_CONSULTATION_EMAIL}>`,
       to: formData.email,
       subject: "We Received Your Consultation Request",
       html: `
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
           formData.message || "No additional message"
         }</li>
         </ul>
-        <p>If you have any immediate questions, please reply to this email or call us at (555) 123-4567.</p>
+        <p>If you have any immediate questions, please reply to this email or call us at +1 702-800-9182.</p>
         <br/>
         <p>Best regards,</p>
         <p>The Orion IT Team</p>

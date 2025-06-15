@@ -148,7 +148,7 @@ const ConsultationPage = () => {
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
               Complete this form and one of our technology experts will contact
-              you within 24 hours to schedule your 30-minute consultation.
+              you within 24 hours to schedule your 15-minute consultation.
             </Typography>
 
             <Divider sx={{ my: 4 }} />
@@ -303,7 +303,7 @@ const ConsultationPage = () => {
               </Box>
               <List dense>
                 {[
-                  "30-minute no-obligation consultation",
+                  "15-minute no-obligation consultation",
                   "Technology assessment tailored to your business",
                   "Actionable recommendations",
                   "Clear next steps if you choose to proceed",

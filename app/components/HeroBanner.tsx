@@ -53,9 +53,9 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       >
         <Image
           src={image}
-          alt=""
-          layout="fill"
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
+          alt="Oriton IT Service Hero Banner"
+          fill={true}
           quality={100}
           priority
         />

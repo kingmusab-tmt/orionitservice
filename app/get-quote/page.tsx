@@ -31,7 +31,7 @@ export default function GetQuote() {
     services: {
       cybersecurity: false,
       networking: false,
-      cloud: false,
+      manageit: false,
       backup: false,
       other: false,
     },
@@ -123,7 +123,7 @@ export default function GetQuote() {
         services: {
           cybersecurity: false,
           networking: false,
-          cloud: false,
+          manageit: false,
           backup: false,
           other: false,
         },
@@ -286,16 +286,16 @@ export default function GetQuote() {
                         <FormControlLabel
                           control={
                             <Checkbox
-                              checked={formData.services.cloud}
+                              checked={formData.services.manageit}
                               onChange={handleServiceChange}
-                              name="cloud"
+                              name="manageit"
                               color="primary"
                             />
                           }
                           label={
                             <Box display="flex" alignItems="center">
                               <StorageIcon color="primary" sx={{ mr: 1 }} />
-                              Cloud Services
+                              Managed IT Services
                             </Box>
                           }
                         />
@@ -500,10 +500,11 @@ export default function GetQuote() {
                     <StorageIcon color="primary" sx={{ mr: 2 }} />
                     <Box>
                       <Typography variant="subtitle1" fontWeight={600}>
-                        Cloud Solutions
+                        Managed IT Solutions
                       </Typography>
                       <Typography variant="body2">
-                        Migration, management & optimization
+                        Proactive IT management so you can focus on your
+                        business
                       </Typography>
                     </Box>
                   </Box>
