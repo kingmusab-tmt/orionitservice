@@ -1,8 +1,7 @@
 "use client";
 
 import HeroBanner from "./components/HeroBanner";
-// import ServiceCard from "./components/ServiceCard";
-// import Testimonials from "./components/Testimonials";
+
 import {
   Button,
   Container,
@@ -14,7 +13,6 @@ import {
   List,
   ListItem,
   ListItemIcon,
-  // Divider,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
@@ -31,30 +29,39 @@ import {
 } from "@mui/icons-material";
 
 const StyledSection = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(10, 0),
+  padding: theme.spacing(8, 0),
+  [theme.breakpoints.up("md")]: {
+    padding: theme.spacing(10, 0),
+  },
   backgroundColor: theme.palette.background.default,
 }));
 
 const StyledCTASection = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(12, 0),
+  padding: theme.spacing(8, 0),
+  [theme.breakpoints.up("md")]: {
+    padding: theme.spacing(12, 0),
+  },
   textAlign: "center",
-  background: "white", // Use a solid color for the CTA section
+  background: "white",
   color: theme.palette.primary.contrastText,
 }));
 
 const FeatureCard = styled(Paper)(({ theme }) => ({
-  padding: theme.spacing(4),
+  padding: theme.spacing(3),
+  [theme.breakpoints.up("md")]: {
+    padding: theme.spacing(4),
+  },
   height: "100%",
   transition: "all 0.3s ease",
   "&:hover": {
     transform: "translateY(-5px)",
-    // boxShadow: theme.shadows && theme.shadows[8],
   },
 }));
 
 export default function Home() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   const services = [
     {
@@ -103,7 +110,6 @@ export default function Home() {
   const stats = [
     { value: "99.9%", label: "Uptime Guarantee" },
     { value: "24/7", label: "Expert Support" },
-    // { value: "100+", label: "Businesses Protected" },
     { value: "30min", label: "Average Response Time" },
   ];
 
@@ -114,67 +120,78 @@ export default function Home() {
         subtitle="Expert IT solutions that drive efficiency, security, and growth"
         ctaText="Get Your Free IT Consultation"
         ctaLink="/free-consultation"
-        image="/images/avatar2.png"
+        image="/images/serveroom2.jpg"
       />
+
       {/* Stats Bar */}
       <Paper
         elevation={0}
         sx={{
-          py: 4,
+          py: 3,
+          [theme.breakpoints.up("md")]: {
+            py: 4,
+          },
           backgroundColor: theme.palette.primary.light,
           color: theme.palette.primary.contrastText,
         }}
       >
         <Container maxWidth="lg">
-          <Grid container spacing={3} justifyContent="center">
+          <Grid container spacing={2} justifyContent="center">
             {stats.map((stat, index) => (
               <Grid
-                size={{ xs: 6, sm: 3 }}
+                size={{ xs: 6, sm: 4, md: 3 }}
                 key={index}
                 sx={{ textAlign: "center" }}
               >
-                <Typography variant="h3" sx={{ fontWeight: 800, mb: 1 }}>
+                <Typography variant="h4" sx={{ fontWeight: 800, mb: 1 }}>
                   {stat.value}
                 </Typography>
-                <Typography variant="subtitle1">{stat.label}</Typography>
+                <Typography variant="subtitle2" component="div">
+                  {stat.label}
+                </Typography>
               </Grid>
             ))}
           </Grid>
         </Container>
       </Paper>
+
       {/* Services Section */}
       <StyledSection as="section" id="services">
         <Container maxWidth="lg">
-          <Box textAlign="center" mb={8}>
+          <Box textAlign="center" mb={6}>
             <Chip
               label="IT SOLUTIONS"
               color="primary"
               sx={{
                 mb: 3,
                 fontWeight: 600,
-                fontSize: "1rem",
-                py: 1.5,
+                fontSize: "0.875rem",
+                [theme.breakpoints.up("md")]: {
+                  fontSize: "1rem",
+                },
+                py: 1,
                 px: 2,
               }}
             />
             <Typography
-              variant="h2"
+              variant={isMobile ? "h3" : "h2"}
               component="h2"
               sx={{
                 fontWeight: 800,
                 mb: 3,
-                fontSize: isMobile ? "2rem" : "2.8rem",
+                fontSize: isMobile ? "1.8rem" : isTablet ? "2.2rem" : "2.8rem",
               }}
             >
               Comprehensive IT Services for Modern Businesses
             </Typography>
             <Typography
-              variant="h6"
+              variant="subtitle1"
               component="p"
               sx={{
                 maxWidth: 700,
                 mx: "auto",
                 color: "text.secondary",
+                px: isMobile ? 2 : 0,
               }}
             >
               We deliver tailored technology solutions that align with your
@@ -182,18 +199,19 @@ export default function Home() {
             </Typography>
           </Box>
 
-          <Grid container spacing={4}>
+          <Grid container spacing={3}>
             {services.map((service, index) => (
-              <Grid size={{ xs: 6, md: 4 }} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                 <FeatureCard elevation={3}>
-                  <Box sx={{ textAlign: "center", mb: 3 }}>{service.icon}</Box>
+                  <Box sx={{ textAlign: "center", mb: 2 }}>{service.icon}</Box>
                   <Typography
-                    variant="h4"
+                    variant="h5"
                     component="h3"
                     sx={{
                       fontWeight: 700,
                       mb: 2,
                       textAlign: "center",
+                      fontSize: isMobile ? "1.4rem" : "1.5rem",
                     }}
                   >
                     {service.title}
@@ -219,6 +237,7 @@ export default function Home() {
                       variant="outlined"
                       endIcon={<ArrowIcon />}
                       href={service.link}
+                      size={isMobile ? "medium" : "large"}
                       sx={{ px: 4 }}
                     >
                       Learn More
@@ -230,32 +249,36 @@ export default function Home() {
           </Grid>
         </Container>
       </StyledSection>
+
       {/* Value Proposition */}
       <StyledSection
         as="section"
         sx={{ backgroundColor: theme.palette.grey[50] }}
       >
         <Container maxWidth="lg">
-          <Grid container spacing={6} alignItems="center">
-            <Grid size={{ xs: 6, md: 6 }}>
+          <Grid container spacing={4} alignItems="center">
+            <Grid size={{ xs: 12, md: 6 }}>
               <Chip
                 label="WHY CHOOSE US"
                 color="primary"
                 sx={{
                   mb: 3,
                   fontWeight: 600,
-                  fontSize: "1rem",
-                  py: 1.5,
+                  fontSize: "0.875rem",
+                  [theme.breakpoints.up("md")]: {
+                    fontSize: "1rem",
+                  },
+                  py: 1,
                   px: 2,
                 }}
               />
               <Typography
-                variant="h3"
+                variant={isMobile ? "h3" : "h2"}
                 component="h2"
                 sx={{
                   fontWeight: 800,
                   mb: 3,
-                  fontSize: isMobile ? "2rem" : "2.5rem",
+                  fontSize: isMobile ? "1.8rem" : isTablet ? "2rem" : "2.5rem",
                 }}
               >
                 Technology Partners You Can Trust
@@ -278,7 +301,7 @@ export default function Home() {
                 ))}
               </List>
             </Grid>
-            <Grid size={{ xs: 6, md: 6 }}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Paper elevation={3} sx={{ p: 3 }}>
                 <Typography
                   variant="h5"
@@ -326,16 +349,17 @@ export default function Home() {
           </Grid>
         </Container>
       </StyledSection>
+
       <StyledSection>
         <Container maxWidth="lg">
           <Typography
-            variant="h3"
+            variant={isMobile ? "h3" : "h2"}
             align="center"
             sx={{ fontWeight: 800, mb: 6 }}
           >
             Our Proven Process
           </Typography>
-          <Grid container spacing={4}>
+          <Grid container spacing={3}>
             {[
               {
                 step: "1",
@@ -359,7 +383,7 @@ export default function Home() {
               },
             ].map((step) => (
               <Grid size={{ xs: 12, sm: 6, md: 3 }} key={step.step}>
-                <Box sx={{ textAlign: "center", p: 3 }}>
+                <Box sx={{ textAlign: "center", p: 2 }}>
                   <Box
                     sx={{
                       bgcolor: "primary.main",
@@ -390,6 +414,7 @@ export default function Home() {
           </Grid>
         </Container>
       </StyledSection>
+
       <StyledSection sx={{ backgroundColor: theme.palette.grey[50] }}>
         <Container maxWidth="lg">
           <Box textAlign="center" mb={6}>
@@ -399,36 +424,40 @@ export default function Home() {
               sx={{
                 mb: 3,
                 fontWeight: 600,
-                fontSize: "1rem",
-                py: 1.5,
+                fontSize: "0.875rem",
+                [theme.breakpoints.up("md")]: {
+                  fontSize: "1rem",
+                },
+                py: 1,
                 px: 2,
               }}
             />
             <Typography
-              variant="h3"
+              variant={isMobile ? "h3" : "h2"}
               sx={{
                 fontWeight: 800,
                 mb: 3,
-                fontSize: isMobile ? "2rem" : "2.5rem",
+                fontSize: isMobile ? "1.8rem" : isTablet ? "2rem" : "2.5rem",
               }}
             >
               What Sets Our Network Team Apart
             </Typography>
             <Typography
-              variant="h6"
+              variant="subtitle1"
               sx={{
                 maxWidth: 700,
                 mx: "auto",
                 color: "text.secondary",
+                px: isMobile ? 2 : 0,
               }}
             >
               Deep technical expertise meets business-focused solutions
             </Typography>
           </Box>
 
-          <Grid container spacing={4}>
+          <Grid container spacing={3}>
             <Grid size={{ xs: 12, md: 6 }}>
-              <Paper elevation={3} sx={{ p: 4, height: "100%" }}>
+              <Paper elevation={3} sx={{ p: 3, height: "100%" }}>
                 <Typography
                   variant="h5"
                   sx={{
@@ -462,7 +491,7 @@ export default function Home() {
             </Grid>
 
             <Grid size={{ xs: 12, md: 6 }}>
-              <Paper elevation={3} sx={{ p: 4, height: "100%" }}>
+              <Paper elevation={3} sx={{ p: 3, height: "100%" }}>
                 <Typography
                   variant="h5"
                   sx={{
@@ -498,11 +527,15 @@ export default function Home() {
           </Grid>
         </Container>
       </StyledSection>
+
       <StyledSection>
         <Container maxWidth="lg">
-          <Grid container spacing={6} alignItems="center">
+          <Grid container spacing={4} alignItems="center">
             <Grid size={{ xs: 12, md: 6 }}>
-              <Typography variant="h3" sx={{ fontWeight: 800, mb: 3 }}>
+              <Typography
+                variant={isMobile ? "h3" : "h2"}
+                sx={{ fontWeight: 800, mb: 3 }}
+              >
                 Common Problems We Solve
               </Typography>
               <List>
@@ -523,7 +556,7 @@ export default function Home() {
               </List>
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
-              <Paper elevation={3} sx={{ p: 4 }}>
+              <Paper elevation={3} sx={{ p: 3 }}>
                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
                   Our Solution Approach
                 </Typography>
@@ -552,39 +585,37 @@ export default function Home() {
           </Grid>
         </Container>
       </StyledSection>
-      {/* <Testimonials /> */}
+
       {/* Final CTA */}
       <StyledCTASection
         as="section"
         sx={{
-          backgroundColor: "white", // Use a solid color for the CTA section
-          color: "primary.main", // Explicit text color
-          py: 6, // Optional padding for visual spacing
+          backgroundColor: "white",
+          color: "primary.main",
         }}
       >
         <Container maxWidth="md">
           <Typography
-            variant="h3"
+            variant={isMobile ? "h3" : "h2"}
             component="h3"
             gutterBottom
             sx={{
               fontWeight: 800,
               mb: 3,
-              fontSize: isMobile ? "2rem" : "2.5rem",
-              color: "blue", // Explicit text color
+              fontSize: isMobile ? "1.8rem" : isTablet ? "2.2rem" : "2.5rem",
             }}
           >
             Ready to Transform Your IT Experience?
           </Typography>
           <Typography
-            variant="h6"
+            variant="subtitle1"
             component="p"
             sx={{
               mb: 4,
               maxWidth: 700,
               margin: "0 auto",
               opacity: 0.9,
-              color: "blue", // Explicit text color
+              px: isMobile ? 2 : 0,
             }}
           >
             Whether you need comprehensive managed services or targeted
@@ -604,9 +635,12 @@ export default function Home() {
               color="secondary"
               size="large"
               sx={{
-                px: 6,
+                px: 4,
                 py: 1.5,
-                fontSize: "1.1rem",
+                fontSize: "1rem",
+                [theme.breakpoints.up("sm")]: {
+                  fontSize: "1.1rem",
+                },
                 fontWeight: 600,
                 "&:hover": {
                   transform: "translateY(-2px)",

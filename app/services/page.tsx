@@ -205,7 +205,7 @@ export default function Services() {
       <HeroBanner
         title="Our IT Services"
         subtitle="Comprehensive solutions tailored to your business needs"
-        image="/images/avatar2.png"
+        image="/images/networkeng.avif"
       />
 
       <Container maxWidth="lg" sx={{ py: 8 }}>

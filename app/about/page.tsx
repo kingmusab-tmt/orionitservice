@@ -321,7 +321,7 @@ export default function About() {
       <HeroBanner
         title="About Orion IT Service"
         subtitle="Your trusted technology partner since 2012"
-        image="/images/avatar7.jpg"
+        image="/images/avatar1.png"
       />
 
       <Container maxWidth="lg" sx={{ py: 8 }}>
