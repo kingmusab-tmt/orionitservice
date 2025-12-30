@@ -52,7 +52,7 @@ export const metadata = {
     },
     sameAs: [
       "https://web.facebook.com/profile.php?id=61577112279023",
-      "https://linkedin.com/company/yourcompany",
+      "https://linkedin.com/orionitservice",
       "https://x.com/orionitservice",
     ],
   },
