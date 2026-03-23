@@ -10,17 +10,25 @@ import {
   MenuItem,
   useMediaQuery,
   useTheme,
+  Box,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../public/images/logo.png"; // Adjust the path as necessary
+import Logo from "../../public/images/logo.webp"; // Adjust the path as necessary
 
 const Header = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  const mediaQuery = useMediaQuery(theme.breakpoints.down("md"));
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    setIsMobile(mediaQuery);
+  }, [mediaQuery]);
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -49,6 +57,7 @@ const Header = () => {
       position="sticky"
       color="transparent"
       elevation={0}
+      suppressHydrationWarning
       sx={{
         backdropFilter: scrolled ? "blur(10px)" : "none",
         backgroundColor: scrolled ? "rgba(255, 255, 255, 0.9)" : "transparent",
@@ -85,87 +94,97 @@ const Header = () => {
 
         <div style={{ flexGrow: 1 }} />
 
-        {isMobile ? (
-          <>
-            <IconButton
-              size="large"
-              edge="start"
-              color={scrolled ? "primary" : "inherit"}
-              aria-label="menu"
-              onClick={handleMenu}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handleClose} component={Link} href="/">
+        <Box suppressHydrationWarning>
+          {isMobile ? (
+            <>
+              <IconButton
+                size="large"
+                edge="start"
+                color={scrolled ? "primary" : "inherit"}
+                aria-label="menu"
+                onClick={handleMenu}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose} component={Link} href="/">
+                  Home
+                </MenuItem>
+                <MenuItem onClick={handleClose} component={Link} href="/about">
+                  About
+                </MenuItem>
+                <MenuItem
+                  onClick={handleClose}
+                  component={Link}
+                  href="/services"
+                >
+                  Services
+                </MenuItem>
+                <MenuItem
+                  onClick={handleClose}
+                  component={Link}
+                  href="/contact"
+                >
+                  Contact
+                </MenuItem>
+              </Menu>
+            </>
+          ) : (
+            <div>
+              <Button
+                color={scrolled ? "primary" : "secondary"}
+                component={Link}
+                href="/"
+              >
                 Home
-              </MenuItem>
-              <MenuItem onClick={handleClose} component={Link} href="/about">
+              </Button>
+              <Button
+                color={scrolled ? "primary" : "secondary"}
+                component={Link}
+                href="/about"
+              >
                 About
-              </MenuItem>
-              <MenuItem onClick={handleClose} component={Link} href="/services">
+              </Button>
+              <Button
+                color={scrolled ? "primary" : "secondary"}
+                component={Link}
+                href="/services"
+              >
                 Services
-              </MenuItem>
-              <MenuItem onClick={handleClose} component={Link} href="/contact">
+              </Button>
+              <Button
+                color={scrolled ? "primary" : "secondary"}
+                component={Link}
+                href="/contact"
+              >
                 Contact
-              </MenuItem>
-            </Menu>
-          </>
-        ) : (
-          <div>
-            <Button
-              color={scrolled ? "primary" : "secondary"}
-              component={Link}
-              href="/"
-            >
-              Home
-            </Button>
-            <Button
-              color={scrolled ? "primary" : "secondary"}
-              component={Link}
-              href="/about"
-            >
-              About
-            </Button>
-            <Button
-              color={scrolled ? "primary" : "secondary"}
-              component={Link}
-              href="/services"
-            >
-              Services
-            </Button>
-            <Button
-              color={scrolled ? "primary" : "secondary"}
-              component={Link}
-              href="/contact"
-            >
-              Contact
-            </Button>
-            <Button
-              variant="contained"
-              color="secondary"
-              sx={{ ml: 2 }}
-              component={Link}
-              href="/get-quote"
-            >
-              Get a Quote
-            </Button>
-          </div>
-        )}
+              </Button>
+              <Button
+                variant="contained"
+                color="secondary"
+                sx={{ ml: 2 }}
+                component={Link}
+                href="/get-quote"
+              >
+                Get a Quote
+              </Button>
+            </div>
+          )}
+        </Box>
       </Toolbar>
     </AppBar>
   );

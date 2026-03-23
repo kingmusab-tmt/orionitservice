@@ -1,5 +1,6 @@
 import HeroBanner from "../components/HeroBanner";
 import ServiceCard from "../components/ServiceCard";
+import JsonLd from "../components/JsonLd";
 import {
   Box,
   Container,
@@ -11,111 +12,47 @@ import {
   AccordionDetails,
   Divider,
 } from "@mui/material";
-import { ExpandMore } from "@mui/icons-material";
+import {
+  ExpandMore,
+  Security as SecurityIcon,
+  Lan as NetworkIcon,
+  Computer as ComputerIcon,
+  Language as WebIcon,
+} from "@mui/icons-material";
 
 export const metadata = {
-  title: "IT Services & Solutions | Cybersecurity, Networking & Managed IT",
+  title: "IT Services Las Vegas | Cybersecurity, Managed IT & Networking",
   description:
-    "Professional IT services including cybersecurity protection, network infrastructure, and managed IT solutions. Custom technology services for businesses of all sizes.",
+    "Comprehensive IT services for Las Vegas businesses — cybersecurity awareness training, managed IT support, network engineering, and website development. Tailored solutions for every business size.",
+  keywords:
+    "IT services Las Vegas, cybersecurity solutions Nevada, managed IT services Las Vegas, network engineering Nevada, website development Las Vegas, IT support small business, business technology solutions Nevada",
   alternates: {
-    canonical: "https://orionitservice.com/services",
+    canonical: "https://www.orionitservice.com/services",
   },
   openGraph: {
-    title: "Comprehensive IT Services | Cybersecurity & Network Solutions",
+    title: "IT Services Las Vegas | Cybersecurity, Managed IT & Networking",
     description:
-      "Expert IT services to protect and optimize your business technology infrastructure",
-    url: "https://orionitservice.com/services",
+      "Expert IT services to protect and optimize your business — cybersecurity, managed IT, network engineering, and website development in Las Vegas.",
+    url: "https://www.orionitservice.com/services",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Orion IT Service Solutions",
+        alt: "Orion IT Service – IT Solutions Las Vegas",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IT Services Las Vegas | Cybersecurity, Managed IT & Networking",
+    description:
+      "Expert IT services for Las Vegas businesses — cybersecurity, managed IT, networking, and website development.",
+    images: ["/images/og-image.webp"],
   },
   robots: {
     index: true,
     follow: true,
-  },
-  structuredData: {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "IT Services",
-    provider: {
-      "@type": "Organization",
-      name: "Orion IT Service",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "IT Services",
-      itemListElement: [
-        {
-          "@type": "OfferCatalog",
-          name: "Cybersecurity Solutions",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Security Awareness Training",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Vulnerability Assessments",
-              },
-            },
-          ],
-        },
-        {
-          "@type": "OfferCatalog",
-          name: "Network Infrastructure",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Network Design & Implementation",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Performance Optimization",
-              },
-            },
-          ],
-        },
-        {
-          "@type": "OfferCatalog",
-          name: "Managed IT Services",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "24/7 Monitoring & Support",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Strategic IT Planning",
-              },
-            },
-          ],
-        },
-      ],
-    },
-    areaServed: {
-      "@type": "AdministrativeArea",
-      name: "United States",
-    },
   },
 };
 
@@ -125,7 +62,7 @@ export default function Services() {
       title: "Cybersecurity Solutions",
       description:
         "Comprehensive protection against digital threats with advanced security measures",
-      icon: "security",
+      icon: <SecurityIcon sx={{ fontSize: 60 }} />,
       link: "/services/cybersecurity",
       features: [
         "Employee awareness training",
@@ -139,7 +76,7 @@ export default function Services() {
       title: "Network Infrastructure",
       description:
         "Reliable and secure network design, implementation, and management",
-      icon: "network",
+      icon: <NetworkIcon sx={{ fontSize: 60 }} />,
       link: "/services/networking",
       features: [
         "Wired & wireless network design",
@@ -165,7 +102,7 @@ export default function Services() {
     {
       title: "Managed IT Services",
       description: "Proactive IT management so you can focus on your business",
-      icon: "computer",
+      icon: <ComputerIcon sx={{ fontSize: 60 }} />,
       link: "/services/managed-it",
       features: [
         "Help desk support",
@@ -173,6 +110,20 @@ export default function Services() {
         "Asset management",
         "Proactive monitoring",
         "Strategic IT planning",
+      ],
+    },
+    {
+      title: "Website Development",
+      description:
+        "Professional websites that showcase your business and drive customer engagement",
+      icon: <WebIcon sx={{ fontSize: 60 }} />,
+      link: "/services/website-development",
+      features: [
+        "Custom website design",
+        "Responsive & mobile-friendly",
+        "E-commerce solutions",
+        "SEO optimization",
+        "Ongoing maintenance & support",
       ],
     },
   ];
@@ -202,13 +153,55 @@ export default function Services() {
 
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "@id": "https://www.orionitservice.com/services#webpage",
+            name: "IT Services – Orion IT Service",
+            description:
+              "Comprehensive IT services for Las Vegas businesses including cybersecurity, managed IT, network engineering, and website development.",
+            url: "https://www.orionitservice.com/services",
+            provider: {
+              "@id": "https://www.orionitservice.com/#organization",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.orionitservice.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Services",
+                  item: "https://www.orionitservice.com/services",
+                },
+              ],
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          },
+        ]}
+      />
       <HeroBanner
         title="Our IT Services"
         subtitle="Comprehensive solutions tailored to your business needs"
         image="/images/networkeng.avif"
       />
 
-      <Container maxWidth="lg" sx={{ py: 8 }}>
+      <Container maxWidth="xl" sx={{ py: 8 }}>
         {/* Services Grid */}
         <Box sx={{ mb: 8 }}>
           <Typography
@@ -221,7 +214,7 @@ export default function Services() {
           </Typography>
           <Grid container spacing={4}>
             {services.map((service, index) => (
-              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={index}>
                 <ServiceCard
                   title={service.title}
                   description={service.description}

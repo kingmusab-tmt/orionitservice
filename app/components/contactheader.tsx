@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -22,7 +22,14 @@ import {
 
 const SmallHeader = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  const mediaQuery = useMediaQuery(theme.breakpoints.down("sm"));
+
+  useEffect(() => {
+    setIsClient(true);
+    setIsMobile(mediaQuery);
+  }, [mediaQuery]);
 
   return (
     <AppBar
@@ -37,8 +44,10 @@ const SmallHeader = () => {
         zIndex: theme.zIndex.appBar,
       }}
       elevation={0}
+      suppressHydrationWarning
     >
       <Toolbar
+        suppressHydrationWarning
         sx={{
           minHeight: "40px !important",
           justifyContent: "space-between",
@@ -47,6 +56,7 @@ const SmallHeader = () => {
       >
         {/* Left side - Contact Info */}
         <Box
+          suppressHydrationWarning
           sx={{
             display: "flex",
             alignItems: "center",
@@ -56,6 +66,7 @@ const SmallHeader = () => {
         >
           {/* Phone */}
           <Box
+            suppressHydrationWarning
             sx={{
               display: "flex",
               alignItems: "center",
@@ -75,6 +86,7 @@ const SmallHeader = () => {
 
           {/* Email */}
           <Box
+            suppressHydrationWarning
             sx={{
               display: "flex",
               alignItems: "center",
@@ -98,6 +110,7 @@ const SmallHeader = () => {
 
           {/* Support Email */}
           <Box
+            suppressHydrationWarning
             sx={{
               display: "flex",
               alignItems: "center",

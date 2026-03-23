@@ -15,7 +15,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   subtitle,
   ctaText,
   ctaLink,
-  image = "/images/avatar5.jpg", // Default image
+  image = "/images/avatar5.webp", // Default image
 }) => {
   return (
     <Box
@@ -56,6 +56,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           style={{ objectFit: "cover" }}
           alt="Oriton IT Service Hero Banner"
           fill={true}
+          sizes="100vw"
           quality={100}
           priority
         />

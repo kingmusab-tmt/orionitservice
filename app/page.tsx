@@ -26,6 +26,7 @@ import {
   Speed as SpeedIcon,
   Lock as LockIcon,
   ArrowForward as ArrowIcon,
+  Language as WebIcon,
 } from "@mui/icons-material";
 
 const StyledSection = styled(Box)(({ theme }) => ({
@@ -105,6 +106,20 @@ export default function Home() {
         "Strategic IT planning",
       ],
     },
+    {
+      title: "Website Development",
+      description:
+        "Professional websites that showcase your business and drive customer engagement",
+      icon: <WebIcon fontSize="large" color="primary" />,
+      link: "/services/website-development",
+      features: [
+        "Custom website design",
+        "Responsive & mobile-friendly",
+        "E-commerce solutions",
+        "SEO optimization",
+        "Ongoing maintenance & support",
+      ],
+    },
   ];
 
   const stats = [
@@ -120,7 +135,7 @@ export default function Home() {
         subtitle="Expert IT solutions that drive efficiency, security, and growth"
         ctaText="Get Your Free IT Consultation"
         ctaLink="/free-consultation"
-        image="/images/serveroom2.jpg"
+        image="/images/serveroom2.webp"
       />
 
       {/* Stats Bar */}
@@ -157,7 +172,7 @@ export default function Home() {
 
       {/* Services Section */}
       <StyledSection as="section" id="services">
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
           <Box textAlign="center" mb={6}>
             <Chip
               label="IT SOLUTIONS"
@@ -201,7 +216,7 @@ export default function Home() {
 
           <Grid container spacing={3}>
             {services.map((service, index) => (
-              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={index}>
                 <FeatureCard elevation={3}>
                   <Box sx={{ textAlign: "center", mb: 2 }}>{service.icon}</Box>
                   <Typography

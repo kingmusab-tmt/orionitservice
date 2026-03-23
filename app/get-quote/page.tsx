@@ -20,6 +20,7 @@ import SendIcon from "@mui/icons-material/Send";
 import SecurityIcon from "@mui/icons-material/Security";
 import LanIcon from "@mui/icons-material/Lan";
 import StorageIcon from "@mui/icons-material/Storage";
+import LanguageIcon from "@mui/icons-material/Language";
 
 export default function GetQuote() {
   const [formData, setFormData] = useState({
@@ -32,6 +33,7 @@ export default function GetQuote() {
       cybersecurity: false,
       networking: false,
       manageit: false,
+      websitedevelopment: false,
       backup: false,
       other: false,
     },
@@ -109,7 +111,7 @@ export default function GetQuote() {
 
       // Show success modal
       setModalMessage(
-        "Thank you for your request! Our team will review your information and get back to you within 1-2 business days."
+        "Thank you for your request! Our team will review your information and get back to you within 1-2 business days.",
       );
       setOpenModal(true);
 
@@ -124,6 +126,7 @@ export default function GetQuote() {
           cybersecurity: false,
           networking: false,
           manageit: false,
+          websitedevelopment: false,
           backup: false,
           other: false,
         },
@@ -137,7 +140,7 @@ export default function GetQuote() {
       setError(
         err instanceof Error
           ? err.message
-          : "An error occurred while submitting your request. Please try again."
+          : "An error occurred while submitting your request. Please try again.",
       );
     } finally {
       setLoading(false);
@@ -296,6 +299,24 @@ export default function GetQuote() {
                             <Box display="flex" alignItems="center">
                               <StorageIcon color="primary" sx={{ mr: 1 }} />
                               Managed IT Services
+                            </Box>
+                          }
+                        />
+                      </Grid>
+                      <Grid size={{ xs: 12, sm: 6 }}>
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              checked={formData.services.websitedevelopment}
+                              onChange={handleServiceChange}
+                              name="websitedevelopment"
+                              color="primary"
+                            />
+                          }
+                          label={
+                            <Box display="flex" alignItems="center">
+                              <LanguageIcon color="primary" sx={{ mr: 1 }} />
+                              Website Development
                             </Box>
                           }
                         />

@@ -10,9 +10,11 @@ export default function ThemeRegistry({
 }: {
   children: React.ReactNode;
 }) {
-  const [mode, setMode] = useState<"light" | "dark">("light");
+  const [mode, setMode] = useState<"light" | "dark" | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     // Detect system color scheme preference
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     setMode(mediaQuery.matches ? "dark" : "light");
@@ -25,10 +27,12 @@ export default function ThemeRegistry({
     return () => mediaQuery.removeEventListener("change", handler);
   }, []);
 
+  const currentMode = isClient && mode ? mode : "light";
+
   const theme = createTheme({
     palette: {
-      mode,
-      ...(mode === "dark"
+      mode: currentMode,
+      ...(currentMode === "dark"
         ? {
             // Dark mode palette
             background: {
@@ -53,6 +57,16 @@ export default function ThemeRegistry({
           }),
     },
   });
+
+  // Prevent hydration mismatch by only rendering on client after theme is determined
+  if (!isClient) {
+    return (
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </ThemeProvider>
+    );
+  }
 
   return (
     <ThemeProvider theme={theme}>

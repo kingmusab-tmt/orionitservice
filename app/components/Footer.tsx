@@ -27,8 +27,9 @@ const Footer = () => {
               Orion IT Service
             </Typography>
             <Typography variant="body2" paragraph>
-              Providing comprehensive cybersecurity and networking solutions to
-              businesses of all sizes.
+              Providing comprehensive IT Service such as cybersecurity, Manage
+              IT, Website Development and networking solutions to businesses of
+              all sizes.
             </Typography>
             <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
               <Link

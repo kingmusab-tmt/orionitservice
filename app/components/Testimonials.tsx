@@ -9,7 +9,7 @@ const testimonials = [
     content:
       "Orion IT Service transformed our cybersecurity posture. Their training program was engaging and effective, reducing our phishing susceptibility by 80%.",
     rating: 5,
-    avatar: "/images/avatar1.png",
+    avatar: "/images/avatar1.webp",
   },
   {
     name: "Michael Chen",
@@ -17,7 +17,7 @@ const testimonials = [
     content:
       "The network infrastructure they implemented has been rock-solid. We've had zero downtime since deployment, and their support team is exceptional.",
     rating: 5,
-    avatar: "/images/avatar2.png",
+    avatar: "/images/avatar2.webp",
   },
   {
     name: "Emily Rodriguez",
@@ -25,7 +25,7 @@ const testimonials = [
     content:
       "Their team understood our unique needs and delivered customized solutions that have significantly improved our operational efficiency.",
     rating: 4,
-    avatar: "/images/avatar3.webp",
+    avatar: "/images/avatar3..webp",
   },
 ];
 

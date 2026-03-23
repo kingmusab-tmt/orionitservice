@@ -12,7 +12,7 @@ import Link from "next/link";
 interface ServiceCardProps {
   title: string;
   description: string;
-  icon: string;
+  icon: React.ReactNode;
   link: string;
   children?: React.ReactNode;
 }
@@ -24,25 +24,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   link,
   children,
 }) => {
-  const getIcon = (iconName: string) => {
-    switch (iconName) {
-      case "security":
-        return "🛡️";
-      case "network":
-        return "🌐";
-      case "cloud":
-        return "☁️";
-      case "storage":
-        return "💾";
-      case "computer":
-        return "💻";
-      case "mobile":
-        return "📱";
-      default:
-        return "✨";
-    }
-  };
-
   return (
     <Card
       sx={{
@@ -67,7 +48,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           color: "primary.contrastText",
         }}
       >
-        {getIcon(icon)}
+        <Box sx={{ fontSize: 60, color: "inherit" }}>{icon}</Box>
       </CardMedia>
       <CardContent sx={{ flexGrow: 1 }}>
         <Typography gutterBottom variant="h5" component="h3">

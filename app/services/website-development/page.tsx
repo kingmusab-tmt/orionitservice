@@ -1,0 +1,560 @@
+"use client";
+
+import {
+  Box,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Container,
+  Button,
+  List,
+  ListItem,
+  ListItemIcon,
+  Chip,
+  Divider,
+  Paper,
+} from "@mui/material";
+import {
+  Code as CodeIcon,
+  Smartphone as MobileIcon,
+  Search as SearchIcon,
+  Speed as SpeedIcon,
+  Security as SecurityIcon,
+  Support as SupportIcon,
+  Devices as DevicesIcon,
+  ShoppingCart as ShoppingIcon,
+  Palette as PaletteIcon,
+  CheckCircle as CheckIcon,
+  ExpandMore as ExpandMoreIcon,
+  ArrowForward as ArrowIcon,
+} from "@mui/icons-material";
+import HeroBanner from "@/app/components/HeroBanner";
+
+const WebsiteDevelopment = () => {
+  const coreServices = [
+    {
+      icon: <PaletteIcon color="primary" sx={{ fontSize: 50 }} />,
+      title: "Custom Design",
+      description: "Professional designs that reflect your brand identity",
+      features: [
+        "Brand-aligned aesthetics",
+        "User experience optimization",
+        "Modern design trends",
+        "Accessibility compliance",
+        "Responsive layouts",
+      ],
+    },
+    {
+      icon: <CodeIcon color="secondary" sx={{ fontSize: 50 }} />,
+      title: "Web Development",
+      description: "Clean, efficient code built on modern frameworks",
+      features: [
+        "Next.js & React expertise",
+        "Scalable architecture",
+        "API integration",
+        "Database design",
+        "Version control",
+      ],
+    },
+    {
+      icon: <MobileIcon color="success" sx={{ fontSize: 50 }} />,
+      title: "Mobile Responsive",
+      description: "Perfect experience on every device and screen size",
+      features: [
+        "Mobile-first design",
+        "Touch-friendly interfaces",
+        "Fast load times",
+        "Adaptive layouts",
+        "Cross-browser compatibility",
+      ],
+    },
+  ];
+
+  const additionalFeatures = [
+    {
+      icon: <SearchIcon />,
+      title: "SEO Optimization",
+      description: "Get found by your customers with proven SEO strategies",
+    },
+    {
+      icon: <ShoppingIcon />,
+      title: "E-Commerce Solutions",
+      description: "Powerful shopping cart and payment integration",
+    },
+    {
+      icon: <SpeedIcon />,
+      title: "Performance Tuning",
+      description: "Lightning-fast load times for better user experience",
+    },
+    {
+      icon: <SecurityIcon />,
+      title: "Security First",
+      description: "SSL certificates, secure data handling, and compliance",
+    },
+    {
+      icon: <SupportIcon />,
+      title: "Ongoing Support",
+      description: "Maintenance, updates, and technical assistance",
+    },
+    {
+      icon: <DevicesIcon />,
+      title: "CMS Integration",
+      description: "Easy-to-use content management systems",
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "How long does it take to build a website?",
+      answer:
+        "Timeline varies based on complexity, but most projects take 4-12 weeks. Simple landing pages take 2-3 weeks, while complex e-commerce sites may take 12-16 weeks. We provide a detailed timeline during the planning phase.",
+    },
+    {
+      question: "What's included in your maintenance and support?",
+      answer:
+        "Our support packages include regular updates, security patches, backups, performance monitoring, and technical assistance. We offer flexible plans from basic support to comprehensive managed services.",
+    },
+    {
+      question: "Will my website be mobile-friendly?",
+      answer:
+        "Absolutely. Every website we build is fully responsive and optimized for mobile devices. We use mobile-first design principles to ensure excellent experiences on all screen sizes.",
+    },
+    {
+      question: "Do you handle domain and hosting setup?",
+      answer:
+        "Yes, we can help with domain registration and recommend reliable hosting providers. We can manage everything for you, or coordinate with your existing providers.",
+    },
+    {
+      question: "Can you integrate with my existing business systems?",
+      answer:
+        "Yes, we specialize in integrating with CRMs, payment processors, inventory systems, and other business applications to create a seamless workflow.",
+    },
+    {
+      question: "What if I need changes after launch?",
+      answer:
+        "We build ongoing maintenance into our support packages. Any changes, updates, or new features can be implemented quickly and efficiently with our maintenance plans.",
+    },
+  ];
+
+  return (
+    <>
+      <HeroBanner
+        title="Professional Website Development That Drives Growth"
+        subtitle="Custom websites designed to convert visitors into customers"
+        ctaText="Get a Free Website Consultation"
+        ctaLink="/contact"
+        image="/images/cyber.avif"
+      />
+
+      <Container maxWidth="lg" sx={{ py: 8 }}>
+        {/* Value Proposition */}
+        <Box mb={10} textAlign="center">
+          <Chip
+            label="CUSTOM WEB SOLUTIONS"
+            color="primary"
+            sx={{
+              mb: 3,
+              fontWeight: 600,
+              fontSize: "1rem",
+              py: 1.5,
+              px: 2,
+            }}
+          />
+          <Typography
+            variant="h3"
+            component="h2"
+            sx={{
+              fontWeight: 800,
+              mb: 3,
+              fontSize: { xs: "2rem", md: "2.8rem" },
+            }}
+          >
+            Your Website Is Your Best Marketing Tool
+          </Typography>
+          <Typography
+            variant="h6"
+            component="p"
+            sx={{
+              maxWidth: 700,
+              mx: "auto",
+              mb: 5,
+              color: "text.secondary",
+            }}
+          >
+            We build beautiful, fast, and conversion-focused websites that
+            represent your brand and drive business results.
+          </Typography>
+
+          <Grid container spacing={4} sx={{ mt: 4 }}>
+            {coreServices.map((service, index) => (
+              <Grid size={{ xs: 12, md: 4 }} key={index}>
+                <Card
+                  elevation={4}
+                  sx={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    borderTop: `4px solid ${service.icon.props.color}`,
+                  }}
+                >
+                  <CardContent
+                    sx={{
+                      p: 4,
+                      flexGrow: 1,
+                      textAlign: "center",
+                    }}
+                  >
+                    <Box sx={{ mb: 3 }}>{service.icon}</Box>
+                    <Typography
+                      variant="h5"
+                      component="h3"
+                      sx={{
+                        fontWeight: 700,
+                        mb: 2,
+                      }}
+                    >
+                      {service.title}
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 3 }}>
+                      {service.description}
+                    </Typography>
+                    <List dense sx={{ textAlign: "left", mb: 3 }}>
+                      {service.features.map((feature, i) => (
+                        <ListItem key={i} sx={{ px: 0 }}>
+                          <ListItemIcon sx={{ minWidth: 36 }}>
+                            <CheckIcon color="primary" />
+                          </ListItemIcon>
+                          <Typography variant="body2">{feature}</Typography>
+                        </ListItem>
+                      ))}
+                    </List>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        {/* Business Benefits */}
+        <Paper
+          elevation={0}
+          sx={{
+            backgroundColor: "primary.light",
+            color: "primary.contrastText",
+            p: 6,
+            mb: 10,
+            borderRadius: 2,
+          }}
+        >
+          <Grid container spacing={4}>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Typography
+                variant="h3"
+                component="h2"
+                sx={{
+                  fontWeight: 800,
+                  mb: 3,
+                }}
+              >
+                Why Choose Our Web Development Services
+              </Typography>
+              <List>
+                {[
+                  "Custom-built for your specific needs",
+                  "Modern technology stack",
+                  "SEO-optimized from the ground up",
+                  "Secure and compliant",
+                  "Fast performance guaranteed",
+                  "Scalable for future growth",
+                ].map((item, index) => (
+                  <ListItem key={index} sx={{ px: 0 }}>
+                    <ListItemIcon
+                      sx={{ minWidth: 40, color: "primary.contrastText" }}
+                    >
+                      <CheckIcon />
+                    </ListItemIcon>
+                    <Typography variant="body1">{item}</Typography>
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Typography
+                variant="h3"
+                component="h2"
+                sx={{
+                  fontWeight: 800,
+                  mb: 3,
+                }}
+              >
+                Business Benefits You'll Achieve
+              </Typography>
+              <List>
+                {[
+                  "Increased online visibility",
+                  "Higher conversion rates",
+                  "Improved customer engagement",
+                  "Professional brand image",
+                  "Competitive advantage",
+                  "Better ROI on marketing spend",
+                ].map((item, index) => (
+                  <ListItem key={index} sx={{ px: 0 }}>
+                    <ListItemIcon
+                      sx={{ minWidth: 40, color: "primary.contrastText" }}
+                    >
+                      <CheckIcon />
+                    </ListItemIcon>
+                    <Typography variant="body1">{item}</Typography>
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
+          </Grid>
+        </Paper>
+
+        {/* Additional Features */}
+        <Box mb={10}>
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{
+              fontWeight: 800,
+              mb: 5,
+              textAlign: "center",
+            }}
+          >
+            Complete Web Solutions
+          </Typography>
+          <Grid container spacing={3}>
+            {additionalFeatures.map((feature, index) => (
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                <Card elevation={2} sx={{ height: "100%" }}>
+                  <CardContent
+                    sx={{
+                      p: 3,
+                      textAlign: "center",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        color: "primary.main",
+                        mb: 2,
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {feature.icon}
+                    </Box>
+                    <Typography
+                      variant="h6"
+                      component="h4"
+                      sx={{
+                        fontWeight: 600,
+                        mb: 1,
+                      }}
+                    >
+                      {feature.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {feature.description}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        {/* Development Process */}
+        <Box
+          mb={10}
+          sx={{
+            backgroundColor: "grey.50",
+            p: 6,
+            borderRadius: 2,
+          }}
+        >
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{
+              fontWeight: 800,
+              mb: 5,
+              textAlign: "center",
+            }}
+          >
+            Our Development Process
+          </Typography>
+          <Grid container spacing={4}>
+            {[
+              {
+                title: "Discovery",
+                description:
+                  "We learn about your business, goals, and target audience",
+              },
+              {
+                title: "Design",
+                description: "Create wireframes and mockups for your approval",
+              },
+              {
+                title: "Development",
+                description: "Build your website using modern best practices",
+              },
+              {
+                title: "Testing",
+                description:
+                  "Thorough quality assurance across all devices and browsers",
+              },
+              {
+                title: "Optimization",
+                description: "Performance tuning and SEO optimization",
+              },
+              {
+                title: "Launch & Support",
+                description: "Deploy to production and provide ongoing support",
+              },
+            ].map((step, index) => (
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                <Card sx={{ height: "100%", textAlign: "center" }}>
+                  <CardContent sx={{ p: 4 }}>
+                    <Box
+                      sx={{
+                        width: 50,
+                        height: 50,
+                        backgroundColor: "primary.main",
+                        color: "white",
+                        borderRadius: "50%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "1.5rem",
+                        fontWeight: 700,
+                        mb: 2,
+                        mx: "auto",
+                      }}
+                    >
+                      {index + 1}
+                    </Box>
+                    <Typography
+                      variant="h6"
+                      component="h4"
+                      sx={{
+                        fontWeight: 700,
+                        mb: 2,
+                      }}
+                    >
+                      {step.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {step.description}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        {/* FAQ */}
+        <Box mb={10}>
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{
+              fontWeight: 800,
+              mb: 5,
+              textAlign: "center",
+            }}
+          >
+            Website Development Questions
+          </Typography>
+          <Box>
+            {faqs.map((faq, index) => (
+              <Accordion key={index} elevation={2} sx={{ mb: 2 }}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls={`panel${index}-content`}
+                  id={`panel${index}-header`}
+                >
+                  <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+                    {faq.question}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography variant="body1">{faq.answer}</Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
+          </Box>
+        </Box>
+
+        {/* Final CTA */}
+        <Box textAlign="center">
+          <CodeIcon
+            sx={{
+              fontSize: 60,
+              color: "primary.main",
+              mb: 3,
+            }}
+          />
+          <Typography
+            variant="h3"
+            component="h2"
+            sx={{
+              fontWeight: 800,
+              mb: 3,
+            }}
+          >
+            Ready to Build Your Winning Website?
+          </Typography>
+          <Typography
+            variant="h6"
+            component="p"
+            sx={{
+              maxWidth: 700,
+              mx: "auto",
+              mb: 4,
+              color: "text.secondary",
+            }}
+          >
+            Let's create a website that represents your brand and drives real
+            business results.
+          </Typography>
+          <Button
+            variant="contained"
+            size="large"
+            endIcon={<ArrowIcon />}
+            href="/contact"
+            sx={{
+              py: 2,
+              px: 6,
+              fontSize: "1.1rem",
+              mr: 2,
+              mb: { xs: 2, sm: 0 },
+            }}
+          >
+            Contact Us Now
+          </Button>
+          <Button
+            variant="outlined"
+            size="large"
+            href="/get-quote"
+            sx={{
+              py: 2,
+              px: 6,
+              fontSize: "1.1rem",
+            }}
+          >
+            Get a Quote
+          </Button>
+        </Box>
+      </Container>
+    </>
+  );
+};
+
+export default WebsiteDevelopment;

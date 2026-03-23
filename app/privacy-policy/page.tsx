@@ -6,19 +6,19 @@ export const metadata = {
   description:
     "Read Orion IT Service's Privacy Policy detailing how we collect, use, and protect your personal information. Learn about your data rights and our security measures.",
   alternates: {
-    canonical: "https://orionitservice.com/privacy-policy", // Always use absolute URL
+    canonical: "https://www.orionitservice.com/privacy-policy",
   },
   openGraph: {
     title: "Privacy Policy | Orion IT Service Data Protection",
     description:
-      "How we handle and protect your personal information - Orion IT Service's commitment to your privacy",
-    url: "https://orionitservice.com/privacy-policy",
+      "How Orion IT Service collects, uses, and protects your personal information — our commitment to your privacy.",
+    url: "https://www.orionitservice.com/privacy-policy",
     images: [
       {
-        url: "/images/logo.png", // Consider creating a privacy-specific OG image
+        url: "/images/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Orion IT Service Privacy Protection",
+        alt: "Orion IT Service Privacy Policy",
       },
     ],
   },
@@ -34,19 +34,20 @@ export default function PrivacyPolicy() {
       <HeroBanner
         title="Privacy Policy"
         subtitle="How we collect, use, and protect your information"
-        image="/images/avatar5.jpg"
+        image="/images/avatar5.webp"
       />
 
       <Container maxWidth="md" sx={{ py: 6 }}>
         <Box sx={{ mb: 4 }}>
           <Typography variant="h6" gutterBottom>
-            Last Updated: {new Date().toLocaleDateString()}
+            Last Updated: March 23, 2026
           </Typography>
           <Typography variant="body1" paragraph>
             Your privacy is important to us. This Privacy Policy explains how
-            [Your Company Name] ("we," "us," or "our") collects, uses,
-            discloses, and safeguards your information when you visit our
-            website [yourwebsite.com] and use our services.
+            Orion IT Service (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
+            &ldquo;our&rdquo;) collects, uses, discloses, and safeguards your
+            information when you visit our website orionitservice.com and use
+            our services.
           </Typography>
         </Box>
 
@@ -164,8 +165,8 @@ export default function PrivacyPolicy() {
           </ul>
           <Typography variant="body1" paragraph>
             To exercise these rights, please contact us at{" "}
-            <Link href="mailto:privacy@orionitservices.com.">
-              privacy@orionitservice.com.
+            <Link href="mailto:privacy@orionitservice.com">
+              privacy@orionitservice.com
             </Link>
             .
           </Typography>
@@ -217,11 +218,11 @@ export default function PrivacyPolicy() {
             at:
           </Typography>
           <Typography variant="body1" paragraph>
-            <strong>[Your Company Name]</strong>
+            <strong>Orion IT Service</strong>
             <br />
             Email:{" "}
-            <Link href="mailto:privacy@orionitservice.com.">
-              privacy@orionitservice.com.
+            <Link href="mailto:privacy@orionitservice.com">
+              privacy@orionitservice.com
             </Link>
             <br />
             Phone: +1 702-800-9182
