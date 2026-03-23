@@ -54,7 +54,7 @@ const CybersecurityAwareness = () => {
         subtitle="Proven Cybersecurity Awareness Training That Actually Works"
         ctaText="Get Your Security Assessment"
         ctaLink="/contact"
-        image="/images/cyber.avif"
+        image="/images/cyber.webp"
       />
 
       <Container maxWidth="lg" sx={{ py: 8 }}>

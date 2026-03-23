@@ -86,19 +86,7 @@ export default function Services() {
         "24/7 monitoring",
       ],
     },
-    // {
-    //   title: "Data Management",
-    //   description: "Protect and leverage your most valuable asset - your data",
-    //   icon: "storage",
-    //   link: "/services/data",
-    //   features: [
-    //     "Backup & disaster recovery",
-    //     "Data classification",
-    //     "Storage architecture",
-    //     "Data lifecycle management",
-    //     "Compliance solutions",
-    //   ],
-    // },
+
     {
       title: "Managed IT Services",
       description: "Proactive IT management so you can focus on your business",
@@ -198,7 +186,7 @@ export default function Services() {
       <HeroBanner
         title="Our IT Services"
         subtitle="Comprehensive solutions tailored to your business needs"
-        image="/images/networkeng.avif"
+        image="/images/networkeng.webp"
       />
 
       <Container maxWidth="xl" sx={{ py: 8 }}>

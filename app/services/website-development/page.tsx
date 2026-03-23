@@ -147,7 +147,7 @@ const WebsiteDevelopment = () => {
         subtitle="Custom websites designed to convert visitors into customers"
         ctaText="Get a Free Website Consultation"
         ctaLink="/contact"
-        image="/images/cyber.avif"
+        image="/images/cyber.webp"
       />
 
       <Container maxWidth="lg" sx={{ py: 8 }}>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://www.orionitservice.com/security-assessment",
     images: [
       {
-        url: "/images/cyber.avif",
+        url: "/images/cyber.webp",
         width: 1200,
         height: 630,
         alt: "Free Cybersecurity Risk Assessment Tool – Orion IT Service",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Free Cybersecurity Risk Assessment | Orion IT Service",
     description:
       "Identify your business's cybersecurity weak spots. Free interactive assessment with instant scoring and recommendations.",
-    images: ["/images/cyber.avif"],
+    images: ["/images/cyber.webp"],
   },
   robots: { index: true, follow: true },
 };

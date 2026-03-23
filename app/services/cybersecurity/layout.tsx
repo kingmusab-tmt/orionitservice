@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://www.orionitservice.com/services/cybersecurity",
     images: [
       {
-        url: "/images/cyber.avif",
+        url: "/images/cyber.webp",
         width: 1200,
         height: 630,
         alt: "Cybersecurity Awareness Training – Orion IT Service",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Cybersecurity Awareness Training | Orion IT Service",
     description:
       "Transform your employees into your strongest security layer. Phishing simulations, security training, and vulnerability assessments.",
-    images: ["/images/cyber.avif"],
+    images: ["/images/cyber.webp"],
   },
   robots: { index: true, follow: true },
 };

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://www.orionitservice.com/services/networking",
     images: [
       {
-        url: "/images/networkeng.avif",
+        url: "/images/networkeng.webp",
         width: 1200,
         height: 630,
         alt: "Network Engineering Solutions – Orion IT Service",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Network Engineering & IT Networking Solutions | Orion IT Service",
     description:
       "Reliable network design, troubleshooting, and managed network services for businesses in Las Vegas.",
-    images: ["/images/networkeng.avif"],
+    images: ["/images/networkeng.webp"],
   },
   robots: { index: true, follow: true },
 };
