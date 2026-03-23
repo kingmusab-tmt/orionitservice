@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
     if (!contentType || !contentType.includes("application/json")) {
       return NextResponse.json(
         { error: "Invalid content type. Please use application/json" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
       console.error("Missing environment variables:", envErrors);
       return NextResponse.json(
         { error: "Server configuration error" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -91,7 +91,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(
       { success: true, message: "Quote request submitted successfully" },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error processing request:", error);
@@ -100,7 +100,7 @@ export async function POST(req: NextRequest) {
         error: "Internal server error",
         details: error instanceof Error ? error.message : "Unknown error",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -156,13 +156,23 @@ function validateInput(body: any): string[] {
     const validServiceKeys = [
       "cybersecurity",
       "networking",
+      "managedit",
       "manageit",
+      "websitedevelopment",
+      "websiteDevelopment",
       "backup",
       "other",
     ];
     const serviceKeys = Object.keys(body.services);
 
     if (serviceKeys.length === 0) {
+      errors.push("At least one service must be selected");
+    }
+
+    const hasSelectedService = serviceKeys.some(
+      (key) => body.services[key] === true,
+    );
+    if (!hasSelectedService) {
       errors.push("At least one service must be selected");
     }
 
@@ -181,7 +191,7 @@ function validateInput(body: any): string[] {
         body.otherService.trim().length === 0)
     ) {
       errors.push(
-        'Other service description is required when "other" is selected'
+        'Other service description is required when "other" is selected',
       );
     }
   }
@@ -226,8 +236,12 @@ function formatServices(services: any, otherService: string): string {
           return "Cybersecurity Training";
         case "networking":
           return "Network Solutions";
+        case "managedit":
         case "manageit":
           return "Managed IT Services";
+        case "websitedevelopment":
+        case "websiteDevelopment":
+          return "Website Development";
         case "backup":
           return "Data Backup & Recovery";
         case "other":

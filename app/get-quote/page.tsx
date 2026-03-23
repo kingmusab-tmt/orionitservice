@@ -32,8 +32,8 @@ export default function GetQuote() {
     services: {
       cybersecurity: false,
       networking: false,
-      manageit: false,
-      websitedevelopment: false,
+      managedit: false,
+      websiteDevelopment: false,
       backup: false,
       other: false,
     },
@@ -125,8 +125,8 @@ export default function GetQuote() {
         services: {
           cybersecurity: false,
           networking: false,
-          manageit: false,
-          websitedevelopment: false,
+          managedit: false,
+          websiteDevelopment: false,
           backup: false,
           other: false,
         },
@@ -289,9 +289,9 @@ export default function GetQuote() {
                         <FormControlLabel
                           control={
                             <Checkbox
-                              checked={formData.services.manageit}
+                              checked={formData.services.managedit}
                               onChange={handleServiceChange}
-                              name="manageit"
+                              name="managedit"
                               color="primary"
                             />
                           }
@@ -307,9 +307,9 @@ export default function GetQuote() {
                         <FormControlLabel
                           control={
                             <Checkbox
-                              checked={formData.services.websitedevelopment}
+                              checked={formData.services.websiteDevelopment}
                               onChange={handleServiceChange}
-                              name="websitedevelopment"
+                              name="websiteDevelopment"
                               color="primary"
                             />
                           }
