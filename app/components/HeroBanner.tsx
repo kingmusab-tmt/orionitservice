@@ -69,7 +69,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           gutterBottom
           sx={{
             fontWeight: 900,
-            fontSize: { xs: "2.5rem", sm: "3rem", md: "5rem" },
+            fontSize: { xs: "3rem", sm: "3rem", md: "5rem" },
             textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
           }}
         >
@@ -80,7 +80,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           component="p"
           gutterBottom
           sx={{
-            mb: 4,
+            mb: 5,
             textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
           }}
         >

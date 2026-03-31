@@ -89,7 +89,7 @@ const SmallHeader = () => {
           </Box>
 
           {/* Email */}
-          <Box
+          {/* <Box
             suppressHydrationWarning
             sx={{
               display: "flex",
@@ -110,7 +110,7 @@ const SmallHeader = () => {
                 info@orionitservice.com
               </Link>
             </Typography>
-          </Box>
+          </Box> */}
 
           {/* Support Email */}
           <Box

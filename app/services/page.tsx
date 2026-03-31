@@ -107,7 +107,7 @@ export default function Services() {
       icon: <WebIcon sx={{ fontSize: 60 }} />,
       link: "/services/website-development",
       features: [
-        "Custom web Application development",
+        "Custom web application development",
         "Responsive & mobile-friendly",
         "E-commerce solutions",
         "SEO optimization",
