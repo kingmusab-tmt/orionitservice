@@ -178,6 +178,20 @@ const SmallHeader = () => {
           >
             <TwitterIcon fontSize="small" />
           </IconButton>
+          <IconButton
+            size="small"
+            color="inherit"
+            href="https://linkedin.com/orionitservice"
+            target="_blank"
+            sx={{
+              color: "text.secondary",
+              "&:hover": {
+                color: theme.palette.mode === "dark" ? "#0A66C2" : "#0A66C2",
+              },
+            }}
+          >
+            <LinkedInIcon fontSize="small" />
+          </IconButton>
         </Box>
       </Toolbar>
     </AppBar>
