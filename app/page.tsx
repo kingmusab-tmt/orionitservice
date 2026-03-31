@@ -272,7 +272,7 @@ export default function Home() {
       >
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid textAlign="center" size={{ xs: 12, md: 6 }} mb={6}>
               <Chip
                 label="WHY CHOOSE US"
                 color="primary"
