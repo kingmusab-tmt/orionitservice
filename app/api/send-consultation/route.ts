@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     ) {
       return NextResponse.json(
         { message: "Missing required fields" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
           formData.message || "No additional message"
         }</li>
         </ul>
-        <p>If you have any immediate questions, please reply to this email or call us at +1 702-800-9182.</p>
+        <p>If you have any immediate questions, please reply to this email or call us at +1 888 841 2885.</p>
         <br/>
         <p>Best regards,</p>
         <p>The Orion IT Team</p>
@@ -88,13 +88,13 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       { message: "Consultation request sent successfully" },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error sending consultation request:", error);
     return NextResponse.json(
       { message: "Error sending consultation request" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

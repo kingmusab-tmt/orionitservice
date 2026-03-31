@@ -225,7 +225,7 @@ export default function PrivacyPolicy() {
               privacy@orionitservice.com
             </Link>
             <br />
-            Phone: +1 702-800-9182
+            Phone: +1 888 841 2885
             <br />
             Address: 304 S. Jones Blvd #4809 Las Vegas, NV 89107
           </Typography>

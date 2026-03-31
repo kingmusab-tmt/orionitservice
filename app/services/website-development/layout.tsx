@@ -6,13 +6,12 @@ export const metadata: Metadata = {
   description:
     "Custom website design and development for Las Vegas businesses. Orion IT Service builds fast, mobile-responsive, SEO-optimized websites using Next.js and React — from small business sites to enterprise platforms.",
   keywords:
-    "website development Las Vegas, custom web design Nevada, Next.js development, React website development, small business website Las Vegas, e-commerce development Nevada, SEO website design, mobile responsive website Las Vegas",
+    "website development Las Vegas, custom web application Nevada, Next.js development, React website development, small business website Las Vegas, e-commerce development Nevada, SEO website design, mobile responsive website Las Vegas",
   alternates: {
     canonical: "https://www.orionitservice.com/services/website-development",
   },
   openGraph: {
-    title:
-      "Website Development Las Vegas | Custom Web Design | Orion IT Service",
+    title: "Website Development Las Vegas | Custom Web App | Orion IT Service",
     description:
       "Professional custom websites built with Next.js and React — fast, mobile-first, SEO-optimized. Serving Las Vegas businesses and beyond.",
     url: "https://www.orionitservice.com/services/website-development",
@@ -27,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Las Vegas | Custom Web Design",
+    title: "Website Development Las Vegas | Custom Web App",
     description:
       "Custom Next.js websites — fast, SEO-optimized, and mobile-first. Built for Las Vegas businesses.",
     images: ["/images/og-image.webp"],
@@ -47,7 +46,7 @@ export default function WebsiteDevelopmentLayout({
       "https://www.orionitservice.com/services/website-development#service",
     name: "Website Development",
     description:
-      "Custom website design and development using Next.js and React — mobile-responsive, SEO-optimized, and built for performance. Serving small businesses to enterprise clients in Las Vegas and nationwide.",
+      "Custom web application development using Next.js and React — mobile-responsive, SEO-optimized, and built for performance. Serving small businesses to enterprise clients in Las Vegas and nationwide.",
     url: "https://www.orionitservice.com/services/website-development",
     provider: {
       "@type": "Organization",

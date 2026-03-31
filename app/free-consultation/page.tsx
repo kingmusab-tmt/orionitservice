@@ -54,7 +54,7 @@ const ConsultationPage = () => {
   const handleChange = (
     e:
       | React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-      | { target: { name: string; value: string } }
+      | { target: { name: string; value: string } },
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -341,7 +341,7 @@ const ConsultationPage = () => {
                     <PhoneIcon color="primary" />
                   </ListItemIcon>
                   <Typography variant="body1">
-                    <strong>Call us:</strong> +1 702-800-9182
+                    <strong>Call us:</strong> +1 888 841 2885
                   </Typography>
                 </ListItem>
                 <ListItem sx={{ px: 0 }}>

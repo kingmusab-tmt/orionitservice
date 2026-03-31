@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
     if (!contentType || !contentType.includes("application/json")) {
       return NextResponse.json(
         { error: "Invalid content type. Please use application/json" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
       console.error("Missing environment variables:", envErrors);
       return NextResponse.json(
         { error: "Server configuration error" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -64,7 +64,7 @@ export async function POST(req: NextRequest) {
           body.message || "No additional message"
         }</li>
         </ul>
-        <p>If you have any immediate questions, please reply to this email or call us at +1 702-800-9182.</p>
+        <p>If you have any immediate questions, please reply to this email or call us at +1 888 841 2885.</p>
         <br/>
         <p>Best regards,</p>
         <p>The Orion IT Team</p>
@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(
       { success: true, message: "Contact request submitted successfully" },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error processing request:", error);
@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
         error: "Internal server error",
         details: error instanceof Error ? error.message : "Unknown error",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

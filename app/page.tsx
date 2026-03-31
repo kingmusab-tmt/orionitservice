@@ -113,7 +113,7 @@ export default function Home() {
       icon: <WebIcon fontSize="large" color="primary" />,
       link: "/services/website-development",
       features: [
-        "Custom website design",
+        "Custom web Applications",
         "Responsive & mobile-friendly",
         "E-commerce solutions",
         "SEO optimization",

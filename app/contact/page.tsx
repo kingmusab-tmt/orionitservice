@@ -142,10 +142,10 @@ export default function Contact() {
                   <Phone color="primary" sx={{ mr: 1.5 }} />
                   <Typography
                     component="a"
-                    href="tel:+17028009182"
+                    href="tel:+1 888 841 2885"
                     sx={{ textDecoration: "none", color: "inherit" }}
                   >
-                    +1 702-800-9182
+                    +1 888 841 2885
                   </Typography>
                 </Box>
 
