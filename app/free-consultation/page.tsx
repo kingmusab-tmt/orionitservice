@@ -131,6 +131,37 @@ const ConsultationPage = () => {
 
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
+      {/* Trust Indicators */}
+      <Box sx={{ mt: 5, mb: 5, textAlign: "center" }}>
+        <Typography variant="h4" component="h2" sx={{ fontWeight: 800, mb: 3 }}>
+          Trusted By Businesses Across Industries
+        </Typography>
+        <Grid container spacing={4} justifyContent="center" sx={{ mt: 4 }}>
+          {[
+            "Healthcare Providers",
+            "Financial Services",
+            "Legal Firms",
+            "Manufacturing",
+            "Education",
+            "Nonprofits",
+          ].map((industry) => (
+            <Grid size={{ xs: 12, sm: 4, md: 2 }} key={industry}>
+              <Chip
+                label={industry}
+                variant="outlined"
+                sx={{
+                  px: 2,
+                  py: 1.5,
+                  fontSize: "0.9rem",
+                  borderWidth: 2,
+                  borderColor: "primary.main",
+                }}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+
       <Grid container spacing={6}>
         {/* Form Column */}
         <Grid size={{ xs: 12, md: 7 }}>
@@ -375,37 +406,6 @@ const ConsultationPage = () => {
           </Box>
         </Grid>
       </Grid>
-
-      {/* Trust Indicators */}
-      <Box sx={{ mt: 10, textAlign: "center" }}>
-        <Typography variant="h4" component="h2" sx={{ fontWeight: 800, mb: 3 }}>
-          Trusted By Businesses Across Industries
-        </Typography>
-        <Grid container spacing={4} justifyContent="center" sx={{ mt: 4 }}>
-          {[
-            "Healthcare Providers",
-            "Financial Services",
-            "Legal Firms",
-            "Manufacturing",
-            "Education",
-            "Nonprofits",
-          ].map((industry) => (
-            <Grid size={{ xs: 12, sm: 4, md: 2 }} key={industry}>
-              <Chip
-                label={industry}
-                variant="outlined"
-                sx={{
-                  px: 2,
-                  py: 1.5,
-                  fontSize: "0.9rem",
-                  borderWidth: 2,
-                  borderColor: "primary.main",
-                }}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
 
       {/* Snackbar Notification */}
       <Snackbar

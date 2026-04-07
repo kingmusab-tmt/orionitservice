@@ -169,6 +169,118 @@ export default function Home() {
           </Grid>
         </Container>
       </Paper>
+      <StyledSection sx={{ backgroundColor: theme.palette.grey[50] }}>
+        <Container maxWidth="lg">
+          <Box textAlign="center" mb={6}>
+            <Chip
+              label="OUR EXPERTISE"
+              color="primary"
+              sx={{
+                mb: 3,
+                fontWeight: 600,
+                fontSize: "0.875rem",
+                [theme.breakpoints.up("md")]: {
+                  fontSize: "1rem",
+                },
+                py: 1,
+                px: 2,
+              }}
+            />
+            <Typography
+              variant={isMobile ? "h3" : "h2"}
+              sx={{
+                fontWeight: 800,
+                mb: 3,
+                fontSize: isMobile ? "1.8rem" : isTablet ? "2rem" : "2.5rem",
+              }}
+            >
+              What Sets Our Network Team Apart
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                maxWidth: 700,
+                mx: "auto",
+                color: "text.secondary",
+                px: isMobile ? 2 : 0,
+              }}
+            >
+              Deep technical expertise meets business-focused solutions
+            </Typography>
+          </Box>
+
+          <Grid container spacing={3}>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Paper elevation={3} sx={{ p: 3, height: "100%" }}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: 700,
+                    mb: 3,
+                    color: "primary.main",
+                  }}
+                >
+                  Technical Excellence
+                </Typography>
+                <List>
+                  {[
+                    "Deep understanding of network architectures (traditional & cloud)",
+                    "Proven ability to troubleshoot and resolve issues quickly",
+                    "Strong skills in routing, switching, and wireless technologies",
+                    "Cybersecurity expertise including access control and intrusion prevention",
+                    "Commitment to documentation and industry best practices",
+                  ].map((item, index) => (
+                    <ListItem
+                      key={index}
+                      sx={{ px: 0, alignItems: "flex-start" }}
+                    >
+                      <ListItemIcon sx={{ minWidth: 36, mt: "2px" }}>
+                        <CheckIcon color="primary" />
+                      </ListItemIcon>
+                      <Typography variant="body1">{item}</Typography>
+                    </ListItem>
+                  ))}
+                </List>
+              </Paper>
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Paper elevation={3} sx={{ p: 3, height: "100%" }}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: 700,
+                    mb: 3,
+                    color: "primary.main",
+                  }}
+                >
+                  Business Benefits
+                </Typography>
+                <List>
+                  {[
+                    "Your business stays connected, protected, and ahead of the curve",
+                    "Skilled engineers who quickly diagnose and fix issues",
+                    "Rapid call response and issue resolution",
+                    "Proactive approach prevents problems before they occur",
+                    "Flexible pricing - pay only for what you need",
+                    "Friendly, professional support that goes the extra mile",
+                  ].map((item, index) => (
+                    <ListItem
+                      key={index}
+                      sx={{ px: 0, alignItems: "flex-start" }}
+                    >
+                      <ListItemIcon sx={{ minWidth: 36, mt: "2px" }}>
+                        <CheckIcon color="primary" />
+                      </ListItemIcon>
+                      <Typography variant="body1">{item}</Typography>
+                    </ListItem>
+                  ))}
+                </List>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Container>
+      </StyledSection>
 
       {/* Services Section */}
       <StyledSection as="section" id="services">
@@ -430,119 +542,6 @@ export default function Home() {
         </Container>
       </StyledSection>
 
-      <StyledSection sx={{ backgroundColor: theme.palette.grey[50] }}>
-        <Container maxWidth="lg">
-          <Box textAlign="center" mb={6}>
-            <Chip
-              label="OUR EXPERTISE"
-              color="primary"
-              sx={{
-                mb: 3,
-                fontWeight: 600,
-                fontSize: "0.875rem",
-                [theme.breakpoints.up("md")]: {
-                  fontSize: "1rem",
-                },
-                py: 1,
-                px: 2,
-              }}
-            />
-            <Typography
-              variant={isMobile ? "h3" : "h2"}
-              sx={{
-                fontWeight: 800,
-                mb: 3,
-                fontSize: isMobile ? "1.8rem" : isTablet ? "2rem" : "2.5rem",
-              }}
-            >
-              What Sets Our Network Team Apart
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              sx={{
-                maxWidth: 700,
-                mx: "auto",
-                color: "text.secondary",
-                px: isMobile ? 2 : 0,
-              }}
-            >
-              Deep technical expertise meets business-focused solutions
-            </Typography>
-          </Box>
-
-          <Grid container spacing={3}>
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Paper elevation={3} sx={{ p: 3, height: "100%" }}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 700,
-                    mb: 3,
-                    color: "primary.main",
-                  }}
-                >
-                  Technical Excellence
-                </Typography>
-                <List>
-                  {[
-                    "Deep understanding of network architectures (traditional & cloud)",
-                    "Proven ability to troubleshoot and resolve issues quickly",
-                    "Strong skills in routing, switching, and wireless technologies",
-                    "Cybersecurity expertise including access control and intrusion prevention",
-                    "Commitment to documentation and industry best practices",
-                  ].map((item, index) => (
-                    <ListItem
-                      key={index}
-                      sx={{ px: 0, alignItems: "flex-start" }}
-                    >
-                      <ListItemIcon sx={{ minWidth: 36, mt: "2px" }}>
-                        <CheckIcon color="primary" />
-                      </ListItemIcon>
-                      <Typography variant="body1">{item}</Typography>
-                    </ListItem>
-                  ))}
-                </List>
-              </Paper>
-            </Grid>
-
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Paper elevation={3} sx={{ p: 3, height: "100%" }}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 700,
-                    mb: 3,
-                    color: "primary.main",
-                  }}
-                >
-                  Business Benefits
-                </Typography>
-                <List>
-                  {[
-                    "Your business stays connected, protected, and ahead of the curve",
-                    "Skilled engineers who quickly diagnose and fix issues",
-                    "Rapid call response and issue resolution",
-                    "Proactive approach prevents problems before they occur",
-                    "Flexible pricing - pay only for what you need",
-                    "Friendly, professional support that goes the extra mile",
-                  ].map((item, index) => (
-                    <ListItem
-                      key={index}
-                      sx={{ px: 0, alignItems: "flex-start" }}
-                    >
-                      <ListItemIcon sx={{ minWidth: 36, mt: "2px" }}>
-                        <CheckIcon color="primary" />
-                      </ListItemIcon>
-                      <Typography variant="body1">{item}</Typography>
-                    </ListItem>
-                  ))}
-                </List>
-              </Paper>
-            </Grid>
-          </Grid>
-        </Container>
-      </StyledSection>
-
       <StyledSection>
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
@@ -626,8 +625,8 @@ export default function Home() {
             variant="subtitle1"
             component="p"
             sx={{
-              mb: 4,
-              maxWidth: 700,
+              mb: 5,
+              maxWidth: 800,
               margin: "0 auto",
               opacity: 0.9,
               px: isMobile ? 2 : 0,
@@ -652,6 +651,7 @@ export default function Home() {
               sx={{
                 px: 4,
                 py: 1.5,
+                mt: 2,
                 fontSize: "1rem",
                 [theme.breakpoints.up("sm")]: {
                   fontSize: "1.1rem",
