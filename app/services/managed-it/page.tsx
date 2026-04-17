@@ -122,6 +122,78 @@ const ManagedItServices = () => {
       answer:
         "We maintain compliance frameworks for HIPAA, PCI DSS, and other standards relevant to your industry.",
     },
+    {
+      question: "What is included in managed IT services each month?",
+      answer:
+        "Managed IT services typically include proactive monitoring, patching, endpoint protection, help desk support, backup oversight, and strategic guidance. We customize scope based on your business priorities and technology environment.",
+    },
+    {
+      question: "Can managed IT reduce downtime for my business?",
+      answer:
+        "Yes. Continuous monitoring, preventative maintenance, and faster incident response reduce unplanned outages and improve system reliability over time.",
+    },
+    {
+      question: "Do you support remote and hybrid teams?",
+      answer:
+        "Yes. We support hybrid and remote work by securing endpoints, optimizing connectivity, managing access controls, and providing responsive remote support to distributed teams.",
+    },
+    {
+      question: "How do managed IT services improve cybersecurity?",
+      answer:
+        "Managed IT improves security through patch management, antivirus and endpoint controls, account policy enforcement, backup strategy, and ongoing monitoring for suspicious activity.",
+    },
+    {
+      question: "Will we still have control over our systems?",
+      answer:
+        "Absolutely. You retain ownership and decision-making control. We provide recommendations, execution, and reporting so you have visibility while reducing your team’s day-to-day IT burden.",
+    },
+    {
+      question: "Can you work with our existing software and vendors?",
+      answer:
+        "Yes. We work with your current stack and third-party vendors, coordinate technical issues, and help streamline support across multiple platforms and providers.",
+    },
+    {
+      question: "Do managed IT services help with planning and budgeting?",
+      answer:
+        "Yes. We provide technology roadmaps, lifecycle planning, and budgeting guidance so you can make informed IT investments and avoid surprise costs.",
+    },
+    {
+      question: "How quickly can onboarding start?",
+      answer:
+        "Most onboarding projects begin with discovery and documentation, followed by priority stabilization work. Timelines vary by environment size, but we aim to deliver early improvements quickly.",
+    },
+  ];
+
+  const approachSteps = [
+    {
+      title: "Environment Discovery",
+      description:
+        "We assess your current infrastructure, users, devices, software, and operational pain points to establish a clear baseline.",
+    },
+    {
+      title: "Stabilization Plan",
+      description:
+        "We prioritize high-impact fixes for reliability, security, and user productivity so immediate issues stop recurring.",
+    },
+    {
+      title: "Execution and Optimization",
+      description:
+        "We implement the roadmap with proactive maintenance, policy improvements, and performance tuning across systems.",
+    },
+    {
+      title: "Ongoing IT Partnership",
+      description:
+        "We continuously monitor, support, and plan with your business to keep technology aligned with growth goals.",
+    },
+  ];
+
+  const itChallenges = [
+    "Recurring support tickets and unresolved root causes",
+    "Unexpected downtime affecting team productivity",
+    "Outdated systems and delayed patch cycles",
+    "Security gaps caused by inconsistent controls",
+    "Limited internal IT capacity for strategic projects",
+    "Rising technology costs without clear ROI",
   ];
 
   return (
@@ -134,6 +206,55 @@ const ManagedItServices = () => {
       />
 
       <Container maxWidth="lg" sx={{ py: 8 }}>
+        {/* Intro Section */}
+        <Box mb={10}>
+          <Chip
+            label="MANAGED IT SERVICES"
+            color="primary"
+            sx={{
+              mb: 2,
+              fontWeight: 700,
+              letterSpacing: 0.8,
+            }}
+          />
+          <Typography
+            variant="h3"
+            component="h2"
+            sx={{
+              fontWeight: 800,
+              mb: 3,
+              fontSize: { xs: "2rem", md: "2.8rem" },
+            }}
+          >
+            Comprehensive Managed IT Support For Growing Businesses
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 980,
+              color: "text.secondary",
+              lineHeight: 1.9,
+              mb: 2,
+            }}
+          >
+            Modern businesses depend on reliable technology to operate,
+            communicate, and scale. Orion IT Service provides managed IT
+            services designed to reduce disruption, improve security, and keep
+            your environment stable. From proactive monitoring and maintenance
+            to responsive help desk support and strategic planning, we help your
+            organization move from reactive fixes to predictable IT operations.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ maxWidth: 980, color: "text.secondary", lineHeight: 1.9 }}
+          >
+            Our team works as an extension of your business, handling day-to-day
+            technical needs while helping leadership make smarter long-term IT
+            decisions. Whether you need full-service support or co-managed IT,
+            we align technology performance with your business goals.
+          </Typography>
+        </Box>
+
         {/* Value Proposition */}
         <Box mb={10} textAlign="center">
           <Chip
@@ -236,6 +357,106 @@ const ManagedItServices = () => {
               </Grid>
             ))}
           </Grid>
+        </Box>
+
+        {/* Service Approach */}
+        <Box mb={10}>
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{ fontWeight: 800, mb: 2, textAlign: "center" }}
+          >
+            Our Managed IT Service Approach
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 860,
+              mx: "auto",
+              mb: 5,
+              color: "text.secondary",
+              lineHeight: 1.85,
+              textAlign: "center",
+            }}
+          >
+            We use a structured, business-focused process to improve system
+            reliability, strengthen security posture, and support operational
+            growth without overwhelming your internal team.
+          </Typography>
+          <Grid container spacing={3}>
+            {approachSteps.map((step, index) => (
+              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={step.title}>
+                <Paper elevation={2} sx={{ p: 3, height: "100%" }}>
+                  <Typography
+                    variant="subtitle2"
+                    sx={{ color: "primary.main", fontWeight: 700, mb: 1 }}
+                  >
+                    STEP {index + 1}
+                  </Typography>
+                  <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                    {step.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {step.description}
+                  </Typography>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        {/* Common Challenges */}
+        <Box mb={10}>
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{ fontWeight: 800, mb: 3, textAlign: "center" }}
+          >
+            Common Managed IT Problems We Solve
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 900,
+              mx: "auto",
+              mb: 4,
+              color: "text.secondary",
+              lineHeight: 1.85,
+              textAlign: "center",
+            }}
+          >
+            Many businesses struggle with recurring technical issues,
+            unpredictable support outcomes, and limited visibility into IT
+            performance. We help resolve core challenges such as:
+          </Typography>
+          <Paper elevation={1} sx={{ p: 3 }}>
+            <Typography variant="body1" sx={{ lineHeight: 1.9 }}>
+              {itChallenges.join(". ")}.
+            </Typography>
+          </Paper>
+          <Typography
+            variant="body1"
+            sx={{ mt: 3, color: "text.secondary", lineHeight: 1.9 }}
+          >
+            Scenario: A growing company relies on a small internal team while
+            managing more users, devices, and cloud applications than ever. IT
+            issues pile up, ticket queues get longer, patching becomes
+            inconsistent, and leadership loses confidence in system stability.
+            Employees experience productivity loss from slow support turnaround
+            and recurring disruptions.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ mt: 2, color: "text.secondary", lineHeight: 1.9 }}
+          >
+            Solution: We onboard the environment, establish proactive
+            monitoring, standardize patch and endpoint policies, strengthen
+            documentation, and provide structured help desk workflows. With
+            continuous oversight and strategic reviews, your business gets more
+            predictable IT performance, faster issue resolution, and a clearer
+            roadmap for technology growth.
+          </Typography>
+          <Divider sx={{ mt: 4 }} />
         </Box>
 
         {/* Business Benefits */}

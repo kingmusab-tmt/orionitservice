@@ -134,6 +134,9 @@ const Header = () => {
                 >
                   Services
                 </MenuItem>
+                <MenuItem onClick={handleClose} component={Link} href="/blog">
+                  Blog
+                </MenuItem>
                 <MenuItem
                   onClick={handleClose}
                   component={Link}
@@ -165,6 +168,13 @@ const Header = () => {
                 href="/services"
               >
                 Services
+              </Button>
+              <Button
+                color={scrolled ? "primary" : "secondary"}
+                component={Link}
+                href="/blog"
+              >
+                Blog
               </Button>
               <Button
                 color={scrolled ? "primary" : "secondary"}

@@ -121,6 +121,83 @@ const NetworkingSolutions = () => {
       answer:
         "Most business-grade equipment should be evaluated every 3-5 years. We'll advise when upgrades make financial sense.",
     },
+    {
+      question: "Why is my business WiFi slow even with fast internet?",
+      answer:
+        "Slow business WiFi is often caused by poor access point placement, channel congestion, outdated hardware, or too many devices competing for airtime. We perform wireless analysis and optimize coverage, channels, and configuration for better performance.",
+    },
+    {
+      question: "Do you provide secure guest WiFi setup for offices?",
+      answer:
+        "Yes. We configure isolated guest networks so visitors can access the internet without exposing your internal business systems, files, or devices.",
+    },
+    {
+      question: "Can you help with network security and firewall setup?",
+      answer:
+        "Yes. We design and manage firewall rules, segmentation, and secure remote access policies to reduce unauthorized access and improve overall network security posture.",
+    },
+    {
+      question: "How do I know if my network needs an upgrade?",
+      answer:
+        "Common signs include frequent outages, dropped connections, poor video call quality, slow file transfers, and growing device counts. We assess your current environment and recommend right-sized upgrades.",
+    },
+    {
+      question: "Do you support multi-site or hybrid office networks?",
+      answer:
+        "Yes. We support single-office, multi-location, and hybrid environments by designing reliable connectivity and secure access for both in-office and remote teams.",
+    },
+    {
+      question: "What is included in network monitoring services?",
+      answer:
+        "Network monitoring includes device availability checks, performance metrics, traffic visibility, alerting on unusual behavior, and proactive intervention to reduce downtime.",
+    },
+    {
+      question: "Can you improve VoIP and video call quality on our network?",
+      answer:
+        "Yes. We optimize network traffic with QoS policies, bandwidth prioritization, and configuration tuning so voice and video applications remain stable and clear.",
+    },
+    {
+      question: "How often should network maintenance be performed?",
+      answer:
+        "Most businesses should schedule monthly or quarterly maintenance depending on complexity. Regular reviews, firmware updates, and configuration checks help prevent unexpected failures.",
+    },
+    {
+      question: "Do you provide documentation after network changes?",
+      answer:
+        "Yes. We provide clear documentation for network topology, device configuration, IP plans, and change history so your team has better visibility and continuity.",
+    },
+  ];
+
+  const approachSteps = [
+    {
+      title: "Network Discovery",
+      description:
+        "We review your current infrastructure, device health, WiFi coverage, bottlenecks, and business requirements.",
+    },
+    {
+      title: "Stability and Security Plan",
+      description:
+        "We prioritize fixes and improvements that increase reliability, harden security, and reduce recurring disruptions.",
+    },
+    {
+      title: "Implementation and Optimization",
+      description:
+        "We deploy the recommended changes, optimize configuration, and validate performance under real-world usage.",
+    },
+    {
+      title: "Ongoing Monitoring and Support",
+      description:
+        "We provide maintenance, documentation, and responsive support to keep your network stable as your business grows.",
+    },
+  ];
+
+  const networkChallenges = [
+    "Frequent internet outages and unstable connectivity",
+    "Slow WiFi performance and dead zones in key work areas",
+    "Dropped video calls and poor VoIP call quality",
+    "Security gaps caused by misconfigured firewalls or outdated firmware",
+    "Limited visibility into network traffic and device health",
+    "Difficulty scaling infrastructure as teams and devices grow",
   ];
 
   return (
@@ -133,6 +210,53 @@ const NetworkingSolutions = () => {
       />
 
       <Container maxWidth="lg" sx={{ py: 8 }}>
+        {/* Intro Section */}
+        <Box mb={10}>
+          <Chip
+            label="BUSINESS NETWORKING SERVICES"
+            color="primary"
+            sx={{ mb: 2, fontWeight: 700, letterSpacing: 0.8 }}
+          />
+          <Typography
+            variant="h3"
+            component="h2"
+            sx={{
+              fontWeight: 800,
+              mb: 3,
+              fontSize: { xs: "2rem", md: "2.8rem" },
+            }}
+          >
+            Comprehensive Networking Solutions For Modern Operations
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 980,
+              color: "text.secondary",
+              lineHeight: 1.9,
+              mb: 2,
+            }}
+          >
+            A reliable network is the foundation of business productivity,
+            communication, and security. Orion IT Service delivers end-to-end
+            networking services that help businesses reduce downtime, improve
+            speed, and keep teams connected across office, remote, and hybrid
+            work environments. From troubleshooting and maintenance to
+            infrastructure upgrades and security hardening, we build practical
+            networking solutions aligned with how your business actually works.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ maxWidth: 980, color: "text.secondary", lineHeight: 1.9 }}
+          >
+            Our approach combines network performance optimization, secure
+            wireless design, firewall management, and proactive support so your
+            technology can scale with confidence. Whether you need urgent issue
+            resolution or long-term network planning, we help you create a
+            stable infrastructure that supports growth and daily operations.
+          </Typography>
+        </Box>
+
         {/* Core Services */}
         <Box mb={10} textAlign="center">
           {/* <Chip
@@ -229,6 +353,116 @@ const NetworkingSolutions = () => {
               </Grid>
             ))}
           </Grid>
+        </Box>
+
+        {/* Service Approach */}
+        <Box mb={10}>
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{ fontWeight: 800, mb: 2, textAlign: "center" }}
+          >
+            Our Networking Service Approach
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 860,
+              mx: "auto",
+              mb: 5,
+              color: "text.secondary",
+              lineHeight: 1.85,
+              textAlign: "center",
+            }}
+          >
+            We use a structured process to deliver measurable improvements in
+            reliability, performance, and security. This helps your business
+            avoid reactive fixes and move toward a more stable, scalable network
+            environment.
+          </Typography>
+          <Grid container spacing={3}>
+            {approachSteps.map((step, index) => (
+              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={step.title}>
+                <Paper elevation={2} sx={{ p: 3, height: "100%" }}>
+                  <Typography
+                    variant="subtitle2"
+                    sx={{ color: "primary.main", fontWeight: 700, mb: 1 }}
+                  >
+                    STEP {index + 1}
+                  </Typography>
+                  <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                    {step.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {step.description}
+                  </Typography>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        {/* Common Challenges */}
+        <Box mb={10}>
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{ fontWeight: 800, mb: 3, textAlign: "center" }}
+          >
+            Common Network Problems We Solve
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 900,
+              mx: "auto",
+              mb: 4,
+              color: "text.secondary",
+              lineHeight: 1.85,
+              textAlign: "center",
+            }}
+          >
+            Many organizations struggle with recurring performance issues,
+            inconsistent wireless coverage, and limited visibility into network
+            health. We help resolve core challenges such as:
+          </Typography>
+          <Paper elevation={1} sx={{ p: 3 }}>
+            <Typography variant="body1" sx={{ lineHeight: 1.9 }}>
+              {networkChallenges.join(". ")}.
+            </Typography>
+          </Paper>
+          <Typography
+            variant="body1"
+            sx={{
+              mt: 3,
+              color: "text.secondary",
+              lineHeight: 1.9,
+            }}
+          >
+            Scenario: A growing office has fast internet service, but employees
+            still report slow cloud apps, dropped video meetings, and unstable
+            WiFi in conference rooms. The root problem is usually not raw
+            bandwidth alone. In many cases, the network has aging switches,
+            overlapping wireless channels, poor access point placement, and no
+            traffic prioritization for critical tools.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              mt: 2,
+              color: "text.secondary",
+              lineHeight: 1.9,
+            }}
+          >
+            Solution: We start with a full network assessment to map current
+            topology, identify bottlenecks, and measure real-world performance.
+            Then we optimize wireless design, update network hardware where
+            needed, apply QoS policies for voice and video traffic, and improve
+            segmentation and security controls. This gives your team a more
+            reliable, secure, and scalable network environment that supports
+            daily operations without recurring disruptions.
+          </Typography>
+          <Divider sx={{ mt: 4 }} />
         </Box>
 
         {/* Additional Services */}

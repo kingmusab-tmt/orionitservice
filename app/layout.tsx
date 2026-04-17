@@ -22,13 +22,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.orionitservice.com"),
   title: {
-    default: "Orion IT Service | Cybersecurity, Managed IT & Networking",
+    default:
+      "Managed IT Services in Las Vegas | Cybersecurity & Network Solutions",
     template: "%s | Orion IT Service",
   },
   description:
-    "Orion IT Service provides expert cybersecurity awareness training, managed IT support, network engineering, and website development for businesses in Las Vegas and nationwide.",
+    "Managed IT Services in Las Vegas from Orion IT Service — proactive monitoring, network solutions, cybersecurity, help desk support, and website development. Serving businesses across the US and UK globally.",
   keywords:
-    "IT services Las Vegas, cybersecurity training, managed IT services, network solutions, phishing prevention, business networking, IT support, IT consulting, cybersecurity awareness, network security, IT compliance, IT infrastructure management, website development, IT service provider, Orion IT Service, Las Vegas IT company, Nevada IT services",
+    "managed IT services Las Vegas, IT support Las Vegas, managed IT services, network solutions, cybersecurity solutions, IT consulting, business IT support, network infrastructure, help desk support, managed IT support, cybersecurity awareness training, phishing prevention, IT compliance, website development, Las Vegas IT company, IT service provider",
   authors: [
     { name: "Orion IT Service", url: "https://www.orionitservice.com" },
   ],
@@ -56,9 +57,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.orionitservice.com",
     siteName: "Orion IT Service",
-    title: "Orion IT Service | Cybersecurity, Managed IT & Networking",
+    title: "Managed IT Services in Las Vegas | Orion IT Service",
     description:
-      "Expert IT services for businesses — cybersecurity training, managed IT, network engineering, and website development. Based in Las Vegas, serving clients nationwide.",
+      "Proactive Managed IT Services in Las Vegas — network infrastructure, cybersecurity solutions, help desk support, and website development for businesses. Serving US, UK, and global clients.",
     images: [
       {
         url: "/images/og-image.webp",
@@ -72,9 +73,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@orionitservice",
     creator: "@orionitservice",
-    title: "Orion IT Service | Cybersecurity, Managed IT & Networking",
+    title:
+      "Managed IT Services in Las Vegas | Cybersecurity & Network Solutions",
     description:
-      "Expert IT services for businesses — cybersecurity training, managed IT, network engineering, and website development.",
+      "Managed IT Services in Las Vegas — proactive monitoring, cybersecurity protection, network solutions, and website development for your business.",
     images: ["/images/og-image.webp"],
   },
 };
@@ -93,7 +95,7 @@ export default function RootLayout({
     logo: "https://www.orionitservice.com/images/logo.webp",
     image: "https://www.orionitservice.com/images/og-image.webp",
     description:
-      "Professional IT services including cybersecurity awareness training, managed IT support, network engineering, and website development for businesses in Las Vegas and nationwide.",
+      "Managed IT Services in Las Vegas providing proactive network monitoring, cybersecurity solutions, help desk support, and website development. Serving the US, UK, and global businesses.",
     telephone: "+1-702-800-9182",
     email: "info@orionitservice.com",
     address: {

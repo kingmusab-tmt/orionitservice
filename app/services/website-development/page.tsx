@@ -138,6 +138,79 @@ const WebsiteDevelopment = () => {
       answer:
         "We build ongoing maintenance into our support packages. Any changes, updates, or new features can be implemented quickly and efficiently with our maintenance plans.",
     },
+    {
+      question:
+        "Can you redesign our existing website instead of starting over?",
+      answer:
+        "Yes. We can redesign and modernize existing websites while preserving valuable content and SEO equity where possible. We evaluate your current platform and recommend the best migration path.",
+    },
+    {
+      question: "Do you write website content and SEO copy?",
+      answer:
+        "Yes. We can help structure page content, service messaging, and SEO-friendly copy so your website is clearer for visitors and better optimized for search engines.",
+    },
+    {
+      question: "Will I be able to edit content after launch?",
+      answer:
+        "Absolutely. We build with manageable content workflows and can integrate CMS solutions so your team can update key sections without relying on developers for every change.",
+    },
+    {
+      question: "How do you improve website conversion rates?",
+      answer:
+        "We improve conversion rates through stronger calls to action, better content hierarchy, faster performance, mobile-first design, and streamlined user journeys aligned to business goals.",
+    },
+    {
+      question: "Do you provide technical SEO setup during development?",
+      answer:
+        "Yes. We include technical SEO best practices such as metadata structure, semantic HTML, fast loading pages, mobile responsiveness, and crawl-friendly page architecture.",
+    },
+    {
+      question: "Can you integrate contact forms, CRM, and analytics tools?",
+      answer:
+        "Yes. We integrate websites with forms, CRM systems, analytics platforms, marketing tools, and automation workflows so your website supports lead generation and operations.",
+    },
+    {
+      question: "What happens if traffic grows after launch?",
+      answer:
+        "We build scalable architecture and can optimize hosting, caching, and asset delivery as traffic grows so your website remains stable and responsive under heavier demand.",
+    },
+    {
+      question: "Do you offer post-launch support and maintenance?",
+      answer:
+        "Yes. We provide ongoing support plans for updates, performance monitoring, security improvements, bug fixes, and feature enhancements after launch.",
+    },
+  ];
+
+  const approachSteps = [
+    {
+      title: "Discovery and Planning",
+      description:
+        "We define business goals, audience intent, competitor context, and functional requirements to create a clear project roadmap.",
+    },
+    {
+      title: "UX and Content Structure",
+      description:
+        "We map user journeys, plan page hierarchy, and align messaging so visitors can quickly understand your value and take action.",
+    },
+    {
+      title: "Design and Development",
+      description:
+        "We build responsive, performant pages using modern frameworks and clean, maintainable code with SEO and accessibility best practices.",
+    },
+    {
+      title: "Launch and Optimization",
+      description:
+        "After deployment, we monitor performance, refine conversion paths, and support continuous improvements based on real usage.",
+    },
+  ];
+
+  const webChallenges = [
+    "Low website traffic from weak search visibility",
+    "High bounce rates caused by slow load times",
+    "Poor conversion rates from unclear calls to action",
+    "Outdated design that reduces user trust",
+    "Mobile usability issues affecting engagement",
+    "Difficult content updates due to rigid site structure",
   ];
 
   return (
@@ -151,6 +224,55 @@ const WebsiteDevelopment = () => {
       />
 
       <Container maxWidth="lg" sx={{ py: 8 }}>
+        {/* Intro Section */}
+        <Box mb={10}>
+          <Chip
+            label="WEBSITE DEVELOPMENT SERVICES"
+            color="primary"
+            sx={{
+              mb: 2,
+              fontWeight: 700,
+              letterSpacing: 0.8,
+            }}
+          />
+          <Typography
+            variant="h3"
+            component="h2"
+            sx={{
+              fontWeight: 800,
+              mb: 3,
+              fontSize: { xs: "2rem", md: "2.8rem" },
+            }}
+          >
+            Comprehensive Website Development For Growth-Focused Businesses
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 980,
+              color: "text.secondary",
+              lineHeight: 1.9,
+              mb: 2,
+            }}
+          >
+            Your website should do more than look good. It should communicate
+            your value clearly, rank well in search, perform fast on every
+            device, and convert visitors into qualified leads or customers.
+            Orion IT Service delivers website development services built around
+            business outcomes, combining UX strategy, modern engineering,
+            technical SEO, and long-term maintainability.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ maxWidth: 980, color: "text.secondary", lineHeight: 1.9 }}
+          >
+            Whether you need a new business website, a redesign of an existing
+            platform, or conversion-focused landing pages, we create scalable
+            web experiences that align with your brand, support your marketing,
+            and improve measurable performance over time.
+          </Typography>
+        </Box>
+
         {/* Value Proposition */}
         <Box mb={10} textAlign="center">
           <Chip
@@ -237,6 +359,104 @@ const WebsiteDevelopment = () => {
               </Grid>
             ))}
           </Grid>
+        </Box>
+
+        {/* Service Approach */}
+        <Box mb={10}>
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{ fontWeight: 800, mb: 2, textAlign: "center" }}
+          >
+            Our Website Development Approach
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 860,
+              mx: "auto",
+              mb: 5,
+              color: "text.secondary",
+              lineHeight: 1.85,
+              textAlign: "center",
+            }}
+          >
+            We use a structured process that balances design quality, technical
+            performance, and business objectives. This helps launch websites
+            that are easier to manage and more effective at generating results.
+          </Typography>
+          <Grid container spacing={3}>
+            {approachSteps.map((step, index) => (
+              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={step.title}>
+                <Paper elevation={2} sx={{ p: 3, height: "100%" }}>
+                  <Typography
+                    variant="subtitle2"
+                    sx={{ color: "primary.main", fontWeight: 700, mb: 1 }}
+                  >
+                    STEP {index + 1}
+                  </Typography>
+                  <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                    {step.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {step.description}
+                  </Typography>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        {/* Common Challenges */}
+        <Box mb={10}>
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{ fontWeight: 800, mb: 3, textAlign: "center" }}
+          >
+            Common Website Problems We Solve
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 900,
+              mx: "auto",
+              mb: 4,
+              color: "text.secondary",
+              lineHeight: 1.85,
+              textAlign: "center",
+            }}
+          >
+            Many business websites underperform because they were built without
+            a clear strategy for search visibility, user journey, and
+            conversion. We help resolve core challenges such as:
+          </Typography>
+          <Paper elevation={1} sx={{ p: 3 }}>
+            <Typography variant="body1" sx={{ lineHeight: 1.9 }}>
+              {webChallenges.join(". ")}.
+            </Typography>
+          </Paper>
+          <Typography
+            variant="body1"
+            sx={{ mt: 3, color: "text.secondary", lineHeight: 1.9 }}
+          >
+            Scenario: A business invests in ads and social media, but website
+            leads remain low. Visitors arrive on the site, struggle to find key
+            information, and leave without contacting the team. The site loads
+            slowly on mobile, service pages are thin, and calls to action are
+            buried or inconsistent.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ mt: 2, color: "text.secondary", lineHeight: 1.9 }}
+          >
+            Solution: We redesign the site architecture, improve content
+            hierarchy, optimize speed and mobile performance, implement
+            conversion-focused layouts, and strengthen technical SEO. This
+            creates a faster, clearer, and more trustworthy user experience that
+            supports better rankings and higher conversion rates.
+          </Typography>
+          <Divider sx={{ mt: 4 }} />
         </Box>
 
         {/* Business Benefits */}
