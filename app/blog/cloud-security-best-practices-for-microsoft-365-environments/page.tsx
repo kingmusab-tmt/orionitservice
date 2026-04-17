@@ -15,6 +15,7 @@ import {
   Person as PersonIcon,
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
+import { blogArticles } from "../blogArticles";
 
 export const metadata: Metadata = {
   title: "Cloud Security Best Practices for Microsoft 365 Environments",
@@ -73,6 +74,12 @@ export default function CloudSecurityArticle() {
     ],
   };
 
+  const currentSlug =
+    "cloud-security-best-practices-for-microsoft-365-environments";
+  const relatedArticles = blogArticles
+    .filter((article) => article.slug !== currentSlug)
+    .slice(0, 4);
+
   return (
     <>
       <JsonLd data={[articleSchema, breadcrumbSchema]} />
@@ -84,200 +91,245 @@ export default function CloudSecurityArticle() {
         image="/images/cyber.webp"
       />
 
-      <Container maxWidth="md" sx={{ py: 8 }}>
-        <Paper elevation={2} sx={{ p: { xs: 3, md: 5 } }}>
-          <Box
+      <Container maxWidth="lg" sx={{ py: 8 }}>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              lg: "minmax(0, 2.2fr) minmax(280px, 1fr)",
+            },
+            gap: { xs: 3, lg: 4 },
+            alignItems: "start",
+          }}
+        >
+          <Paper elevation={2} sx={{ p: { xs: 3, md: 5 } }}>
+            <Box
+              sx={{
+                display: "flex",
+                gap: 3,
+                flexWrap: "wrap",
+                mb: 3,
+                color: "text.secondary",
+              }}
+            >
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <PersonIcon fontSize="small" />
+                <Typography variant="body2">Orion IT Service Team</Typography>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <CalendarIcon fontSize="small" />
+                <Typography variant="body2">April 3, 2026</Typography>
+              </Box>
+            </Box>
+            <Typography variant="h4" sx={{ mb: 3 }}>
+              Cloud Security Best Practices for Microsoft 365 Environments
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              Microsoft 365 has become one of the most important collaboration
+              platforms for modern businesses. Email, file storage, document
+              sharing, chat, meetings, and access to daily workflows often live
+              inside the same cloud ecosystem. That convenience is powerful, but
+              it also means that a weakness in cloud security can expose a large
+              portion of the business at once. A practical cloud security
+              strategy is essential because it helps protect users, data, and
+              productivity without making the platform harder to use.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              The foundation of cloud security begins with identity and access
+              management. In Microsoft 365 environments, user accounts are often
+              the primary path to sensitive data, so account protection should
+              be treated as a first priority. Strong passwords, multi-factor
+              authentication, and careful permission management reduce the
+              likelihood that a compromised account can be used to access email,
+              files, or administrative functions. Businesses should also review
+              onboarding and offboarding procedures to make sure users receive
+              the right access when they join and lose it promptly when they
+              leave.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              One of the most common mistakes businesses make is giving too much
+              access to too many people for too long. Cloud permissions tend to
+              accumulate over time, especially when employees move between
+              departments or projects. Without regular reviews, shared files,
+              Teams channels, and administrative tools can become cluttered with
+              outdated access rights. A cloud security best practice is to apply
+              the principle of least privilege so users only have access to the
+              resources they actually need. That lowers the risk of accidental
+              exposure and helps contain the impact if an account is ever
+              compromised.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              Email security is another critical area because Microsoft 365
+              often serves as the gateway into the rest of the environment.
+              Phishing attacks, impersonation attempts, malicious links, and
+              fake login pages are designed to steal credentials or trick
+              employees into taking actions they should not take. Businesses
+              should combine user training with secure email policies, threat
+              filtering, and reporting procedures. The goal is to make it easier
+              for employees to spot suspicious messages and easier for the
+              organization to respond when something looks wrong.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              File sharing and collaboration settings also deserve close
+              attention. Cloud platforms make it simple to share documents
+              internally and externally, but that ease of use can create
+              accidental data leaks if sharing rules are too loose. Businesses
+              should review who can share files, how external links are created,
+              and whether sensitive information is protected by labeling or
+              access restrictions. A well-configured Microsoft 365 environment
+              should support collaboration without making confidential documents
+              widely accessible by default.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              Monitoring and logging are often overlooked, but they are
+              essential for cloud security. If unusual sign-in attempts, failed
+              logins, admin changes, or suspicious sharing behavior are not
+              tracked, a small incident can turn into a larger breach before
+              anyone notices. Good cloud security includes visibility. That
+              means setting up alerts, reviewing activity logs, and knowing how
+              to respond when patterns suggest account abuse or unauthorized
+              access. Visibility allows a business to react faster and with more
+              confidence.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              Backup and recovery planning should also be part of cloud
+              security. Many organizations assume cloud data is automatically
+              protected simply because it lives in Microsoft 365. In reality,
+              businesses still need to think about how they would recover from
+              accidental deletion, retention issues, malicious actions, or
+              configuration mistakes. A backup strategy gives the business
+              another layer of resilience and helps ensure that critical
+              information can be restored when needed.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              A strong cloud security program does not rely on a single control.
+              It layers identity protection, permission reviews, security
+              awareness, monitoring, and recovery planning into a system that is
+              easier to manage and harder to compromise. That layered approach
+              is especially important for small and mid-sized businesses because
+              they often use the same cloud tools as larger organizations but
+              with fewer internal resources dedicated to managing them.
+            </Typography>
+
+            <Typography variant="h5" sx={{ fontWeight: 800, mt: 5, mb: 2 }}>
+              A Practical Example
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              Imagine a company where employees use Microsoft 365 for email,
+              file storage, and project collaboration. A new vendor relationship
+              begins, and several users are given broad file-sharing permissions
+              to make onboarding easier. Over time, those permissions are never
+              reviewed. A cloud security assessment identifies the issue,
+              tightens access controls, enables multi-factor authentication,
+              improves alerting, and introduces a clear review process for
+              external sharing. The result is a safer environment that still
+              supports collaboration without exposing sensitive documents
+              unnecessarily.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              That kind of improvement shows why cloud security best practices
+              matter. The objective is not to make Microsoft 365 harder to use.
+              The objective is to configure it in a way that gives the business
+              the productivity benefits of the cloud while reducing the risks
+              that come with it. When access, sharing, monitoring, and recovery
+              are managed well, the environment becomes a stronger asset rather
+              than a hidden liability.
+            </Typography>
+
+            <Divider sx={{ my: 4 }} />
+
+            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+              Key Takeaway
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
+            >
+              Microsoft 365 security works best when identity, permissions,
+              monitoring, user training, and backup planning are addressed
+              together. A layered cloud security approach helps businesses stay
+              productive while better protecting their data and accounts.
+            </Typography>
+
+            <Button
+              variant="contained"
+              endIcon={<ArrowIcon />}
+              href="/contact"
+              sx={{ mt: 1 }}
+            >
+              Talk to Our Cloud Security Team
+            </Button>
+          </Paper>
+
+          <Paper
+            elevation={1}
             sx={{
-              display: "flex",
-              gap: 3,
-              flexWrap: "wrap",
-              mb: 3,
-              color: "text.secondary",
+              p: { xs: 3, md: 4 },
+              position: { md: "sticky" },
+              top: { md: 96 },
             }}
           >
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <PersonIcon fontSize="small" />
-              <Typography variant="body2">Orion IT Service Team</Typography>
+            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+              You may also want to read
+            </Typography>
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
+              {relatedArticles.map((article) => (
+                <Button
+                  key={article.slug}
+                  variant="text"
+                  href={`/blog/${article.slug}`}
+                  sx={{
+                    justifyContent: "flex-start",
+                    textAlign: "left",
+                    textTransform: "none",
+                    px: 0,
+                  }}
+                >
+                  {article.title}
+                </Button>
+              ))}
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <CalendarIcon fontSize="small" />
-              <Typography variant="body2">April 3, 2026</Typography>
-            </Box>
-          </Box>
-          <Typography variant="h4" sx={{ mb: 3 }}>
-            Cloud Security Best Practices for Microsoft 365 Environments
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            Microsoft 365 has become one of the most important collaboration
-            platforms for modern businesses. Email, file storage, document
-            sharing, chat, meetings, and access to daily workflows often live
-            inside the same cloud ecosystem. That convenience is powerful, but
-            it also means that a weakness in cloud security can expose a large
-            portion of the business at once. A practical cloud security strategy
-            is essential because it helps protect users, data, and productivity
-            without making the platform harder to use.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            The foundation of cloud security begins with identity and access
-            management. In Microsoft 365 environments, user accounts are often
-            the primary path to sensitive data, so account protection should be
-            treated as a first priority. Strong passwords, multi-factor
-            authentication, and careful permission management reduce the
-            likelihood that a compromised account can be used to access email,
-            files, or administrative functions. Businesses should also review
-            onboarding and offboarding procedures to make sure users receive the
-            right access when they join and lose it promptly when they leave.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            One of the most common mistakes businesses make is giving too much
-            access to too many people for too long. Cloud permissions tend to
-            accumulate over time, especially when employees move between
-            departments or projects. Without regular reviews, shared files,
-            Teams channels, and administrative tools can become cluttered with
-            outdated access rights. A cloud security best practice is to apply
-            the principle of least privilege so users only have access to the
-            resources they actually need. That lowers the risk of accidental
-            exposure and helps contain the impact if an account is ever
-            compromised.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            Email security is another critical area because Microsoft 365 often
-            serves as the gateway into the rest of the environment. Phishing
-            attacks, impersonation attempts, malicious links, and fake login
-            pages are designed to steal credentials or trick employees into
-            taking actions they should not take. Businesses should combine user
-            training with secure email policies, threat filtering, and reporting
-            procedures. The goal is to make it easier for employees to spot
-            suspicious messages and easier for the organization to respond when
-            something looks wrong.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            File sharing and collaboration settings also deserve close
-            attention. Cloud platforms make it simple to share documents
-            internally and externally, but that ease of use can create
-            accidental data leaks if sharing rules are too loose. Businesses
-            should review who can share files, how external links are created,
-            and whether sensitive information is protected by labeling or access
-            restrictions. A well-configured Microsoft 365 environment should
-            support collaboration without making confidential documents widely
-            accessible by default.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            Monitoring and logging are often overlooked, but they are essential
-            for cloud security. If unusual sign-in attempts, failed logins,
-            admin changes, or suspicious sharing behavior are not tracked, a
-            small incident can turn into a larger breach before anyone notices.
-            Good cloud security includes visibility. That means setting up
-            alerts, reviewing activity logs, and knowing how to respond when
-            patterns suggest account abuse or unauthorized access. Visibility
-            allows a business to react faster and with more confidence.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            Backup and recovery planning should also be part of cloud security.
-            Many organizations assume cloud data is automatically protected
-            simply because it lives in Microsoft 365. In reality, businesses
-            still need to think about how they would recover from accidental
-            deletion, retention issues, malicious actions, or configuration
-            mistakes. A backup strategy gives the business another layer of
-            resilience and helps ensure that critical information can be
-            restored when needed.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            A strong cloud security program does not rely on a single control.
-            It layers identity protection, permission reviews, security
-            awareness, monitoring, and recovery planning into a system that is
-            easier to manage and harder to compromise. That layered approach is
-            especially important for small and mid-sized businesses because they
-            often use the same cloud tools as larger organizations but with
-            fewer internal resources dedicated to managing them.
-          </Typography>
-
-          <Typography variant="h5" sx={{ fontWeight: 800, mt: 5, mb: 2 }}>
-            A Practical Example
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            Imagine a company where employees use Microsoft 365 for email, file
-            storage, and project collaboration. A new vendor relationship
-            begins, and several users are given broad file-sharing permissions
-            to make onboarding easier. Over time, those permissions are never
-            reviewed. A cloud security assessment identifies the issue, tightens
-            access controls, enables multi-factor authentication, improves
-            alerting, and introduces a clear review process for external
-            sharing. The result is a safer environment that still supports
-            collaboration without exposing sensitive documents unnecessarily.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            That kind of improvement shows why cloud security best practices
-            matter. The objective is not to make Microsoft 365 harder to use.
-            The objective is to configure it in a way that gives the business
-            the productivity benefits of the cloud while reducing the risks that
-            come with it. When access, sharing, monitoring, and recovery are
-            managed well, the environment becomes a stronger asset rather than a
-            hidden liability.
-          </Typography>
-
-          <Divider sx={{ my: 4 }} />
-
-          <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
-            Key Takeaway
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
-          >
-            Microsoft 365 security works best when identity, permissions,
-            monitoring, user training, and backup planning are addressed
-            together. A layered cloud security approach helps businesses stay
-            productive while better protecting their data and accounts.
-          </Typography>
-
-          <Button
-            variant="contained"
-            endIcon={<ArrowIcon />}
-            href="/contact"
-            sx={{ mt: 1 }}
-          >
-            Talk to Our Cloud Security Team
-          </Button>
-        </Paper>
+          </Paper>
+        </Box>
       </Container>
     </>
   );

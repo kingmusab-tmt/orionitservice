@@ -13,6 +13,29 @@ import Image from "next/image";
 
 export default function About() {
   const theme = useTheme();
+  const serviceAreas = [
+    {
+      title: "United States (All States)",
+      description:
+        "We support businesses across the U.S. with remote IT management, cybersecurity, and network services.",
+    },
+    {
+      title: "United Kingdom",
+      description:
+        "We provide remote-first support for UK teams, including cloud, endpoint, and operational IT assistance.",
+    },
+    {
+      title: "Remote Global Support",
+      description:
+        "For distributed teams and international operations, we deliver secure remote IT support and consulting globally.",
+    },
+    {
+      title: "Las Vegas (Local Focus)",
+      description:
+        "We offer dedicated local service in Las Vegas, including on-site visits, infrastructure support, and hands-on troubleshooting.",
+    },
+  ];
+
   const values = [
     {
       icon: <Security fontSize="large" />,
@@ -113,6 +136,114 @@ export default function About() {
         </Box>
 
         <Divider sx={{ my: 8, borderColor: theme.palette.divider }} />
+
+        <Box sx={{ mb: 8 }}>
+          <Grid container spacing={4}>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Box
+                sx={{
+                  p: 4,
+                  borderRadius: 2,
+                  border: `1px solid ${theme.palette.divider}`,
+                  backgroundColor: "background.paper",
+                  height: "100%",
+                }}
+              >
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  sx={{ fontWeight: 700, mb: 2, color: "text.primary" }}
+                >
+                  Our Mission
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontSize: "1.05rem",
+                    lineHeight: 1.8,
+                    color: "text.secondary",
+                  }}
+                >
+                  Our mission is to keep businesses connected, secure, and
+                  productive through reliable IT and network services. We focus
+                  on practical solutions that reduce downtime, improve
+                  performance, and help teams work confidently every day.
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Box
+                sx={{
+                  p: 4,
+                  borderRadius: 2,
+                  border: `1px solid ${theme.palette.divider}`,
+                  backgroundColor: "background.paper",
+                  height: "100%",
+                }}
+              >
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  sx={{ fontWeight: 700, mb: 2, color: "text.primary" }}
+                >
+                  Our Vision
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontSize: "1.05rem",
+                    lineHeight: 1.8,
+                    color: "text.secondary",
+                  }}
+                >
+                  Our vision is to be the most trusted long-term IT partner for
+                  growing organizations, known for clear guidance, proactive
+                  protection, and technology strategies that scale with each
+                  client&apos;s goals.
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+
+        <Divider sx={{ my: 8, borderColor: theme.palette.divider }} />
+
+        <Box sx={{ mb: 8 }}>
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            sx={{ fontWeight: 700, mb: 4, color: "text.primary" }}
+          >
+            Service Area
+          </Typography>
+          <Grid container spacing={3}>
+            {serviceAreas.map((area) => (
+              <Grid size={{ xs: 12, md: 6 }} key={area.title}>
+                <Box
+                  sx={{
+                    p: 3,
+                    borderRadius: 2,
+                    border: `1px solid ${theme.palette.divider}`,
+                    backgroundColor: "background.paper",
+                    height: "100%",
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    component="h3"
+                    sx={{ fontWeight: 700, mb: 1, color: "text.primary" }}
+                  >
+                    {area.title}
+                  </Typography>
+                  <Typography variant="body1" sx={{ color: "text.secondary" }}>
+                    {area.description}
+                  </Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
 
         {/* Our Values Section */}
         <Box>
