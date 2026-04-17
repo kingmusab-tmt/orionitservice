@@ -380,7 +380,7 @@ const ConsultationPage = () => {
                     <EmailIcon color="primary" />
                   </ListItemIcon>
                   <Typography variant="body1">
-                    <strong>Email us:</strong> consultations@orionit.com
+                    <strong>Email us:</strong> info@orionitservice.com
                   </Typography>
                 </ListItem>
                 <ListItem sx={{ px: 0 }}>

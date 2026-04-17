@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Website Development Las Vegas | Custom Web Design & Next.js",
+  title: "Website Development Las Vegas | SEO-Ready Next.js Sites",
   description:
     "Custom website design and development for Las Vegas businesses. Orion IT Service builds fast, mobile-responsive, SEO-optimized websites using Next.js and React — from small business sites to enterprise platforms.",
   keywords:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.orionitservice.com/services/website-development",
   },
   openGraph: {
-    title: "Website Development Las Vegas | Custom Web App | Orion IT Service",
+    title: "Website Development Las Vegas | SEO-Ready Next.js Sites",
     description:
       "Professional custom websites built with Next.js and React — fast, mobile-first, SEO-optimized. Serving Las Vegas businesses and beyond.",
     url: "https://www.orionitservice.com/services/website-development",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Las Vegas | Custom Web App",
+    title: "Website Development Las Vegas | SEO-Ready Next.js Sites",
     description:
       "Custom Next.js websites — fast, SEO-optimized, and mobile-first. Built for Las Vegas businesses.",
     images: ["/images/og-image.webp"],

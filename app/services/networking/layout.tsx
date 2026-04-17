@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Network Engineering & IT Networking Solutions | Las Vegas",
+  title: "Network Engineering Las Vegas | Secure Business Networking",
   description:
     "Expert network design, troubleshooting, and maintenance services from Orion IT Service. Fast connectivity solutions, WiFi optimization, and ongoing network support for Las Vegas businesses.",
   keywords:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.orionitservice.com/services/networking",
   },
   openGraph: {
-    title: "Network Engineering & Solutions | Orion IT Service Las Vegas",
+    title: "Network Engineering Las Vegas | Secure Business Networking",
     description:
       "Reliable network design, installation, and ongoing management for businesses. Fast troubleshooting, WiFi optimization, and proactive network monitoring.",
     url: "https://www.orionitservice.com/services/networking",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Network Engineering & IT Networking Solutions | Orion IT Service",
+    title: "Network Engineering Las Vegas | Secure Business Networking",
     description:
       "Reliable network design, troubleshooting, and managed network services for businesses in Las Vegas.",
     images: ["/images/networkeng.webp"],

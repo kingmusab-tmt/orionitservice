@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About Orion IT Service | Las Vegas IT Company",
+  title: "About Orion IT Service | Las Vegas IT Experts & Mission",
   description:
     "Orion IT Service is a Las Vegas-based IT company delivering cybersecurity training, managed IT support, network engineering, and website development with a security-first approach.",
   keywords:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.orionitservice.com/about",
   },
   openGraph: {
-    title: "About Orion IT Service | Your Trusted Las Vegas IT Partner",
+    title: "About Orion IT Service | Las Vegas IT Experts & Mission",
     description:
       "Learn about Orion IT Service — expert IT solutions with a security-first approach, serving businesses in Las Vegas and nationwide.",
     url: "https://www.orionitservice.com/about",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Orion IT Service | Las Vegas IT Company",
+    title: "About Orion IT Service | Las Vegas IT Experts & Mission",
     description:
       "Expert IT solutions with a security-first approach — serving businesses in Las Vegas and nationwide.",
     images: ["/images/og-image.webp"],

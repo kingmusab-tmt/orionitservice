@@ -590,10 +590,10 @@ const NetworkingSolutions = () => {
                   variant="contained"
                   size="large"
                   fullWidth
-                  href="/network-assessment"
+                  href="/contact"
                   sx={{ py: 1.5 }}
                 >
-                  Schedule Your Free Consulation
+                  Schedule Your Free Consultation
                 </Button>
               </Paper>
             </Grid>

@@ -17,7 +17,7 @@ import {
 import { blogArticles } from "../blogArticles";
 
 export const metadata: Metadata = {
-  title: "Why Your Office WiFi Is Slow and How to Fix It",
+  title: "Office WiFi Fixes | Boost Speed, Coverage, and Reliability",
   description:
     "Learn the common causes of slow office WiFi and the practical fixes that improve wireless speed, coverage, and reliability.",
   alternates: {
@@ -119,7 +119,7 @@ export default function OfficeWifiArticle() {
                 <Typography variant="body2">April 12, 2026</Typography>
               </Box>
             </Box>
-            <Typography variant="h4" sx={{ mb: 3 }}>
+            <Typography variant="h2" component="h2" sx={{ mb: 3 }}>
               Why Your Office WiFi Is Slow and How to Fix It
             </Typography>
             <Typography
@@ -244,7 +244,11 @@ export default function OfficeWifiArticle() {
               network health rather than an isolated problem.
             </Typography>
 
-            <Typography variant="h5" sx={{ fontWeight: 800, mt: 5, mb: 2 }}>
+            <Typography
+              variant="h3"
+              component="h3"
+              sx={{ fontWeight: 800, mt: 5, mb: 2 }}
+            >
               A Practical Example
             </Typography>
             <Typography
@@ -309,7 +313,11 @@ export default function OfficeWifiArticle() {
               top: { md: 96 },
             }}
           >
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h4"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               You may also want to read
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>

@@ -449,30 +449,41 @@ export default function GetQuote() {
                 gutterBottom
                 sx={{ fontWeight: 600 }}
               >
-                Why Get a Quote?
+                Why Request an IT Services Quote?
               </Typography>
               <Typography variant="body1" paragraph>
-                Our customized quotes help you:
+                Securing a customized quote from Orion IT Service ensures you
+                receive tailored, enterprise-grade technology solutions for your
+                Las Vegas business. Our expert assessments help you:
               </Typography>
               <ul>
                 <li>
                   <Typography variant="body1">
-                    Get accurate pricing for your specific needs
+                    <strong>Optimize IT Budgets:</strong> Get accurate,
+                    transparent pricing for managed IT services, cloud
+                    solutions, and scalable infrastructure.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="body1">
-                    Understand the scope of services required
+                    <strong>Enhance Cybersecurity:</strong> Identify
+                    vulnerabilities and understand the scope of advanced
+                    cybersecurity protection needed to secure your sensitive
+                    data.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="body1">
-                    Plan your IT budget effectively
+                    <strong>Ensure Business Continuity:</strong> Plan reliable
+                    data backup, disaster recovery, and proactive network
+                    maintenance strategies.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="body1">
-                    Compare options before making decisions
+                    <strong>Drive Digital Transformation:</strong> Compare
+                    strategic options for website development, IT consulting,
+                    and comprehensive IT support tailored to your growth goals.
                   </Typography>
                 </li>
               </ul>
@@ -555,30 +566,41 @@ export default function GetQuote() {
                 gutterBottom
                 sx={{ fontWeight: 600 }}
               >
-                What to Expect
+                What to Expect During Your IT Consultation
               </Typography>
               <Typography variant="body1" paragraph>
-                After submitting your quote request:
+                After submitting your IT service quote request, our streamlined
+                onboarding process ensures you get the right technology
+                solutions fast:
               </Typography>
               <ol>
                 <li>
                   <Typography variant="body1">
-                    We'll review your requirements within 24 hours
+                    <strong>Rapid Requirements Review:</strong> Our certified IT
+                    experts will analyze your business needs and infrastructure
+                    requirements within 24 hours.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="body1">
-                    A specialist may contact you for clarification
+                    <strong>Strategic Technical Discovery:</strong> A dedicated
+                    technology specialist may reach out to clarify your network
+                    setup, cybersecurity posture, or specific project goals.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="body1">
-                    You'll receive a detailed proposal
+                    <strong>Comprehensive IT Proposal:</strong> You'll receive a
+                    detailed, transparent proposal outlining recommended managed
+                    services, hardware, software, and pricing.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="body1">
-                    Opportunity to discuss and refine the solution
+                    <strong>Collaborative Solution Refinement:</strong> We
+                    provide the opportunity to discuss, adjust, and finalize an
+                    IT roadmap that aligns perfectly with your budget and
+                    business objectives.
                   </Typography>
                 </li>
               </ol>
@@ -610,7 +632,7 @@ export default function GetQuote() {
           <Typography
             id="success-modal-title"
             variant="h6"
-            component="h2"
+            component="h3"
             sx={{ mb: 2 }}
           >
             Request Submitted Successfully

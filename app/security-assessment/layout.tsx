@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Free Cybersecurity Risk Assessment Tool | Check Your Security Score",
+  title: "Free Cybersecurity Assessment | Business Risk Scanner",
   description:
     "Take Orion IT Service's free interactive cybersecurity risk assessment to identify vulnerabilities in your business. Get your security score and personalized recommendations in minutes.",
   keywords:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.orionitservice.com/security-assessment",
   },
   openGraph: {
-    title: "Free Cybersecurity Risk Assessment | Orion IT Service",
+    title: "Free Cybersecurity Assessment | Business Risk Scanner",
     description:
       "Discover your business's cybersecurity vulnerabilities with our free interactive assessment tool. Get your security score and actionable recommendations.",
     url: "https://www.orionitservice.com/security-assessment",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Cybersecurity Risk Assessment | Orion IT Service",
+    title: "Free Cybersecurity Assessment | Business Risk Scanner",
     description:
       "Identify your business's cybersecurity weak spots. Free interactive assessment with instant scoring and recommendations.",
     images: ["/images/cyber.webp"],

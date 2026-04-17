@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Orion IT Insights",
-    default: "Orion IT Insights",
+    template: "%s",
+    default: "Orion IT Blog | Managed IT, Security, and Network Tips",
   },
   description:
     "Practical articles on managed IT, cybersecurity, networking, website development, and business technology strategy.",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Free IT Consultation | Talk to a Las Vegas IT Expert Today",
+  title: "Free IT Consultation | Las Vegas Managed IT Experts",
   description:
     "Schedule your free no-obligation IT consultation with Orion IT Service. Get expert advice on cybersecurity, managed IT, networking, or website development for your business.",
   keywords:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.orionitservice.com/free-consultation",
   },
   openGraph: {
-    title: "Free IT Consultation | Orion IT Service Las Vegas",
+    title: "Free IT Consultation | Las Vegas Managed IT Experts",
     description:
       "Talk to a Las Vegas IT expert for free — no obligation. Get tailored advice for your cybersecurity, managed IT, networking, or web development needs.",
     url: "https://www.orionitservice.com/free-consultation",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free IT Consultation | Orion IT Service Las Vegas",
+    title: "Free IT Consultation | Las Vegas Managed IT Experts",
     description:
       "Schedule your free consultation with an IT expert. No obligation — just honest, practical IT advice for your business.",
     images: ["/images/og-image.webp"],

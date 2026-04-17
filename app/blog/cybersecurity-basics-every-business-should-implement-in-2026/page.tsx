@@ -17,7 +17,7 @@ import {
 import { blogArticles } from "../blogArticles";
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Basics Every Business Should Implement in 2026",
+  title: "Cybersecurity Basics 2026 | Essential Controls for Business",
   description:
     "A practical guide to multi-factor authentication, endpoint protection, phishing awareness, backups, and cloud security basics.",
   alternates: {
@@ -120,7 +120,7 @@ export default function CybersecurityBasicsArticle() {
                 <Typography variant="body2">April 14, 2026</Typography>
               </Box>
             </Box>
-            <Typography variant="h4" sx={{ mb: 3 }}>
+            <Typography variant="h2" component="h2" sx={{ mb: 3 }}>
               Cybersecurity Basics Every Business Should Implement in 2026
             </Typography>
             <Typography
@@ -230,7 +230,11 @@ export default function CybersecurityBasicsArticle() {
               security posture than any one tool could achieve alone.
             </Typography>
 
-            <Typography variant="h5" sx={{ fontWeight: 800, mt: 5, mb: 2 }}>
+            <Typography
+              variant="h3"
+              component="h3"
+              sx={{ fontWeight: 800, mt: 5, mb: 2 }}
+            >
               A Simple Example
             </Typography>
             <Typography
@@ -293,7 +297,11 @@ export default function CybersecurityBasicsArticle() {
               top: { md: 96 },
             }}
           >
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h4"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               You may also want to read
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>

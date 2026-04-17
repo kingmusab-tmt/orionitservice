@@ -17,7 +17,7 @@ import {
 import { blogArticles } from "../blogArticles";
 
 export const metadata: Metadata = {
-  title: "Break-Fix vs Managed IT: Which Model Saves More Over Time?",
+  title: "Break-Fix vs Managed IT | Cost, Risk, and Downtime Guide",
   description:
     "Compare break-fix support with managed IT services to understand cost, downtime, security, and long-term value.",
   alternates: {
@@ -120,7 +120,7 @@ export default function BreakFixVsManagedItArticle() {
                 <Typography variant="body2">March 30, 2026</Typography>
               </Box>
             </Box>
-            <Typography variant="h4" sx={{ mb: 3 }}>
+            <Typography variant="h2" component="h2" sx={{ mb: 3 }}>
               Break-Fix vs Managed IT: Which Model Saves More Over Time?
             </Typography>
             <Typography
@@ -239,7 +239,11 @@ export default function BreakFixVsManagedItArticle() {
               the outage is more valuable than paying to respond to it later.
             </Typography>
 
-            <Typography variant="h5" sx={{ fontWeight: 800, mt: 5, mb: 2 }}>
+            <Typography
+              variant="h3"
+              component="h3"
+              sx={{ fontWeight: 800, mt: 5, mb: 2 }}
+            >
               A Practical Example
             </Typography>
             <Typography
@@ -273,7 +277,11 @@ export default function BreakFixVsManagedItArticle() {
 
             <Divider sx={{ my: 4 }} />
 
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h4"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               Key Takeaway
             </Typography>
             <Typography
@@ -303,7 +311,11 @@ export default function BreakFixVsManagedItArticle() {
               top: { md: 96 },
             }}
           >
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h4"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               You may also want to read
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>

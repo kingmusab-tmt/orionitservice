@@ -5,7 +5,7 @@ import { Phone, Email, LocationOn } from "@mui/icons-material";
 import JsonLd from "../components/JsonLd";
 
 export const metadata = {
-  title: "Contact Orion IT Service | IT Support & Consultation Las Vegas",
+  title: "Contact Orion IT Service | Las Vegas IT Support Team",
   description:
     "Contact Orion IT Service for expert IT support in Las Vegas — cybersecurity, managed IT, network engineering, or website development. Call, email, or message us today.",
   keywords:
@@ -14,7 +14,7 @@ export const metadata = {
     canonical: "https://www.orionitservice.com/contact",
   },
   openGraph: {
-    title: "Contact Orion IT Service | IT Experts in Las Vegas",
+    title: "Contact Orion IT Service | Las Vegas IT Support Team",
     description:
       "Reach out for professional IT support and technology consultation in Las Vegas. We respond fast — call, email, or submit a message.",
     url: "https://www.orionitservice.com/contact",
@@ -29,7 +29,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Orion IT Service | IT Support Las Vegas",
+    title: "Contact Orion IT Service | Las Vegas IT Support Team",
     description:
       "Get expert IT support in Las Vegas — cybersecurity, managed IT, networking, or web development. Reach us by phone, email, or form.",
     images: ["/images/og-image.webp"],

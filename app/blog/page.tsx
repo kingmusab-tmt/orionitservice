@@ -18,7 +18,7 @@ import {
 } from "@mui/icons-material";
 
 export const metadata: Metadata = {
-  title: "Orion IT Insights",
+  title: "Orion IT Blog | Managed IT, Security, and Network Tips",
   description:
     "Read practical managed IT, cybersecurity, networking, and website development insights for Las Vegas businesses and distributed teams across the US and UK.",
   alternates: {
@@ -171,8 +171,9 @@ export default function BlogPage() {
               variant="contained"
               endIcon={<ArrowIcon />}
               href="/blog/how-managed-it-services-reduce-downtime-for-small-and-mid-sized-businesses"
+              aria-label="Read how managed IT services reduce downtime article"
             >
-              Read Article
+              Read Managed IT Downtime Article
             </Button>
           </Paper>
         </Box>
@@ -245,8 +246,9 @@ export default function BlogPage() {
                       size="small"
                       endIcon={<ArrowIcon />}
                       href={post.href ?? "/contact"}
+                      aria-label={`Read article: ${post.title}`}
                     >
-                      Read More
+                      Read Full Article
                     </Button>
                   </CardContent>
                 </Card>

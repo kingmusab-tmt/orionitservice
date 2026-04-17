@@ -21,7 +21,7 @@ import {
 } from "@mui/icons-material";
 
 export const metadata = {
-  title: "IT Services Las Vegas | Cybersecurity, Managed IT & Networking",
+  title: "IT Services Las Vegas | Managed IT, Cybersecurity, Web",
   description:
     "Comprehensive IT services for Las Vegas businesses — cybersecurity awareness training, managed IT support, network engineering, and website development. Tailored solutions for every business size.",
   keywords:
@@ -30,7 +30,7 @@ export const metadata = {
     canonical: "https://www.orionitservice.com/services",
   },
   openGraph: {
-    title: "IT Services Las Vegas | Cybersecurity, Managed IT & Networking",
+    title: "IT Services Las Vegas | Managed IT, Cybersecurity, Web",
     description:
       "Expert IT services to protect and optimize your business — cybersecurity, managed IT, network engineering, and website development in Las Vegas.",
     url: "https://www.orionitservice.com/services",
@@ -45,7 +45,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "IT Services Las Vegas | Cybersecurity, Managed IT & Networking",
+    title: "IT Services Las Vegas | Managed IT, Cybersecurity, Web",
     description:
       "Expert IT services for Las Vegas businesses — cybersecurity, managed IT, networking, and website development.",
     images: ["/images/og-image.webp"],

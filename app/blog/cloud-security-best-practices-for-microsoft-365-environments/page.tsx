@@ -18,7 +18,7 @@ import {
 import { blogArticles } from "../blogArticles";
 
 export const metadata: Metadata = {
-  title: "Cloud Security Best Practices for Microsoft 365 Environments",
+  title: "Microsoft 365 Security | Cloud Protection Best Practices",
   description:
     "Practical cloud security guidance for Microsoft 365 environments, including identity protection, permissions, monitoring, and backup planning.",
   alternates: {
@@ -122,7 +122,7 @@ export default function CloudSecurityArticle() {
                 <Typography variant="body2">April 3, 2026</Typography>
               </Box>
             </Box>
-            <Typography variant="h4" sx={{ mb: 3 }}>
+            <Typography variant="h2" component="h2" sx={{ mb: 3 }}>
               Cloud Security Best Practices for Microsoft 365 Environments
             </Typography>
             <Typography
@@ -243,7 +243,11 @@ export default function CloudSecurityArticle() {
               with fewer internal resources dedicated to managing them.
             </Typography>
 
-            <Typography variant="h5" sx={{ fontWeight: 800, mt: 5, mb: 2 }}>
+            <Typography
+              variant="h3"
+              component="h3"
+              sx={{ fontWeight: 800, mt: 5, mb: 2 }}
+            >
               A Practical Example
             </Typography>
             <Typography
@@ -308,7 +312,11 @@ export default function CloudSecurityArticle() {
               top: { md: 96 },
             }}
           >
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h4"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               You may also want to read
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>

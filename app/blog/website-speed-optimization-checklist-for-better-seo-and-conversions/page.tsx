@@ -17,7 +17,7 @@ import {
 import { blogArticles } from "../blogArticles";
 
 export const metadata: Metadata = {
-  title: "Website Speed Optimization Checklist for Better SEO and Conversions",
+  title: "Website Speed Checklist | Better SEO and More Conversions",
   description:
     "A practical checklist for improving load times, user experience, SEO, and conversion performance on your website.",
   alternates: {
@@ -122,7 +122,7 @@ export default function WebsiteSpeedArticle() {
                 <Typography variant="body2">April 9, 2026</Typography>
               </Box>
             </Box>
-            <Typography variant="h4" sx={{ mb: 3 }}>
+            <Typography variant="h2" component="h2" sx={{ mb: 3 }}>
               Website Speed Optimization Checklist for Better SEO and
               Conversions
             </Typography>
@@ -254,7 +254,11 @@ export default function WebsiteSpeedArticle() {
               less like a static brochure.
             </Typography>
 
-            <Typography variant="h5" sx={{ fontWeight: 800, mt: 5, mb: 2 }}>
+            <Typography
+              variant="h3"
+              component="h3"
+              sx={{ fontWeight: 800, mt: 5, mb: 2 }}
+            >
               A Practical Example
             </Typography>
             <Typography
@@ -286,7 +290,11 @@ export default function WebsiteSpeedArticle() {
 
             <Divider sx={{ my: 4 }} />
 
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h4"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               Key Takeaway
             </Typography>
             <Typography
@@ -317,7 +325,11 @@ export default function WebsiteSpeedArticle() {
               top: { md: 96 },
             }}
           >
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h4"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               You may also want to read
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>

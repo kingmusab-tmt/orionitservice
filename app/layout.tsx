@@ -22,9 +22,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.orionitservice.com"),
   title: {
-    default:
-      "Managed IT Services in Las Vegas | Cybersecurity & Network Solutions",
-    template: "%s | Orion IT Service",
+    default: "Managed IT Services Las Vegas | Orion IT Cybersecurity",
+    template: "%s",
   },
   description:
     "Managed IT Services in Las Vegas from Orion IT Service — proactive monitoring, network solutions, cybersecurity, help desk support, and website development. Serving businesses across the US and UK globally.",
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.orionitservice.com",
     siteName: "Orion IT Service",
-    title: "Managed IT Services in Las Vegas | Orion IT Service",
+    title: "Managed IT Services Las Vegas | Orion IT Cybersecurity",
     description:
       "Proactive Managed IT Services in Las Vegas — network infrastructure, cybersecurity solutions, help desk support, and website development for businesses. Serving US, UK, and global clients.",
     images: [
@@ -73,8 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@orionitservice",
     creator: "@orionitservice",
-    title:
-      "Managed IT Services in Las Vegas | Cybersecurity & Network Solutions",
+    title: "Managed IT Services Las Vegas | Orion IT Cybersecurity",
     description:
       "Managed IT Services in Las Vegas — proactive monitoring, cybersecurity protection, network solutions, and website development for your business.",
     images: ["/images/og-image.webp"],

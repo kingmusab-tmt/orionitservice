@@ -17,8 +17,7 @@ import {
 import { blogArticles } from "../blogArticles";
 
 export const metadata: Metadata = {
-  title:
-    "How Managed IT Services Reduce Downtime for Small and Mid-Sized Businesses",
+  title: "Managed IT for SMBs | Reduce Downtime and Improve Uptime",
   description:
     "Learn how proactive monitoring, patch management, maintenance, and strategic planning reduce downtime for small and mid-sized businesses.",
   alternates: {
@@ -123,7 +122,7 @@ export default function ManagedItDowntimeArticle() {
                 <Typography variant="body2">April 17, 2026</Typography>
               </Box>
             </Box>
-            <Typography variant="h4" sx={{ mb: 3 }}>
+            <Typography variant="h2" component="h2" sx={{ mb: 3 }}>
               How Managed IT Services Reduce Downtime for Small and Mid-Sized
               Businesses
             </Typography>
@@ -235,7 +234,11 @@ export default function ManagedItDowntimeArticle() {
               operations.
             </Typography>
 
-            <Typography variant="h5" sx={{ fontWeight: 800, mt: 5, mb: 2 }}>
+            <Typography
+              variant="h3"
+              component="h3"
+              sx={{ fontWeight: 800, mt: 5, mb: 2 }}
+            >
               A Practical Example
             </Typography>
             <Typography
@@ -271,7 +274,11 @@ export default function ManagedItDowntimeArticle() {
 
             <Divider sx={{ my: 4 }} />
 
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h4"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               Related Insight
             </Typography>
             <Typography
@@ -302,7 +309,11 @@ export default function ManagedItDowntimeArticle() {
               top: { md: 96 },
             }}
           >
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h4"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               You may also want to read
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>

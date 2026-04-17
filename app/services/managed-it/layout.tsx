@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Managed IT Services Las Vegas | 24/7 IT Support & Monitoring",
+  title: "Managed IT Services Las Vegas | 24/7 Monitoring & Support",
   description:
     "Orion IT Service's managed IT plans give your business proactive 24/7 monitoring, patch management, help desk support, and cybersecurity protection — predictable pricing, zero surprises.",
   keywords:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.orionitservice.com/services/managed-it",
   },
   openGraph: {
-    title: "Managed IT Services | 24/7 Support & Monitoring | Orion IT Service",
+    title: "Managed IT Services Las Vegas | 24/7 Monitoring & Support",
     description:
       "Proactive managed IT services for Las Vegas businesses — 24/7 monitoring, help desk support, patch management, and cybersecurity protection with predictable monthly pricing.",
     url: "https://www.orionitservice.com/services/managed-it",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Managed IT Services Las Vegas | 24/7 IT Support",
+    title: "Managed IT Services Las Vegas | 24/7 Monitoring & Support",
     description:
       "Proactive 24/7 IT monitoring, help desk, patch management, and cybersecurity for Las Vegas businesses.",
     images: ["/images/og-image.webp"],

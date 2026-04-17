@@ -2,14 +2,14 @@ import { Container, Typography, Box, Link } from "@mui/material";
 import HeroBanner from "../components/HeroBanner";
 
 export const metadata = {
-  title: "Privacy Policy | Orion IT Service | Data Protection Commitment",
+  title: "Privacy Policy | Orion IT Service Data Protection Terms",
   description:
     "Read Orion IT Service's Privacy Policy detailing how we collect, use, and protect your personal information. Learn about your data rights and our security measures.",
   alternates: {
     canonical: "https://www.orionitservice.com/privacy-policy",
   },
   openGraph: {
-    title: "Privacy Policy | Orion IT Service Data Protection",
+    title: "Privacy Policy | Orion IT Service Data Protection Terms",
     description:
       "How Orion IT Service collects, uses, and protects your personal information — our commitment to your privacy.",
     url: "https://www.orionitservice.com/privacy-policy",

@@ -67,7 +67,7 @@ const Header = () => {
       }}
     >
       <Toolbar>
-        <Link href="/" passHref>
+        <Link href="/" aria-label="Orion IT Service home page">
           <div
             style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
           >

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Awareness Training | Phishing & Breach Prevention",
+  title: "Cybersecurity Training Las Vegas | Phishing Defense Plan",
   description:
     "Protect your business with Orion IT Service's cybersecurity awareness training. Reduce breach risk by 74% — phishing simulations, employee training, and vulnerability assessments in Las Vegas.",
   keywords:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.orionitservice.com/services/cybersecurity",
   },
   openGraph: {
-    title: "Cybersecurity Awareness Training | Orion IT Service Las Vegas",
+    title: "Cybersecurity Training Las Vegas | Phishing Defense Plan",
     description:
       "Transform your team into a human firewall. Proven cybersecurity awareness training that reduces breach risk by 74% — phishing simulations, assessments, and ongoing coaching.",
     url: "https://www.orionitservice.com/services/cybersecurity",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cybersecurity Awareness Training | Orion IT Service",
+    title: "Cybersecurity Training Las Vegas | Phishing Defense Plan",
     description:
       "Transform your employees into your strongest security layer. Phishing simulations, security training, and vulnerability assessments.",
     images: ["/images/cyber.webp"],
