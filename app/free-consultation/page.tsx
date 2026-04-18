@@ -133,7 +133,7 @@ const ConsultationPage = () => {
     <Container maxWidth="lg" sx={{ py: 8 }}>
       {/* Trust Indicators */}
       <Box sx={{ mt: 5, mb: 5, textAlign: "center" }}>
-        <Typography variant="h4" component="h2" sx={{ fontWeight: 800, mb: 3 }}>
+        <Typography variant="h4" component="p" sx={{ fontWeight: 800, mb: 3 }}>
           Trusted By Businesses Across Industries
         </Typography>
         <Grid container spacing={4} justifyContent="center" sx={{ mt: 4 }}>

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Request a free custom IT quote from Orion IT Service. Select the services you need — cybersecurity, managed IT, networking, or website development — and get a tailored proposal.",
   keywords:
-    "IT quote Las Vegas, free IT estimate, managed IT pricing Nevada, cybersecurity service quote, IT services cost Las Vegas, network solutions quote, website development quote Las Vegas",
+    "IT quote Las Vegas, IT quote Henderson, IT quote North Las Vegas, IT quote Summerlin, IT quote Boulder City, IT quote Pahrump, IT quote Los Angeles, IT quote Phoenix, IT quote Salt Lake City, IT quote Reno, IT quote Dallas, IT quote Austin, IT quote Houston, IT quote Denver, IT quote Seattle, IT quote Chicago, IT quote Atlanta, IT quote Miami, IT quote New York, free IT estimate, managed IT pricing Nevada, cybersecurity service quote, IT services cost Las Vegas, network solutions quote, website development quote Las Vegas",
   alternates: {
     canonical: "https://www.orionitservice.com/get-quote",
   },

@@ -25,7 +25,7 @@ export const metadata = {
   description:
     "Comprehensive IT services for Las Vegas businesses — cybersecurity awareness training, managed IT support, network engineering, and website development. Tailored solutions for every business size.",
   keywords:
-    "IT services Las Vegas, cybersecurity solutions Nevada, managed IT services Las Vegas, network engineering Nevada, website development Las Vegas, IT support small business, business technology solutions Nevada",
+    "IT services Las Vegas, managed services provider near me, IT services Henderson, IT services North Las Vegas, IT services Summerlin, IT services Boulder City, IT services Pahrump, IT services Los Angeles, IT services Phoenix, IT services Salt Lake City, IT services Reno, IT services Dallas, IT services Austin, IT services Houston, IT services Denver, IT services Seattle, IT services Chicago, IT services Atlanta, IT services Miami, IT services New York, cybersecurity solutions Nevada, managed IT services Las Vegas, network engineering Nevada, website development Las Vegas, IT support small business, business technology solutions Nevada",
   alternates: {
     canonical: "https://www.orionitservice.com/services",
   },
@@ -297,7 +297,12 @@ export default function Services() {
                     borderColor: "primary.main",
                   }}
                 >
-                  <Typography variant="h4" color="primary" sx={{ mb: 2 }}>
+                  <Typography
+                    variant="h4"
+                    component="p"
+                    color="primary"
+                    sx={{ mb: 2 }}
+                  >
                     0{index + 1}
                   </Typography>
                   <Typography variant="h6" component="h3" gutterBottom>

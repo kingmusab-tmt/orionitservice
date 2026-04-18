@@ -390,7 +390,11 @@ const NetworkingSolutions = () => {
                   >
                     STEP {index + 1}
                   </Typography>
-                  <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                  <Typography
+                    variant="h6"
+                    component="h3"
+                    sx={{ fontWeight: 700, mb: 1 }}
+                  >
                     {step.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">

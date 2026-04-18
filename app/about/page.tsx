@@ -336,7 +336,9 @@ export default function About() {
                 >
                   500+
                 </Typography>
-                <Typography variant="h6">Satisfied Clients</Typography>
+                <Typography variant="h6" component="p">
+                  Satisfied Clients
+                </Typography>
               </Box>
             </Grid>
             <Grid size={{ xs: 6, sm: 3 }}>
@@ -348,7 +350,9 @@ export default function About() {
                 >
                   98%
                 </Typography>
-                <Typography variant="h6">Client Retention</Typography>
+                <Typography variant="h6" component="p">
+                  Client Retention
+                </Typography>
               </Box>
             </Grid>
             <Grid size={{ xs: 6, sm: 3 }}>
@@ -360,7 +364,9 @@ export default function About() {
                 >
                   24/7
                 </Typography>
-                <Typography variant="h6">Support Availability</Typography>
+                <Typography variant="h6" component="p">
+                  Support Availability
+                </Typography>
               </Box>
             </Grid>
             <Grid size={{ xs: 6, sm: 3 }}>
@@ -372,7 +378,9 @@ export default function About() {
                 >
                   50+
                 </Typography>
-                <Typography variant="h6">Industry Certifications</Typography>
+                <Typography variant="h6" component="p">
+                  Industry Certifications
+                </Typography>
               </Box>
             </Grid>
           </Grid>

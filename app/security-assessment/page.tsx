@@ -121,7 +121,7 @@ const SecurityAssessment = () => {
       Object.values(answers).forEach((answer) => {
         if (
           ["monthly", "no", "yes_tested", "simulations", "always"].includes(
-            answer
+            answer,
           )
         ) {
           calculatedScore += 20;
@@ -137,7 +137,7 @@ const SecurityAssessment = () => {
           calculatedScore += 15;
         } else if (
           ["yearly", "yes_one", "developing", "ad_hoc", "sometimes"].includes(
-            answer
+            answer,
           )
         ) {
           calculatedScore += 10;
@@ -215,7 +215,7 @@ const SecurityAssessment = () => {
         title: "Endpoint Protection",
         description:
           "Ensure all devices have updated endpoint protection software with behavioral detection capabilities.",
-      }
+      },
     );
 
     return recs;
@@ -228,7 +228,7 @@ const SecurityAssessment = () => {
         <Typography variant="h3" component="h1" sx={{ fontWeight: 800, mb: 2 }}>
           Cybersecurity Health Check
         </Typography>
-        <Typography variant="h6" color="text.secondary">
+        <Typography variant="h6" component="p" color="text.secondary">
           Complete this 5-minute assessment to uncover your organization's
           security vulnerabilities
         </Typography>
@@ -296,7 +296,7 @@ const SecurityAssessment = () => {
           {isCalculating ? (
             <Box textAlign="center" sx={{ py: 8 }}>
               <CircularProgress size={80} thickness={4} sx={{ mb: 3 }} />
-              <Typography variant="h5" sx={{ fontWeight: 600 }}>
+              <Typography variant="h5" component="p" sx={{ fontWeight: 600 }}>
                 Analyzing your security profile...
               </Typography>
             </Box>
@@ -327,8 +327,8 @@ const SecurityAssessment = () => {
                         score && score >= 80
                           ? "success.main"
                           : score && score >= 50
-                          ? "warning.main"
-                          : "error.main",
+                            ? "warning.main"
+                            : "error.main",
                     }}
                   />
                   <Box
@@ -358,8 +358,8 @@ const SecurityAssessment = () => {
                     score && score >= 80
                       ? "success"
                       : score && score >= 50
-                      ? "warning"
-                      : "error"
+                        ? "warning"
+                        : "error"
                   }
                   sx={{ fontSize: "1.2rem", p: 2, mb: 3 }}
                 />
@@ -367,8 +367,8 @@ const SecurityAssessment = () => {
                   {score && score >= 80
                     ? "Your organization demonstrates strong cybersecurity awareness practices. Maintain your edge with continuous improvement."
                     : score && score >= 50
-                    ? "Your security posture needs strengthening in key areas. Targeted improvements can significantly reduce your risk."
-                    : "Your organization is at significant risk of cyber threats. Immediate action is recommended to protect your assets."}
+                      ? "Your security posture needs strengthening in key areas. Targeted improvements can significantly reduce your risk."
+                      : "Your organization is at significant risk of cyber threats. Immediate action is recommended to protect your assets."}
                 </Typography>
               </Paper>
 

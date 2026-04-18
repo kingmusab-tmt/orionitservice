@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Contact Orion IT Service for expert IT support in Las Vegas — cybersecurity, managed IT, network engineering, or website development. Call, email, or message us today.",
   keywords:
-    "contact IT support Las Vegas, IT helpdesk Nevada, cybersecurity support contact, managed IT contact, IT consultation Las Vegas",
+    "contact IT support Las Vegas, contact IT support Henderson, contact IT support North Las Vegas, contact IT support Summerlin, contact IT support Boulder City, contact IT support Pahrump, contact IT support Los Angeles, contact IT support Phoenix, contact IT support Salt Lake City, contact IT support Reno, contact IT support Dallas, contact IT support Austin, contact IT support Houston, contact IT support Denver, contact IT support Seattle, contact IT support Chicago, contact IT support Atlanta, contact IT support Miami, contact IT support New York, IT helpdesk Nevada, cybersecurity support contact, managed IT contact, IT consultation Las Vegas",
   alternates: {
     canonical: "https://www.orionitservice.com/contact",
   },
@@ -120,7 +120,7 @@ export default function Contact() {
             <Box sx={{ mb: 4 }}>
               <Typography
                 variant="h4"
-                component="h3"
+                component="h2"
                 gutterBottom
                 sx={{ fontWeight: 600 }}
               >
@@ -163,7 +163,12 @@ export default function Contact() {
             </Box>
 
             <Box>
-              <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
+              <Typography
+                variant="h6"
+                component="h3"
+                gutterBottom
+                sx={{ fontWeight: 600 }}
+              >
                 Business Hours
               </Typography>
               <Typography paragraph>
@@ -185,7 +190,7 @@ export default function Contact() {
             >
               <Typography
                 variant="h4"
-                component="h3"
+                component="h2"
                 gutterBottom
                 sx={{ fontWeight: 600, mb: 3 }}
               >

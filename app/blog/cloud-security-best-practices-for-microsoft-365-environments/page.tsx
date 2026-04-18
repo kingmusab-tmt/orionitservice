@@ -281,7 +281,11 @@ export default function CloudSecurityArticle() {
 
             <Divider sx={{ my: 4 }} />
 
-            <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography
+              variant="h6"
+              component="p"
+              sx={{ fontWeight: 800, mb: 2 }}
+            >
               Key Takeaway
             </Typography>
             <Typography

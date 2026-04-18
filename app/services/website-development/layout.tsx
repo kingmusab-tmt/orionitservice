@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Custom website design and development for Las Vegas businesses. Orion IT Service builds fast, mobile-responsive, SEO-optimized websites using Next.js and React — from small business sites to enterprise platforms.",
   keywords:
-    "website development Las Vegas, custom web application Nevada, Next.js development, React website development, small business website Las Vegas, e-commerce development Nevada, SEO website design, mobile responsive website Las Vegas",
+    "website development Las Vegas, website development Henderson, website development North Las Vegas, website development Summerlin, website development Boulder City, website development Pahrump, website development Los Angeles, website development Phoenix, website development Salt Lake City, website development Reno, website development Dallas, website development Austin, website development Houston, website development Denver, website development Seattle, website development Chicago, website development Atlanta, website development Miami, website development New York, custom web application Nevada, Next.js development, React website development, small business website Las Vegas, e-commerce development Nevada, SEO website design, mobile responsive website Las Vegas",
   alternates: {
     canonical: "https://www.orionitservice.com/services/website-development",
   },

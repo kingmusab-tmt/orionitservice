@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Take Orion IT Service's free interactive cybersecurity risk assessment to identify vulnerabilities in your business. Get your security score and personalized recommendations in minutes.",
   keywords:
-    "free security assessment, cybersecurity risk assessment, business security score, IT security quiz, cyber risk tool, vulnerability assessment Las Vegas, cybersecurity health check",
+    "free security assessment, cybersecurity risk assessment, business security score, IT security quiz, cyber risk tool, vulnerability assessment Las Vegas, vulnerability assessment Henderson, vulnerability assessment North Las Vegas, vulnerability assessment Summerlin, vulnerability assessment Boulder City, vulnerability assessment Pahrump, vulnerability assessment Los Angeles, vulnerability assessment Phoenix, vulnerability assessment Salt Lake City, vulnerability assessment Reno, vulnerability assessment Dallas, vulnerability assessment Austin, vulnerability assessment Houston, vulnerability assessment Denver, vulnerability assessment Seattle, vulnerability assessment Chicago, vulnerability assessment Atlanta, vulnerability assessment Miami, vulnerability assessment New York, cybersecurity health check",
   alternates: {
     canonical: "https://www.orionitservice.com/security-assessment",
   },

@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
 
       <Container maxWidth="md" sx={{ py: 6 }}>
         <Box sx={{ mb: 4 }}>
-          <Typography variant="h6" gutterBottom>
+          <Typography variant="h6" component="p" gutterBottom>
             Last Updated: March 23, 2026
           </Typography>
           <Typography variant="body1" paragraph>

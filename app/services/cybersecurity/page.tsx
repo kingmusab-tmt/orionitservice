@@ -281,7 +281,11 @@ const CybersecurityServices = () => {
                     mb: 2,
                   }}
                 />
-                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                <Typography
+                  variant="h6"
+                  component="h3"
+                  sx={{ fontWeight: 700, mb: 1 }}
+                >
                   Multi-Layer Protection
                 </Typography>
                 <Typography
@@ -302,7 +306,11 @@ const CybersecurityServices = () => {
                     mb: 2,
                   }}
                 />
-                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                <Typography
+                  variant="h6"
+                  component="h3"
+                  sx={{ fontWeight: 700, mb: 1 }}
+                >
                   Proactive Risk Reduction
                 </Typography>
                 <Typography
@@ -323,7 +331,11 @@ const CybersecurityServices = () => {
                     mb: 2,
                   }}
                 />
-                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                <Typography
+                  variant="h6"
+                  component="h3"
+                  sx={{ fontWeight: 700, mb: 1 }}
+                >
                   Human-Focused Training
                 </Typography>
                 <Typography
@@ -445,7 +457,11 @@ const CybersecurityServices = () => {
                       sx={{ color: theme.palette.success.main, mt: 0.2 }}
                     />
                     <Box>
-                      <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                      <Typography
+                        variant="h6"
+                        component="h3"
+                        sx={{ fontWeight: 700, mb: 1 }}
+                      >
                         {benefit.title}
                       </Typography>
                       <Typography
@@ -503,7 +519,11 @@ const CybersecurityServices = () => {
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
               <Paper elevation={3} sx={{ p: 4 }}>
-                <Typography variant="h5" sx={{ fontWeight: 800, mb: 2 }}>
+                <Typography
+                  variant="h5"
+                  component="h3"
+                  sx={{ fontWeight: 800, mb: 2 }}
+                >
                   Security Reviews, Training, and Ongoing Monitoring
                 </Typography>
                 <Typography
@@ -558,7 +578,11 @@ const CybersecurityServices = () => {
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, md: 6 }}>
               <Paper elevation={2} sx={{ p: 4, height: "100%" }}>
-                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+                <Typography
+                  variant="h6"
+                  component="h3"
+                  sx={{ fontWeight: 800, mb: 2 }}
+                >
                   A Practical Security Strategy
                 </Typography>
                 <Typography
@@ -574,7 +598,11 @@ const CybersecurityServices = () => {
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
               <Paper elevation={2} sx={{ p: 4, height: "100%" }}>
-                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+                <Typography
+                  variant="h6"
+                  component="h3"
+                  sx={{ fontWeight: 800, mb: 2 }}
+                >
                   Guidance You Can Act On
                 </Typography>
                 <Typography
@@ -590,7 +618,11 @@ const CybersecurityServices = () => {
             </Grid>
             <Grid size={{ xs: 12 }}>
               <Paper elevation={2} sx={{ p: 4 }}>
-                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>
+                <Typography
+                  variant="h6"
+                  component="h3"
+                  sx={{ fontWeight: 800, mb: 2 }}
+                >
                   Built For Long-Term Resilience
                 </Typography>
                 <Typography
@@ -625,7 +657,11 @@ const CybersecurityServices = () => {
             {faqItems.map((faq) => (
               <Accordion key={faq.question} sx={{ mb: 2 }}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography variant="h6" sx={{ fontWeight: 700 }}>
+                  <Typography
+                    variant="h6"
+                    component="h3"
+                    sx={{ fontWeight: 700 }}
+                  >
                     {faq.question}
                   </Typography>
                 </AccordionSummary>

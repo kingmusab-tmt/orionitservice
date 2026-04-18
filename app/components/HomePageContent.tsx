@@ -158,7 +158,11 @@ export default function Home() {
                 key={index}
                 sx={{ textAlign: "center" }}
               >
-                <Typography variant="h4" sx={{ fontWeight: 800, mb: 1 }}>
+                <Typography
+                  variant="h4"
+                  component="p"
+                  sx={{ fontWeight: 800, mb: 1 }}
+                >
                   {stat.value}
                 </Typography>
                 <Typography variant="subtitle2" component="div">
@@ -214,6 +218,7 @@ export default function Home() {
               <Paper elevation={3} sx={{ p: 3, height: "100%" }}>
                 <Typography
                   variant="h5"
+                  component="h3"
                   sx={{
                     fontWeight: 700,
                     mb: 3,
@@ -249,6 +254,7 @@ export default function Home() {
               <Paper elevation={3} sx={{ p: 3, height: "100%" }}>
                 <Typography
                   variant="h5"
+                  component="h3"
                   sx={{
                     fontWeight: 700,
                     mb: 3,
@@ -530,7 +536,11 @@ export default function Home() {
                   >
                     {step.step}
                   </Box>
-                  <Typography variant="h5" sx={{ fontWeight: 700, mb: 1 }}>
+                  <Typography
+                    variant="h5"
+                    component="h3"
+                    sx={{ fontWeight: 700, mb: 1 }}
+                  >
                     {step.title}
                   </Typography>
                   <Typography variant="body1" color="text.secondary">
