@@ -99,10 +99,10 @@ export default function RootLayout({
     email: "info@orionitservice.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "304 S. Jones Blvd #4809",
+      streetAddress: "3305 Sky County ln 201",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
-      postalCode: "89107",
+      postalCode: "89117",
       addressCountry: "US",
     },
     geo: {

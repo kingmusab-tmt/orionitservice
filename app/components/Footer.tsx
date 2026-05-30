@@ -126,9 +126,11 @@ const Footer = () => {
             >
               <LocationOn sx={{ mr: 1, mt: 0.5 }} aria-hidden="true" />
               <Typography variant="body2">
-                304 S. Jones Blvd #4809
+                3305 Sky County ln 201
                 <br />
-                Las Vegas, NV 89107
+                Las Vegas, NV 89117
+                <br />
+                United States
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>

@@ -56,10 +56,10 @@ const contactSchema = {
     email: "info@orionitservice.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "304 S. Jones Blvd #4809",
+      streetAddress: "3305 Sky County ln 201",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
-      postalCode: "89107",
+      postalCode: "89117",
       addressCountry: "US",
     },
     openingHoursSpecification: [
@@ -130,9 +130,9 @@ export default function Contact() {
                 <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                   <LocationOn color="primary" sx={{ mr: 1.5 }} />
                   <Typography>
-                    304 S. Jones Blvd #4809
+                    3305 Sky County ln 201
                     <br />
-                    Las Vegas, NV 89107
+                    Las Vegas, NV 89117
                     <br />
                     United States
                   </Typography>

@@ -227,7 +227,7 @@ export default function PrivacyPolicy() {
             <br />
             Phone: +1 888 841 2885
             <br />
-            Address: 304 S. Jones Blvd #4809 Las Vegas, NV 89107
+            Address: 3305 Sky County ln 201, Las Vegas, NV 89117, United States
           </Typography>
         </Box>
       </Container>
