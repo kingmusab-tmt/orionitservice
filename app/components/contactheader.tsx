@@ -137,7 +137,7 @@ const SmallHeader = () => {
           </Box>
 
           {/* Working Hours */}
-          {!isMobile && (
+          {/* {!isMobile && (
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <ScheduleIcon
                 fontSize="small"
@@ -145,7 +145,7 @@ const SmallHeader = () => {
               />
               <Typography variant="caption">Mon-Fri: 9AM-5PM</Typography>
             </Box>
-          )}
+          )} */}
         </Box>
 
         {/* Right side - Social Media */}

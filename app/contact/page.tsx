@@ -67,7 +67,7 @@ const contactSchema = {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "09:00",
-        closes: "18:00",
+        closes: "17:00",
       },
       {
         "@type": "OpeningHoursSpecification",
@@ -172,7 +172,7 @@ export default function Contact() {
                 Business Hours
               </Typography>
               <Typography paragraph>
-                Monday - Friday: 9:00 AM - 6:00 PM
+                Monday - Friday: 9:00 AM - 5:00 PM
               </Typography>
               <Typography paragraph>Saturday: 10:00 AM - 4:00 PM</Typography>
               <Typography>Sunday: Closed</Typography>
