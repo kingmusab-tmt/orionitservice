@@ -142,7 +142,7 @@ export default function Home() {
           {
             text: "Call Now",
             link: "tel:+17024231050",
-            variant: "outlined",
+            variant: "contained",
           },
         ]}
         image="/images/serveroom2.webp"
