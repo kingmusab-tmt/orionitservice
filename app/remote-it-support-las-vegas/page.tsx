@@ -12,7 +12,6 @@ import {
   ListItem,
   ListItemIcon,
   Stack,
-  Divider,
   Accordion,
   AccordionSummary,
   AccordionDetails,
@@ -28,8 +27,6 @@ import {
   Shield as ShieldIcon,
   Zap as ZapIcon,
   TrendingUp as TrendingUpIcon,
-  People as PeopleIcon,
-  Headset as HeadsetIcon,
 } from "@mui/icons-material";
 
 const HeroSection = styled(Box)(({ theme }) => ({
@@ -96,25 +93,25 @@ export default function RemoteITSupportLandingPage() {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8" />,
+      icon: <ClockIcon sx={{ fontSize: 32 }} />,
       title: "24/7 Remote Support",
       description:
         "Round-the-clock monitoring and instant troubleshooting whenever you need it",
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <ShieldIcon sx={{ fontSize: 32 }} />,
       title: "Maximum Uptime",
       description:
         "Proactive monitoring prevents issues before they impact your business",
     },
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <ZapIcon sx={{ fontSize: 32 }} />,
       title: "Instant Resolution",
       description:
         "No travel time—our experts connect to your systems immediately",
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <TrendingUpIcon sx={{ fontSize: 32 }} />,
       title: "Cost Effective",
       description:
         "Pay only for support you need without expensive on-site visits",
