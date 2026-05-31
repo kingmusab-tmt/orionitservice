@@ -1,12 +1,19 @@
 import React from "react";
-import { Box, Typography, Button, Container } from "@mui/material";
+import { Box, Typography, Button, Container, Stack } from "@mui/material";
 import Image from "next/image";
+
+interface CTA {
+  text: string;
+  link: string;
+  variant?: "contained" | "outlined";
+}
 
 interface HeroBannerProps {
   title: string;
   subtitle: string;
   ctaText?: string;
   ctaLink?: string;
+  ctas?: CTA[];
   image?: string;
 }
 
@@ -15,8 +22,15 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   subtitle,
   ctaText,
   ctaLink,
+  ctas,
   image = "/images/avatar5.webp", // Default image
 }) => {
+  // Use new ctas array if provided, otherwise fall back to single CTA for backward compatibility
+  const ctaButtons =
+    ctas ||
+    (ctaText && ctaLink
+      ? [{ text: ctaText, link: ctaLink, variant: "contained" as const }]
+      : []);
   return (
     <Box
       sx={{
@@ -86,21 +100,31 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         >
           {subtitle}
         </Typography>
-        {ctaText && ctaLink && (
-          <Button
-            variant="contained"
-            color="secondary"
-            size="large"
-            href={ctaLink}
-            sx={{
-              px: 4,
-              py: 2,
-              fontSize: "1.1rem",
-              fontWeight: "bold",
-            }}
+        {ctaButtons.length > 0 && (
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={2}
+            justifyContent="center"
+            alignItems="center"
           >
-            {ctaText}
-          </Button>
+            {ctaButtons.map((cta, index) => (
+              <Button
+                key={index}
+                variant={cta.variant || "contained"}
+                color={cta.variant === "outlined" ? "inherit" : "secondary"}
+                size="large"
+                href={cta.link}
+                sx={{
+                  px: 4,
+                  py: 2,
+                  fontSize: "1.1rem",
+                  fontWeight: "bold",
+                }}
+              >
+                {cta.text}
+              </Button>
+            ))}
+          </Stack>
         )}
       </Container>
     </Box>

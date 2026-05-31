@@ -133,8 +133,18 @@ export default function Home() {
       <HeroBanner
         title="Transform Your Business Technology"
         subtitle="Expert IT solutions that drive efficiency, security, and growth"
-        ctaText="Get Your Free IT Consultation"
-        ctaLink="/free-consultation"
+        ctas={[
+          {
+            text: "Get Your Free IT Consultation",
+            link: "/free-consultation",
+            variant: "contained",
+          },
+          {
+            text: "Call Now",
+            link: "tel:+17024231050",
+            variant: "outlined",
+          },
+        ]}
         image="/images/serveroom2.webp"
       />
 
@@ -702,7 +712,7 @@ export default function Home() {
                 transition: "all 0.3s ease",
               }}
             >
-              Get Started Today
+              Contact Us Now
             </Button>
           </Box>
         </Container>
