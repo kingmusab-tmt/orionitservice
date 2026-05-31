@@ -23,9 +23,9 @@ import { styled } from "@mui/system";
 import {
   CheckCircle as CheckIcon,
   ExpandMore as ExpandMoreIcon,
-  Clock as ClockIcon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
+  Schedule as ClockIcon,
+  Security as ShieldIcon,
+  ElectricBolt as ZapIcon,
   TrendingUp as TrendingUpIcon,
 } from "@mui/icons-material";
 
@@ -65,7 +65,7 @@ const BenefitCard = styled(Card)(({ theme }) => ({
   borderColor: theme.palette.divider,
   "&:hover": {
     transform: "translateY(-8px)",
-    boxShadow: theme.shadows[8],
+    boxShadow: "0 12px 20px rgba(0,0,0,0.1)",
   },
 }));
 
@@ -79,7 +79,7 @@ const CTAButton = styled(Button)(({ theme }) => ({
   transition: "all 0.3s ease",
   "&:hover": {
     transform: "scale(1.05)",
-    boxShadow: theme.shadows[10],
+    boxShadow: "0 10px 25px rgba(255, 107, 53, 0.3)",
   },
 }));
 
@@ -181,7 +181,7 @@ export default function RemoteITSupportLandingPage() {
       <HeroSection>
         <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Typography
                 variant="h3"
                 component="h1"
@@ -235,7 +235,7 @@ export default function RemoteITSupportLandingPage() {
                 </Button>
               </Stack>
             </Grid>
-            <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
+            <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "center" }}>
               <Box
                 sx={{
                   position: "relative",
@@ -269,7 +269,7 @@ export default function RemoteITSupportLandingPage() {
             justifyContent="center"
             textAlign="center"
           >
-            <Grid item xs={6} sm={4} md={3}>
+            <Grid size={{ xs: 6, sm: 4, md: 3 }}>
               <Typography
                 variant="h5"
                 sx={{ fontWeight: 800, color: "primary.main" }}
@@ -278,7 +278,7 @@ export default function RemoteITSupportLandingPage() {
               </Typography>
               <Typography variant="body2">Uptime Guarantee</Typography>
             </Grid>
-            <Grid item xs={6} sm={4} md={3}>
+            <Grid size={{ xs: 6, sm: 4, md: 3 }}>
               <Typography
                 variant="h5"
                 sx={{ fontWeight: 800, color: "primary.main" }}
@@ -287,7 +287,7 @@ export default function RemoteITSupportLandingPage() {
               </Typography>
               <Typography variant="body2">Expert Support</Typography>
             </Grid>
-            <Grid item xs={6} sm={4} md={3}>
+            <Grid size={{ xs: 6, sm: 4, md: 3 }}>
               <Typography
                 variant="h5"
                 sx={{ fontWeight: 800, color: "primary.main" }}
@@ -296,7 +296,7 @@ export default function RemoteITSupportLandingPage() {
               </Typography>
               <Typography variant="body2">Avg Response</Typography>
             </Grid>
-            <Grid item xs={6} sm={4} md={3}>
+            <Grid size={{ xs: 6, sm: 4, md: 3 }}>
               <Typography
                 variant="h5"
                 sx={{ fontWeight: 800, color: "primary.main" }}
@@ -360,7 +360,7 @@ export default function RemoteITSupportLandingPage() {
                   "Pay only for support you need without expensive on-site visits",
               },
             ].map((benefit, index) => (
-              <Grid item xs={12} sm={6} md={6} lg={3} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }} key={index}>
                 <BenefitCard>
                   <CardContent sx={{ textAlign: "center" }}>
                     <Box sx={{ mb: 2 }}>{benefit.icon}</Box>
@@ -396,7 +396,7 @@ export default function RemoteITSupportLandingPage() {
 
           <Grid container spacing={3}>
             {howItWorks.map((item, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                 <Box sx={{ textAlign: "center" }}>
                   <Box
                     sx={{
@@ -446,7 +446,7 @@ export default function RemoteITSupportLandingPage() {
           </Typography>
 
           <Grid container spacing={4}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Paper sx={{ p: 3 }}>
                 <Typography
                   variant="h6"
@@ -478,7 +478,7 @@ export default function RemoteITSupportLandingPage() {
               </Paper>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Paper sx={{ p: 3 }}>
                 <Typography
                   variant="h6"
