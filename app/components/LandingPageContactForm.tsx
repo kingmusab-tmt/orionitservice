@@ -9,6 +9,7 @@ import {
   CircularProgress,
   Modal,
   Typography,
+  Grid,
 } from "@mui/material";
 import { styled } from "@mui/system";
 
@@ -31,6 +32,7 @@ interface FormData {
   email: string;
   phone: string;
   company: string;
+  description: string;
 }
 
 const LandingPageContactForm = () => {
@@ -38,6 +40,7 @@ const LandingPageContactForm = () => {
     name: "",
     email: "",
     phone: "",
+    description: "",
     company: "",
   });
   const [error, setError] = useState("");
@@ -54,7 +57,13 @@ const LandingPageContactForm = () => {
 
   const handleCloseModal = () => {
     setOpenModal(false);
-    setFormData({ name: "", email: "", phone: "", company: "" });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      description: "",
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -87,7 +96,8 @@ const LandingPageContactForm = () => {
           email: formData.email,
           phone: formData.phone,
           company: formData.company,
-          message: "Remote IT Support Landing Page Inquiry",
+          message:
+            formData.description || "Remote IT Support Landing Page Inquiry",
         }),
       });
 
@@ -132,7 +142,7 @@ const LandingPageContactForm = () => {
             textAlign: "center",
           }}
         >
-          Get Your Free Remote IT Support Audit
+          Get Your Free Remote IT Support
         </Typography>
 
         {error && (
@@ -141,71 +151,100 @@ const LandingPageContactForm = () => {
           </Alert>
         )}
 
-        <TextField
-          required
-          fullWidth
-          id="name"
-          name="name"
-          label="Your Name"
-          placeholder="John Doe"
-          value={formData.name}
-          onChange={handleChange}
-          variant="outlined"
-          margin="normal"
-          sx={{
-            "& .MuiOutlinedInput-root": {
-              backgroundColor: "rgba(255, 255, 255, 0.8)",
-            },
-          }}
-        />
+        <Grid container spacing={2}>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <TextField
+              required
+              fullWidth
+              id="name"
+              name="name"
+              label="Name"
+              placeholder="John Doe"
+              value={formData.name}
+              onChange={handleChange}
+              variant="outlined"
+              margin="normal"
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                },
+              }}
+            />
+          </Grid>
+
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <TextField
+              required
+              fullWidth
+              id="email"
+              name="email"
+              label="Email"
+              type="email"
+              placeholder="you@company.com"
+              value={formData.email}
+              onChange={handleChange}
+              variant="outlined"
+              margin="normal"
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                },
+              }}
+            />
+          </Grid>
+
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <TextField
+              fullWidth
+              id="phone"
+              name="phone"
+              label="Phone Number"
+              type="tel"
+              placeholder="(702) 123-4567"
+              value={formData.phone}
+              onChange={handleChange}
+              variant="outlined"
+              margin="normal"
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                },
+              }}
+            />
+          </Grid>
+
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <TextField
+              fullWidth
+              id="company"
+              name="company"
+              label="Company Name"
+              placeholder="Your Company"
+              value={formData.company}
+              onChange={handleChange}
+              variant="outlined"
+              margin="normal"
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                },
+              }}
+            />
+          </Grid>
+        </Grid>
 
         <TextField
-          required
           fullWidth
-          id="email"
-          name="email"
-          label="Business Email"
-          type="email"
-          placeholder="you@company.com"
-          value={formData.email}
+          id="description"
+          name="description"
+          label="Description of Support Needed"
+          placeholder="Tell us about your IT support needs..."
+          value={formData.description}
           onChange={handleChange}
           variant="outlined"
           margin="normal"
-          sx={{
-            "& .MuiOutlinedInput-root": {
-              backgroundColor: "rgba(255, 255, 255, 0.8)",
-            },
-          }}
-        />
-
-        <TextField
-          fullWidth
-          id="phone"
-          name="phone"
-          label="Phone Number"
-          type="tel"
-          placeholder="(702) 123-4567"
-          value={formData.phone}
-          onChange={handleChange}
-          variant="outlined"
-          margin="normal"
-          sx={{
-            "& .MuiOutlinedInput-root": {
-              backgroundColor: "rgba(255, 255, 255, 0.8)",
-            },
-          }}
-        />
-
-        <TextField
-          fullWidth
-          id="company"
-          name="company"
-          label="Company Name"
-          placeholder="Your Company"
-          value={formData.company}
-          onChange={handleChange}
-          variant="outlined"
-          margin="normal"
+          multiline
+          rows={4}
           sx={{
             "& .MuiOutlinedInput-root": {
               backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -239,7 +278,7 @@ const LandingPageContactForm = () => {
             mt: 2,
           }}
         >
-          We'll review your IT setup and reach out within 24 hours.
+          We'll review your IT descriptions and reach out immediately.
         </Typography>
       </Box>
 
@@ -259,11 +298,11 @@ const LandingPageContactForm = () => {
           }}
         >
           <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-            ✓ Submission Received!
+            Submission Received!
           </Typography>
           <Typography variant="body2" sx={{ mb: 3, color: "text.secondary" }}>
             Thank you for your interest in our remote IT support services. Our
-            team will contact you within 24 hours to discuss your IT needs.
+            team will contact you within as soon as possible.
           </Typography>
           <Button
             onClick={handleCloseModal}
