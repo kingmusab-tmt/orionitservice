@@ -95,7 +95,7 @@ export default function RootLayout({
     image: "https://www.orionitservice.com/images/og-image.webp",
     description:
       "Managed IT Services in Las Vegas providing proactive network monitoring, cybersecurity solutions, help desk support, and website development. Serving the US, UK, and global businesses.",
-    telephone: "+1-702-800-9182",
+    telephone: "+1-888-841-2885",
     email: "info@orionitservice.com",
     address: {
       "@type": "PostalAddress",

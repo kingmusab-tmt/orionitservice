@@ -52,7 +52,7 @@ const contactSchema = {
     "@type": "LocalBusiness",
     "@id": "https://www.orionitservice.com/#organization",
     name: "Orion IT Service",
-    telephone: "+1-702-800-9182",
+    telephone: "+1-888-841-2885",
     email: "info@orionitservice.com",
     address: {
       "@type": "PostalAddress",

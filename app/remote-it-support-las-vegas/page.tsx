@@ -18,8 +18,8 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
-import Image from "next/image";
 import { styled } from "@mui/system";
+import LandingPageContactForm from "@/app/components/LandingPageContactForm";
 import {
   CheckCircle as CheckIcon,
   ExpandMore as ExpandMoreIcon,
@@ -212,11 +212,11 @@ export default function RemoteITSupportLandingPage() {
                   size="large"
                   color="inherit"
                 >
-                  Get Started Now
+                  Book Free IT Consultation
                 </CTAButton>
                 <Button
                   variant="outlined"
-                  href="tel:+17024231050"
+                  href="tel:+1888412885"
                   size="large"
                   sx={{
                     borderColor: "white",
@@ -231,25 +231,12 @@ export default function RemoteITSupportLandingPage() {
                     },
                   }}
                 >
-                  Call (702) 423-1050
+                  Call (888) 841-2885
                 </Button>
               </Stack>
             </Grid>
             <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "center" }}>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  height: 400,
-                }}
-              >
-                <Image
-                  src="/images/avatar5.webp"
-                  alt="Remote IT Support"
-                  fill
-                  style={{ objectFit: "cover", borderRadius: "12px" }}
-                />
-              </Box>
+              <LandingPageContactForm />
             </Grid>
           </Grid>
         </Container>
@@ -595,7 +582,7 @@ export default function RemoteITSupportLandingPage() {
             </CTAButton>
             <Button
               variant="outlined"
-              href="tel:+17024231050"
+              href="tel:+1888412885"
               size="large"
               sx={{
                 borderColor: "white",
@@ -610,7 +597,7 @@ export default function RemoteITSupportLandingPage() {
                 },
               }}
             >
-              Call (702) 423-1050
+              Call (888) 841-2885
             </Button>
           </Stack>
         </Container>
