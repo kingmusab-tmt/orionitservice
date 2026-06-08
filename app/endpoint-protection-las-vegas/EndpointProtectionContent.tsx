@@ -116,13 +116,7 @@ export default function EndpointProtectionContent() {
         "AI-powered detection of ransomware, malware, zero-day exploits, and unknown threats",
     },
     {
-      icon: (
-        <Visibility
-          as
-          VisibilityIcon
-          sx={{ fontSize: 40, color: "primary.main" }}
-        />
-      ),
+      icon: <VisibilityIcon sx={{ fontSize: 40, color: "primary.main" }} />,
       title: "Complete Visibility",
       description:
         "Real-time monitoring of all devices, processes, file activity, and network connections",

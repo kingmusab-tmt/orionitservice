@@ -27,10 +27,10 @@ import {
   School as TrainingIcon,
   TrendingUp as IncreaseIcon,
   Verified as CertificationIcon,
-  Users as TeamIcon,
+  Group as TeamIcon,
   BarChart as AnalyticsIcon,
   Lock as ProtectionIcon,
-  AlertCircle as AlertIcon,
+  Error as AlertIcon,
 } from "@mui/icons-material";
 
 const HeroSection = styled(Box)(({ theme }) => ({
