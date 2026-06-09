@@ -17,7 +17,26 @@ const path = require("path");
 const https = require("https");
 const http = require("http");
 
-const API_KEY = "a63aa23fab5445f0bc6be82cbf7cfe1c";
+// Load environment variables from .env.local
+function loadEnv() {
+  const envPath = path.join(process.cwd(), ".env.local");
+  if (fs.existsSync(envPath)) {
+    const envContent = fs.readFileSync(envPath, "utf-8");
+    const envVars = {};
+    envContent.split("\n").forEach((line) => {
+      if (line && !line.startsWith("#")) {
+        const [key, ...valueParts] = line.split("=");
+        envVars[key.trim()] = valueParts.join("=").trim();
+      }
+    });
+    return envVars;
+  }
+  return {};
+}
+
+const env = loadEnv();
+const API_KEY =
+  env.NEXT_PUBLIC_INDEXNOW_KEY || "a7ea15a328334de0bcd5588ccc19fa69";
 const INDEXNOW_API_ENDPOINT = "https://api.indexnow.org/indexnow";
 
 // Get domain from args or use localhost for testing

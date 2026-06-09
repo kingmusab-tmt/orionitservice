@@ -18,7 +18,7 @@ const checks = [];
 const keyFilePath = path.join(
   process.cwd(),
   "public",
-  "a63aa23fab5445f0bc6be82cbf7cfe1c.txt",
+  "a88be1a432204a9489fee4c70f98ceec.txt",
 );
 const keyFileExists = fs.existsSync(keyFilePath);
 const keyContent = keyFileExists
@@ -27,7 +27,7 @@ const keyContent = keyFileExists
 
 checks.push({
   name: "API Key File",
-  passed: keyFileExists && keyContent === "a63aa23fab5445f0bc6be82cbf7cfe1c",
+  passed: keyFileExists && keyContent === "a88be1a432204a9489fee4c70f98ceec",
   details: keyFileExists ? `Found: ${keyFilePath}` : "NOT FOUND",
 });
 
