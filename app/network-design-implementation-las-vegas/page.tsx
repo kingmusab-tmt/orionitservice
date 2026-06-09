@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Professional network design, implementation, and management in Las Vegas. Secure, scalable, high-performance networks for businesses of all sizes.",
   keywords:
-    "network design Las Vegas, network implementation, managed network, enterprise network, network security, network infrastructure, wireless networks",
+    "network design Las Vegas, network implementation,  enterprise network, network security, network infrastructure, wireless networks",
   openGraph: {
     title: "Network Design & Implementation Las Vegas | Orion IT Service",
     description:

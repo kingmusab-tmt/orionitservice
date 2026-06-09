@@ -22,10 +22,10 @@ import {
 export default function BlogPage() {
   const featuredPost = {
     title:
-      "How Managed IT Services Reduce Downtime for Small and Mid-Sized Businesses",
+      "How Remote IT Support Reduces Downtime for Small and Mid-Sized Businesses",
     excerpt:
       "Downtime impacts productivity, customer experience, and revenue. Learn how proactive monitoring, patch management, and strategic IT planning help Las Vegas businesses maintain reliable daily operations.",
-    category: "Managed IT",
+    category: "Remote IT Support",
     author: "Orion IT Service Team",
     date: "April 17, 2026",
   };
@@ -208,10 +208,11 @@ export default function BlogPage() {
       href: "/blog/zero-trust-security-cloud",
     },
     {
-      title: "Break-Fix vs Managed IT: Which Model Saves More Over Time?",
+      title:
+        "Break-Fix vs Remote IT Support: Which Model Saves More Over Time?",
       excerpt:
         "Compare reactive support and proactive service models to understand total cost, risk exposure, and long-term operational impact.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "March 30, 2026",
       href: "/blog/break-fix-vs-managed-it-which-model-saves-more-over-time",
@@ -220,7 +221,7 @@ export default function BlogPage() {
       title: "IT Help Desk Support: Efficient User Issue Resolution",
       excerpt:
         "Learn how responsive help desk support with ticketing systems, support tiers, and expert technicians keeps your team productive and reduces downtime.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "January 15, 2026",
       href: "/blog/it-help-desk-support-services",
@@ -230,7 +231,7 @@ export default function BlogPage() {
         "IT System Monitoring and Maintenance: Proactive Infrastructure Management",
       excerpt:
         "Proactive monitoring detects problems before they become outages. Learn best practices for infrastructure monitoring, alerting, and preventive maintenance.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "January 20, 2026",
       href: "/blog/it-system-monitoring-maintenance",
@@ -239,7 +240,7 @@ export default function BlogPage() {
       title: "Data Backup and Disaster Recovery: Business Continuity Planning",
       excerpt:
         "Backups protect against data loss from failures, ransomware, and disasters. Learn 3-2-1 backup strategy, recovery procedures, and business continuity planning.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "February 1, 2026",
       href: "/blog/data-backup-disaster-recovery",
@@ -248,7 +249,7 @@ export default function BlogPage() {
       title: "IT Infrastructure Upgrade and Migration: System Modernization",
       excerpt:
         "Plan IT infrastructure upgrades and migrations to reduce costs, improve performance, and stay current with technology while minimizing disruption.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "February 10, 2026",
       href: "/blog/it-infrastructure-upgrade-migration",
@@ -258,7 +259,7 @@ export default function BlogPage() {
         "IT Cost Optimization: Reducing Technology Spending While Improving Services",
       excerpt:
         "Learn strategies for reducing IT costs including cloud optimization, vendor management, and efficiency improvements without sacrificing security.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "February 18, 2026",
       href: "/blog/it-cost-optimization-strategies",
@@ -267,7 +268,7 @@ export default function BlogPage() {
       title: "Mobile Device Management for Business: BYOD and Device Security",
       excerpt:
         "Learn MDM strategies to secure employee phones and tablets while supporting BYOD policies and protecting corporate data from personal devices.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "February 25, 2026",
       href: "/blog/mobile-device-management-mdm",
@@ -277,7 +278,7 @@ export default function BlogPage() {
         "IT Change Management: Controlled System Updates and Configuration Changes",
       excerpt:
         "Learn change management processes to implement system updates safely with approval, testing, and communication to minimize disruption.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "March 5, 2026",
       href: "/blog/it-change-management-best-practices",
@@ -286,7 +287,7 @@ export default function BlogPage() {
       title: "Virtual Desktop Infrastructure for Remote Work: VDI Solutions",
       excerpt:
         "Learn how virtual desktops enable secure remote work, simplify management, and improve employee flexibility while protecting corporate data.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "March 12, 2026",
       href: "/blog/virtual-desktop-infrastructure-vdi",
@@ -295,7 +296,7 @@ export default function BlogPage() {
       title: "IT Service Level Agreements: SLA Best Practices for IT Support",
       excerpt:
         "Learn how to define, implement, and monitor SLAs to set clear expectations and improve IT service delivery performance and accountability.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "March 20, 2026",
       href: "/blog/it-service-level-agreements-sla",
@@ -305,7 +306,7 @@ export default function BlogPage() {
         "IT Asset Management and Inventory: Equipment Lifecycle Management",
       excerpt:
         "Learn asset management practices to track hardware and software, optimize spending, and ensure compliance with licensing requirements.",
-      category: "Managed IT",
+      category: "Remote IT Support",
       author: "Orion IT Service Team",
       date: "March 28, 2026",
       href: "/blog/it-asset-management-inventory",
@@ -455,7 +456,7 @@ export default function BlogPage() {
   const categories = [
     "All Topics",
     "Cybersecurity",
-    "Managed IT",
+    "Remote IT Support",
     "Cloud Security",
     "Networking",
     "IT Strategy",
@@ -530,10 +531,10 @@ export default function BlogPage() {
             <Button
               variant="contained"
               endIcon={<ArrowIcon />}
-              href="/blog/how-managed-it-services-reduce-downtime-for-small-and-mid-sized-businesses"
-              aria-label="Read how managed IT services reduce downtime article"
+              href="/blog/how-remote-it-support-reduces-downtime-for-small-and-mid-sized-businesses"
+              aria-label="Read how remote IT support reduces downtime article"
             >
-              Read Managed IT Downtime Article
+              Read Remote IT Support Downtime Article
             </Button>
           </Paper>
         </Box>

@@ -298,7 +298,7 @@ export default function GetQuote() {
                           label={
                             <Box display="flex" alignItems="center">
                               <StorageIcon color="primary" sx={{ mr: 1 }} />
-                              Managed IT Services
+                              Remote IT Support
                             </Box>
                           }
                         />
@@ -460,8 +460,8 @@ export default function GetQuote() {
                 <li>
                   <Typography variant="body1">
                     <strong>Optimize IT Budgets:</strong> Get accurate,
-                    transparent pricing for managed IT services, cloud
-                    solutions, and scalable infrastructure.
+                    transparent pricing for remote IT support, cloud solutions,
+                    and scalable infrastructure.
                   </Typography>
                 </li>
                 <li>
@@ -532,7 +532,7 @@ export default function GetQuote() {
                     <StorageIcon color="primary" sx={{ mr: 2 }} />
                     <Box>
                       <Typography variant="subtitle1" fontWeight={600}>
-                        Managed IT Solutions
+                        Remote IT Support Solutions
                       </Typography>
                       <Typography variant="body2">
                         Proactive IT management so you can focus on your

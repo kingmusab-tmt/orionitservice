@@ -156,8 +156,8 @@ function validateInput(body: any): string[] {
     const validServiceKeys = [
       "cybersecurity",
       "networking",
-      "managedit",
-      "manageit",
+      "itsupport",
+      "itSupport",
       "websitedevelopment",
       "websiteDevelopment",
       "backup",
@@ -236,9 +236,9 @@ function formatServices(services: any, otherService: string): string {
           return "Cybersecurity Training";
         case "networking":
           return "Network Solutions";
-        case "managedit":
-        case "manageit":
-          return "Managed IT Services";
+        case "itsupport":
+        case "itSupport":
+          return "IT Support Services";
         case "websitedevelopment":
         case "websiteDevelopment":
           return "Website Development";

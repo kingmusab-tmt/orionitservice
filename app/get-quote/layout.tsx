@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Get Free IT Quote | Managed IT, Security, and Web Plans",
+  title: "Get Free IT Quote | IT, Security, and Web Plans",
   description:
-    "Request a free custom IT quote from Orion IT Service. Select the services you need — cybersecurity, managed IT, networking, or website development — and get a tailored proposal.",
+    "Request a free custom IT quote from Orion IT Service. Select the services you need — cybersecurity, IT support, networking, or website development — and get a tailored proposal.",
   keywords:
-    "IT quote Las Vegas, IT quote Henderson, IT quote North Las Vegas, IT quote Summerlin, IT quote Boulder City, IT quote Pahrump, IT quote Los Angeles, IT quote Phoenix, IT quote Salt Lake City, IT quote Reno, IT quote Dallas, IT quote Austin, IT quote Houston, IT quote Denver, IT quote Seattle, IT quote Chicago, IT quote Atlanta, IT quote Miami, IT quote New York, free IT estimate, managed IT pricing Nevada, cybersecurity service quote, IT services cost Las Vegas, network solutions quote, website development quote Las Vegas",
+    "IT quote Las Vegas, IT quote Henderson, IT quote North Las Vegas, IT quote Summerlin, IT quote Boulder City, IT quote Pahrump, IT quote Los Angeles, IT quote Phoenix, IT quote Salt Lake City, IT quote Reno, IT quote Dallas, IT quote Austin, IT quote Houston, IT quote Denver, IT quote Seattle, IT quote Chicago, IT quote Atlanta, IT quote Miami, IT quote New York, free IT estimate, IT support pricing Nevada, cybersecurity service quote, IT services cost Las Vegas, network solutions quote, website development quote Las Vegas",
   alternates: {
     canonical: "https://www.orionitservice.com/get-quote",
   },
   openGraph: {
-    title: "Get Free IT Quote | Managed IT, Security, and Web Plans",
+    title: "Get Free IT Quote | IT, Security, and Web Plans",
     description:
-      "Get a custom IT services quote — cybersecurity, managed IT, networking, or website development. Fast response, no obligation.",
+      "Get a custom IT services quote — cybersecurity, IT support, networking, or website development. Fast response, no obligation.",
     url: "https://www.orionitservice.com/get-quote",
     images: [
       {
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Get Free IT Quote | Managed IT, Security, and Web Plans",
+    title: "Get Free IT Quote | IT, Security, and Web Plans",
     description:
-      "Request a custom IT quote — cybersecurity, managed IT, networking, or website development. No obligation.",
+      "Request a custom IT quote — cybersecurity, IT support, networking, or website development. No obligation.",
     images: ["/images/og-image.webp"],
   },
   robots: { index: true, follow: true },

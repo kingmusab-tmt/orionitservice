@@ -93,8 +93,8 @@ export const blogArticles = [
   {
     slug: "how-managed-it-services-reduce-downtime-for-small-and-mid-sized-businesses",
     title:
-      "How Managed IT Services Reduce Downtime for Small and Mid-Sized Businesses",
-    category: "Managed IT",
+      "How Remote IT Support Reduces Downtime for Small and Mid-Sized Businesses",
+    category: "Remote IT Support",
   },
   {
     slug: "it-help-desk-support-services",

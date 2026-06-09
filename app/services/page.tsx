@@ -21,18 +21,18 @@ import {
 } from "@mui/icons-material";
 
 export const metadata = {
-  title: "IT Services Las Vegas | Managed IT, Cybersecurity, Web",
+  title: "IT Services Las Vegas | IT, Cybersecurity, Web",
   description:
-    "Comprehensive IT services for Las Vegas businesses — cybersecurity awareness training, managed IT support, network engineering, and website development. Tailored solutions for every business size.",
+    "Comprehensive IT services for Las Vegas businesses — cybersecurity awareness training, IT support, network engineering, and website development. Tailored solutions for every business size.",
   keywords:
-    "IT services Las Vegas, managed services provider near me, IT services Henderson, IT services North Las Vegas, IT services Summerlin, IT services Boulder City, IT services Pahrump, IT services Los Angeles, IT services Phoenix, IT services Salt Lake City, IT services Reno, IT services Dallas, IT services Austin, IT services Houston, IT services Denver, IT services Seattle, IT services Chicago, IT services Atlanta, IT services Miami, IT services New York, cybersecurity solutions Nevada, managed IT services Las Vegas, network engineering Nevada, website development Las Vegas, IT support small business, business technology solutions Nevada",
+    "IT services Las Vegas, IT services provider near me, IT services Henderson, IT services North Las Vegas, IT services Summerlin, IT services Boulder City, IT services Pahrump, IT services Los Angeles, IT services Phoenix, IT services Salt Lake City, IT services Reno, IT services Dallas, IT services Austin, IT services Houston, IT services Denver, IT services Seattle, IT services Chicago, IT services Atlanta, IT services Miami, IT services New York, cybersecurity solutions Nevada, IT services Las Vegas, network engineering Nevada, website development Las Vegas, IT support small business, business technology solutions Nevada",
   alternates: {
     canonical: "https://www.orionitservice.com/services",
   },
   openGraph: {
-    title: "IT Services Las Vegas | Managed IT, Cybersecurity, Web",
+    title: "IT Services Las Vegas | IT, Cybersecurity, Web",
     description:
-      "Expert IT services to protect and optimize your business — cybersecurity, managed IT, network engineering, and website development in Las Vegas.",
+      "Expert IT services to protect and optimize your business — cybersecurity, IT support, network engineering, and website development in Las Vegas.",
     url: "https://www.orionitservice.com/services",
     images: [
       {
@@ -45,9 +45,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "IT Services Las Vegas | Managed IT, Cybersecurity, Web",
+    title: "IT Services Las Vegas | IT, Cybersecurity, Web",
     description:
-      "Expert IT services for Las Vegas businesses — cybersecurity, managed IT, networking, and website development.",
+      "Expert IT services for Las Vegas businesses — cybersecurity, IT support, networking, and website development.",
     images: ["/images/og-image.webp"],
   },
   robots: {
@@ -88,10 +88,10 @@ export default function Services() {
     },
 
     {
-      title: "Managed IT Services",
+      title: "IT Support",
       description: "Proactive IT management so you can focus on your business",
       icon: <ComputerIcon sx={{ fontSize: 60 }} />,
-      link: "/services/managed-it",
+      link: "/services/it-support",
       features: [
         "Help desk support",
         "Patch management",
@@ -149,7 +149,7 @@ export default function Services() {
             "@id": "https://www.orionitservice.com/services#webpage",
             name: "IT Services – Orion IT Service",
             description:
-              "Comprehensive IT services for Las Vegas businesses including cybersecurity, managed IT, network engineering, and website development.",
+              "Comprehensive IT services for Las Vegas businesses including cybersecurity, IT support, network engineering, and website development.",
             url: "https://www.orionitservice.com/services",
             provider: {
               "@id": "https://www.orionitservice.com/#organization",

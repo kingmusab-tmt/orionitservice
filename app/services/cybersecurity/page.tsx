@@ -61,7 +61,7 @@ const CybersecurityServices = () => {
       intro:
         "Cloud security protects the data, apps, and services your business depends on every day. We help secure Microsoft 365, SharePoint, OneDrive, Teams, and other cloud-based tools so they stay accessible, controlled, and harder to exploit.",
       items: [
-        "Secure user onboarding and offboarding with managed permissions",
+        "Secure user onboarding and offboarding with permissions",
         "Monitor suspicious logins and unusual activity across cloud accounts",
         "Encrypt data in transit and at rest to reduce exposure",
         "Prevent accidental deletion, unauthorized sharing, and data leakage",

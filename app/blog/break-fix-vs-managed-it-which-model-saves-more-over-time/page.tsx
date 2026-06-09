@@ -17,21 +17,22 @@ import {
 import { getRelatedArticlesBySlug } from "../blogArticles";
 
 export const metadata: Metadata = {
-  title: "Break-Fix vs Managed IT | Cost, Risk, and Downtime Guide",
+  title: "Break-Fix vs Remote IT Support | Cost, Risk, and Downtime Guide",
   description:
-    "Compare break-fix support with managed IT services to understand cost, downtime, security, and long-term value.",
+    "Compare break-fix support with remote IT support to understand cost, downtime, security, and long-term value.",
   alternates: {
     canonical: "/blog/break-fix-vs-managed-it-which-model-saves-more-over-time",
   },
 };
 
-export default function BreakFixVsManagedItArticle() {
+export default function BreakFixVsRemoteItArticle() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: "Break-Fix vs Managed IT: Which Model Saves More Over Time?",
+    headline:
+      "Break-Fix vs Remote IT Support: Which Model Saves More Over Time?",
     description:
-      "Compare break-fix support with managed IT services to understand cost, downtime, security, and long-term value.",
+      "Compare break-fix support with remote IT support to understand cost, downtime, security, and long-term value.",
     author: {
       "@type": "Organization",
       name: "Orion IT Service",

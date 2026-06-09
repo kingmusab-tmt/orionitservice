@@ -4,9 +4,9 @@ import JsonLd from "@/app/components/JsonLd";
 export const metadata: Metadata = {
   title: "About Orion IT Service | Las Vegas IT Experts & Mission",
   description:
-    "Orion IT Service is a Las Vegas-based IT company delivering cybersecurity training, managed IT support, network engineering, and website development with a security-first approach.",
+    "Orion IT Service is a Las Vegas-based IT company delivering cybersecurity training, IT support, network engineering, and website development with a security-first approach.",
   keywords:
-    "about Orion IT Service, Las Vegas IT company, Henderson IT company, North Las Vegas IT company, Summerlin IT company, Boulder City IT company, Pahrump IT company, Los Angeles IT company, Phoenix IT company, Salt Lake City IT company, Reno IT company, Dallas IT company, Austin IT company, Houston IT company, Denver IT company, Seattle IT company, Chicago IT company, Atlanta IT company, Miami IT company, New York IT company, Nevada IT services, IT company Las Vegas, cybersecurity company Las Vegas, managed IT provider Nevada",
+    "about Orion IT Service, Las Vegas IT company, Henderson IT company, North Las Vegas IT company, Summerlin IT company, Boulder City IT company, Pahrump IT company, Los Angeles IT company, Phoenix IT company, Salt Lake City IT company, Reno IT company, Dallas IT company, Austin IT company, Houston IT company, Denver IT company, Seattle IT company, Chicago IT company, Atlanta IT company, Miami IT company, New York IT company, Nevada IT services, IT company Las Vegas, cybersecurity company Las Vegas, IT support provider Nevada",
   alternates: {
     canonical: "https://www.orionitservice.com/about",
   },
@@ -46,7 +46,7 @@ export default function AboutLayout({
     name: "About Orion IT Service",
     url: "https://www.orionitservice.com/about",
     description:
-      "Orion IT Service is a Las Vegas-based technology company delivering cybersecurity training, managed IT, and network engineering.",
+      "Orion IT Service is a Las Vegas-based technology company delivering cybersecurity training, IT support, and network engineering.",
     publisher: {
       "@type": "Organization",
       "@id": "https://www.orionitservice.com/#organization",

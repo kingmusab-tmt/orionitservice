@@ -35,7 +35,7 @@ import {
 } from "@mui/icons-material";
 import HeroBanner from "@/app/components/HeroBanner";
 
-const ManagedItServices = () => {
+const RemoteItSupport = () => {
   const coreServices = [
     {
       icon: <MonitorIcon color="primary" sx={{ fontSize: 50 }} />,
@@ -103,7 +103,7 @@ const ManagedItServices = () => {
 
   const faqs = [
     {
-      question: "How is managed IT different from break-fix services?",
+      question: "How is remote IT support different from break-fix services?",
       answer:
         "We prevent problems before they happen through continuous monitoring and maintenance, rather than just reacting to emergencies.",
     },
@@ -123,9 +123,9 @@ const ManagedItServices = () => {
         "We maintain compliance frameworks for HIPAA, PCI DSS, and other standards relevant to your industry.",
     },
     {
-      question: "What is included in managed IT services each month?",
+      question: "What is included in remote IT support each month?",
       answer:
-        "Managed IT services typically include proactive monitoring, patching, endpoint protection, help desk support, backup oversight, and strategic guidance. We customize scope based on your business priorities and technology environment.",
+        "Remote IT support typically includes proactive monitoring, patching, endpoint protection, help desk support, backup oversight, and strategic guidance. We customize scope based on your business priorities and technology environment.",
     },
     {
       question: "Can managed IT reduce downtime for my business?",
@@ -138,9 +138,9 @@ const ManagedItServices = () => {
         "Yes. We support hybrid and remote work by securing endpoints, optimizing connectivity, managing access controls, and providing responsive remote support to distributed teams.",
     },
     {
-      question: "How do managed IT services improve cybersecurity?",
+      question: "How does remote IT support improve cybersecurity?",
       answer:
-        "Managed IT improves security through patch management, antivirus and endpoint controls, account policy enforcement, backup strategy, and ongoing monitoring for suspicious activity.",
+        "Remote IT support improves security through patch management, antivirus and endpoint controls, account policy enforcement, backup strategy, and ongoing monitoring for suspicious activity.",
     },
     {
       question: "Will we still have control over our systems?",
@@ -153,7 +153,8 @@ const ManagedItServices = () => {
         "Yes. We work with your current stack and third-party vendors, coordinate technical issues, and help streamline support across multiple platforms and providers.",
     },
     {
-      question: "Do managed IT services help with planning and budgeting?",
+      question:
+        "Do remote IT support services help with planning and budgeting?",
       answer:
         "Yes. We provide technology roadmaps, lifecycle planning, and budgeting guidance so you can make informed IT investments and avoid surprise costs.",
     },
@@ -209,7 +210,7 @@ const ManagedItServices = () => {
         {/* Intro Section */}
         <Box mb={10}>
           <Chip
-            label="MANAGED IT SERVICES"
+            label="REMOTE IT SUPPORT"
             color="primary"
             sx={{
               mb: 2,
@@ -226,7 +227,7 @@ const ManagedItServices = () => {
               fontSize: { xs: "2rem", md: "2.8rem" },
             }}
           >
-            Comprehensive Managed IT Support For Growing Businesses
+            Comprehensive Remote IT Support For Growing Businesses
           </Typography>
           <Typography
             variant="body1"
@@ -238,10 +239,10 @@ const ManagedItServices = () => {
             }}
           >
             Modern businesses depend on reliable technology to operate,
-            communicate, and scale. Orion IT Service provides managed IT
-            services designed to reduce disruption, improve security, and keep
-            your environment stable. From proactive monitoring and maintenance
-            to responsive help desk support and strategic planning, we help your
+            communicate, and scale. Orion IT Service provides remote IT support
+            designed to reduce disruption, improve security, and keep your
+            environment stable. From proactive monitoring and maintenance to
+            responsive help desk support and strategic planning, we help your
             organization move from reactive fixes to predictable IT operations.
           </Typography>
           <Typography
@@ -366,7 +367,7 @@ const ManagedItServices = () => {
             component="h3"
             sx={{ fontWeight: 800, mb: 2, textAlign: "center" }}
           >
-            Our Managed IT Service Approach
+            Our Remote IT Support Approach
           </Typography>
           <Typography
             variant="body1"
@@ -416,7 +417,7 @@ const ManagedItServices = () => {
             component="h3"
             sx={{ fontWeight: 800, mb: 3, textAlign: "center" }}
           >
-            Common Managed IT Problems We Solve
+            Common Remote IT Support Problems We Solve
           </Typography>
           <Typography
             variant="body1"
@@ -484,7 +485,7 @@ const ManagedItServices = () => {
                   mb: 3,
                 }}
               >
-                What Our Managed IT Services Include
+                What Our Remote IT Support Includes
               </Typography>
               <List>
                 {[
@@ -609,7 +610,7 @@ const ManagedItServices = () => {
               textAlign: "center",
             }}
           >
-            Managed IT vs. Traditional Support
+            Remote IT Support vs. Traditional Support
           </Typography>
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, md: 6 }}>
@@ -664,7 +665,7 @@ const ManagedItServices = () => {
                       color: "primary.main",
                     }}
                   >
-                    Our Managed IT Approach
+                    Our Remote IT Support Approach
                   </Typography>
                   <List>
                     {[
@@ -700,7 +701,7 @@ const ManagedItServices = () => {
               textAlign: "center",
             }}
           >
-            Managed IT Services Questions
+            Remote IT Support Questions
           </Typography>
           <Box>
             {faqs.map((faq, index) => (
@@ -787,4 +788,4 @@ const ManagedItServices = () => {
   );
 };
 
-export default ManagedItServices;
+export default RemoteItSupport;

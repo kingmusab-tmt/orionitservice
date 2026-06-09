@@ -114,7 +114,9 @@ const ConsultationPage = () => {
   const services = [
     "Cybersecurity Assessment",
     "Network Infrastructure Review",
-    "Managed IT Services",
+    " IT Support",
+    "Website Development",
+
     "Cloud Migration",
     "Compliance Consultation",
     "Technology Strategy",

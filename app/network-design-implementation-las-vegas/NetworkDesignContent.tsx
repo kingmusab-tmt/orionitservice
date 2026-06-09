@@ -229,7 +229,7 @@ export default function NetworkDesignContent() {
     {
       question: "What about ongoing management and support?",
       answer:
-        "We offer managed network services including 24/7 monitoring, maintenance, security updates, performance optimization, and technical support. Plans start at $500-2000/month depending on network size.",
+        "We offer network services including  maintenance, security updates, performance optimization, and technical support. Plans start at $500-2000/month depending on network size.",
     },
     {
       question: "How do you handle growth as our business scales?",

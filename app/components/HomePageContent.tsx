@@ -94,10 +94,10 @@ export default function Home() {
       ],
     },
     {
-      title: "Managed IT Services",
+      title: " IT Services",
       description: "Proactive IT management so you can focus on your business",
       icon: <ComputerIcon fontSize="large" color="primary" />,
-      link: "/services/managed-it",
+      link: "/services/it-support",
       features: [
         "Help desk support",
         "Remote Support",
@@ -240,7 +240,7 @@ export default function Home() {
                 <List>
                   {[
                     "Network architecture design, optimization, and management across traditional and cloud environments",
-                    "Managed IT Services with proactive monitoring, patch management, backup and disaster recovery",
+                    "IT Support with proactive response, patch management, backup and disaster recovery",
                     "Cybersecurity expertise spanning endpoint protection, threat detection, vulnerability assessment, and compliance",
                     "Website development capabilities including responsive design, SEO optimization, and e-commerce functionality",
                     "Rapid troubleshooting and issue resolution across all IT and web service domains",
@@ -578,10 +578,10 @@ export default function Home() {
                 variant="body1"
                 sx={{ mb: 2, color: "text.secondary" }}
               >
-                Businesses searching for Managed IT Services in Las Vegas choose
-                us to eliminate recurring downtime, reduce support delays, and
-                improve system reliability. We provide proactive IT management,
-                rapid troubleshooting, and strategic planning that keeps teams
+                Businesses searching for IT Services in Las Vegas choose us to
+                eliminate recurring downtime, reduce support delays, and improve
+                system reliability. We provide proactive IT management, rapid
+                troubleshooting, and strategic planning that keeps teams
                 productive and operations stable. While Las Vegas is a key
                 service hub, we support companies across the entire US and UK,
                 and deliver global remote IT support for distributed teams.
@@ -601,13 +601,12 @@ export default function Home() {
                 variant="body1"
                 sx={{ mb: 2, color: "text.secondary" }}
               >
-                Our Network Solutions and Managed IT Services improve
-                performance from core infrastructure to day-to-day support. We
-                design, optimize, and maintain wired and wireless networks,
-                monitor systems around the clock, manage patches and backups,
-                and deliver responsive help desk support. The result is
-                predictable uptime, better user experience, and technology
-                aligned with your business growth.
+                Our Network Solutions and IT Services improve performance from
+                core infrastructure to day-to-day support. We design, optimize,
+                and maintain wired and wireless networks, monitor systems around
+                the clock, manage patches and backups, and deliver responsive
+                help desk support. The result is predictable uptime, better user
+                experience, and technology aligned with your business growth.
               </Typography>
               <Typography variant="body1" sx={{ color: "text.secondary" }}>
                 Our Website Development services complete your digital strategy
@@ -616,9 +615,9 @@ export default function Home() {
                 and e-commerce functionality to ongoing maintenance and
                 performance updates, we help your business attract and convert
                 the right audience. With Cybersecurity Solutions, Network
-                Solutions, Managed IT Services, and Website Development under
-                one team, you get a trusted technology partner for Las Vegas,
-                the US, the UK, and global operations.
+                Solutions, IT Services, and Website Development under one team,
+                you get a trusted technology partner for Las Vegas, the US, the
+                UK, and global operations.
               </Typography>
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
@@ -680,8 +679,8 @@ export default function Home() {
               px: isMobile ? 2 : 0,
             }}
           >
-            Whether you need comprehensive managed services or targeted
-            solutions, our team is ready to help.
+            Whether you need comprehensive IT services or targeted solutions,
+            our team is ready to help.
           </Typography>
           <Box
             sx={{
