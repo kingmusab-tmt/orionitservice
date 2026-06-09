@@ -14,7 +14,7 @@ import {
   Person as PersonIcon,
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
-import { blogArticles } from "../blogArticles";
+import { getRelatedArticlesBySlug } from "../blogArticles";
 
 export const metadata: Metadata = {
   title: "Break-Fix vs Managed IT | Cost, Risk, and Downtime Guide",
@@ -74,9 +74,7 @@ export default function BreakFixVsManagedItArticle() {
 
   const currentSlug =
     "break-fix-vs-managed-it-which-model-saves-more-over-time";
-  const relatedArticles = blogArticles
-    .filter((article) => article.slug !== currentSlug)
-    .slice(0, 4);
+  const relatedArticles = getRelatedArticlesBySlug(currentSlug);
 
   return (
     <>

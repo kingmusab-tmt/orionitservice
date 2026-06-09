@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && node scripts/submit-to-indexnow.js --domain orionitservice.com",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "indexnow:submit": "node scripts/submit-to-indexnow.js --domain orionitservice.com",
+    "indexnow:submit:prod": "npm run build && npm run indexnow:submit"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

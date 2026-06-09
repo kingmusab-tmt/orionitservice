@@ -14,7 +14,7 @@ import {
   Person as PersonIcon,
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
-import { blogArticles } from "../blogArticles";
+import { getRelatedArticlesBySlug } from "../blogArticles";
 
 export const metadata: Metadata = {
   title: "Website Speed Checklist | Better SEO and More Conversions",
@@ -76,9 +76,7 @@ export default function WebsiteSpeedArticle() {
 
   const currentSlug =
     "website-speed-optimization-checklist-for-better-seo-and-conversions";
-  const relatedArticles = blogArticles
-    .filter((article) => article.slug !== currentSlug)
-    .slice(0, 4);
+  const relatedArticles = getRelatedArticlesBySlug(currentSlug);
 
   return (
     <>

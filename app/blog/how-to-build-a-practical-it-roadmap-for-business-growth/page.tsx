@@ -14,7 +14,7 @@ import {
   Person as PersonIcon,
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
-import { blogArticles } from "../blogArticles";
+import { getRelatedArticlesBySlug } from "../blogArticles";
 
 export const metadata: Metadata = {
   title: "IT Roadmap for Growth | Practical Planning for Business",
@@ -73,9 +73,7 @@ export default function ITRoadmapArticle() {
   };
 
   const currentSlug = "how-to-build-a-practical-it-roadmap-for-business-growth";
-  const relatedArticles = blogArticles
-    .filter((article) => article.slug !== currentSlug)
-    .slice(0, 4);
+  const relatedArticles = getRelatedArticlesBySlug(currentSlug);
 
   return (
     <>

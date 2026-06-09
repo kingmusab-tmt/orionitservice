@@ -14,7 +14,7 @@ import {
   Person as PersonIcon,
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
-import { blogArticles } from "../blogArticles";
+import { getRelatedArticlesBySlug } from "../blogArticles";
 
 export const metadata: Metadata = {
   title: "Managed IT for SMBs | Reduce Downtime and Improve Uptime",
@@ -76,9 +76,7 @@ export default function ManagedItDowntimeArticle() {
 
   const currentSlug =
     "how-managed-it-services-reduce-downtime-for-small-and-mid-sized-businesses";
-  const relatedArticles = blogArticles
-    .filter((article) => article.slug !== currentSlug)
-    .slice(0, 4);
+  const relatedArticles = getRelatedArticlesBySlug(currentSlug);
 
   return (
     <>

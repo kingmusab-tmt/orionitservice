@@ -14,7 +14,7 @@ import {
   Person as PersonIcon,
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
-import { blogArticles } from "../blogArticles";
+import { getRelatedArticlesBySlug } from "../blogArticles";
 
 export const metadata: Metadata = {
   title: "Office WiFi Fixes | Boost Speed, Coverage, and Reliability",
@@ -73,9 +73,7 @@ export default function OfficeWifiArticle() {
   };
 
   const currentSlug = "why-your-office-wifi-is-slow-and-how-to-fix-it";
-  const relatedArticles = blogArticles
-    .filter((article) => article.slug !== currentSlug)
-    .slice(0, 4);
+  const relatedArticles = getRelatedArticlesBySlug(currentSlug);
 
   return (
     <>

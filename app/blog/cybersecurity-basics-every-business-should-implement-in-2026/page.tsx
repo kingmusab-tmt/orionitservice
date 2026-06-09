@@ -14,7 +14,7 @@ import {
   Person as PersonIcon,
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
-import { blogArticles } from "../blogArticles";
+import { getRelatedArticlesBySlug } from "../blogArticles";
 
 export const metadata: Metadata = {
   title: "Cybersecurity Basics 2026 | Essential Controls for Business",
@@ -75,9 +75,7 @@ export default function CybersecurityBasicsArticle() {
 
   const currentSlug =
     "cybersecurity-basics-every-business-should-implement-in-2026";
-  const relatedArticles = blogArticles
-    .filter((article) => article.slug !== currentSlug)
-    .slice(0, 4);
+  const relatedArticles = getRelatedArticlesBySlug(currentSlug);
 
   return (
     <>

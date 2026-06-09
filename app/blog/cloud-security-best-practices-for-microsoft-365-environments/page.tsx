@@ -15,7 +15,7 @@ import {
   Person as PersonIcon,
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
-import { blogArticles } from "../blogArticles";
+import { getRelatedArticlesBySlug } from "../blogArticles";
 
 export const metadata: Metadata = {
   title: "Microsoft 365 Security | Cloud Protection Best Practices",
@@ -76,9 +76,7 @@ export default function CloudSecurityArticle() {
 
   const currentSlug =
     "cloud-security-best-practices-for-microsoft-365-environments";
-  const relatedArticles = blogArticles
-    .filter((article) => article.slug !== currentSlug)
-    .slice(0, 4);
+  const relatedArticles = getRelatedArticlesBySlug(currentSlug);
 
   return (
     <>
