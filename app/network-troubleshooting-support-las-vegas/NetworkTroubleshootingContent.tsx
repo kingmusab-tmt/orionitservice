@@ -213,7 +213,7 @@ export default function NetworkTroubleshootingContent() {
     {
       question: "How do I contact support?",
       answer:
-        "Contact support by phone (888) 412-2885, email, or through your support portal. Critical issues can be escalated immediately. We have dedicated support numbers for different urgency levels.",
+        "Contact support by phone (888) 210-4378, email, or through your support portal. Critical issues can be escalated immediately. We have dedicated support numbers for different urgency levels.",
     },
     {
       question: "Do you charge for after-hours support?",
@@ -290,7 +290,7 @@ export default function NetworkTroubleshootingContent() {
                 </CTAButton>
                 <SecondaryCtaButton
                   variant="outlined"
-                  href="tel:+1888412885"
+                  href="tel:+18882104378"
                   size="large"
                   sx={{
                     borderColor: "white",
@@ -500,7 +500,7 @@ export default function NetworkTroubleshootingContent() {
             </CTAButton>
             <SecondaryCtaButton
               variant="outlined"
-              href="tel:+1888412885"
+              href="tel:+18882104378"
               size="large"
               sx={{
                 borderColor: "white",
@@ -515,7 +515,7 @@ export default function NetworkTroubleshootingContent() {
                 },
               }}
             >
-              (888) 412-2885
+              (888) 210-4378
             </SecondaryCtaButton>
           </Stack>
         </Container>

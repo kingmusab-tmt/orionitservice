@@ -31,7 +31,7 @@ export default function StrategicITPlanningLandingPage() {
           description:
             "Professional strategic IT planning and consulting services in Las Vegas",
           url: "https://www.orionitservice.com/strategic-it-planning-las-vegas",
-          telephone: "+1-888-841-2885",
+          telephone: "+1-888-210-4378",
           areaServed: {
             "@type": "City",
             name: "Las Vegas",

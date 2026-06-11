@@ -374,7 +374,7 @@ const ConsultationPage = () => {
                     <PhoneIcon color="primary" />
                   </ListItemIcon>
                   <Typography variant="body1">
-                    <strong>Call us:</strong> +1 888 841 2885
+                    <strong>Call us:</strong> +1 888 210 4378
                   </Typography>
                 </ListItem>
                 <ListItem sx={{ px: 0 }}>

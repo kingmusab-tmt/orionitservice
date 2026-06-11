@@ -32,7 +32,7 @@ export default function BackupRecoveryLandingPage() {
           description:
             "Professional backup and recovery solutions in Las Vegas",
           url: "https://www.orionitservice.com/backup-recovery-solutions-las-vegas",
-          telephone: "+1-888-841-2885",
+          telephone: "+1-888-210-4378",
           areaServed: {
             "@type": "City",
             name: "Las Vegas",

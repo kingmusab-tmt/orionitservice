@@ -33,7 +33,7 @@ export default function NetworkDesignLandingPage() {
           description:
             "Professional network design and implementation services in Las Vegas",
           url: "https://www.orionitservice.com/network-design-implementation-las-vegas",
-          telephone: "+1-888-841-2885",
+          telephone: "+1-888-210-4378",
           areaServed: {
             "@type": "City",
             name: "Las Vegas",

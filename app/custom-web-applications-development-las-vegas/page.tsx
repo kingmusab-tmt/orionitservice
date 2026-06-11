@@ -33,7 +33,7 @@ export default function CustomWebAppsDevelopmentLandingPage() {
           description:
             "Professional custom web application development services in Las Vegas",
           url: "https://www.orionitservice.com/custom-web-applications-development-las-vegas",
-          telephone: "+1-888-841-2885",
+          telephone: "+1-888-210-4378",
           areaServed: {
             "@type": "City",
             name: "Las Vegas",

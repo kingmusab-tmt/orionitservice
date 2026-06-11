@@ -278,8 +278,9 @@ export default function PatchManagementContent() {
                   lineHeight: 1.6,
                 }}
               >
-                Automated patch management keeps your systems secure. Close vulnerabilities before
-                attackers find them. Stay compliant with patch requirements.
+                Automated patch management keeps your systems secure. Close
+                vulnerabilities before attackers find them. Stay compliant with
+                patch requirements.
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
                 <CTAButton
@@ -291,7 +292,7 @@ export default function PatchManagementContent() {
                 </CTAButton>
                 <SecondaryCtaButton
                   variant="outlined"
-                  href="tel:+1888412885"
+                  href="tel:+18882104378"
                   size="large"
                   sx={{
                     borderColor: "white",
@@ -483,10 +484,15 @@ export default function PatchManagementContent() {
               lineHeight: 1.6,
             }}
           >
-            Most attacks use known vulnerabilities that have patches available. Don't be a target.
-            Automated patch management keeps you protected. Get audited today.
+            Most attacks use known vulnerabilities that have patches available.
+            Don't be a target. Automated patch management keeps you protected.
+            Get audited today.
           </Typography>
-          <Stack direction={{ xs: "column", sm: "row" }} spacing={2} justifyContent="center">
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={2}
+            justifyContent="center"
+          >
             <CTAButton
               variant="contained"
               href="/free-consultation"
@@ -496,7 +502,7 @@ export default function PatchManagementContent() {
             </CTAButton>
             <SecondaryCtaButton
               variant="outlined"
-              href="tel:+1888412885"
+              href="tel:+18882104378"
               size="large"
               sx={{
                 borderColor: "white",
@@ -511,7 +517,7 @@ export default function PatchManagementContent() {
                 },
               }}
             >
-              (888) 412-2885
+              (888) 210-4378
             </SecondaryCtaButton>
           </Stack>
         </Container>
@@ -571,8 +577,9 @@ export default function PatchManagementContent() {
             Stay Secure with Automated Patching
           </Typography>
           <Typography variant="body1" sx={{ mb: 3 }}>
-            Let us handle patch management while you focus on your business. Automated security
-            updates keep vulnerabilities closed. Free patch audit.
+            Let us handle patch management while you focus on your business.
+            Automated security updates keep vulnerabilities closed. Free patch
+            audit.
           </Typography>
           <CTAButton
             variant="contained"

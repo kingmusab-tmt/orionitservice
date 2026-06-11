@@ -33,7 +33,7 @@ export default function SecurityAwarenessLandingPage() {
           description:
             "Professional security awareness training services in Las Vegas",
           url: "https://www.orionitservice.com/security-awareness-training-las-vegas",
-          telephone: "+1-888-841-2885",
+          telephone: "+1-888-210-4378",
           areaServed: {
             "@type": "City",
             name: "Las Vegas",

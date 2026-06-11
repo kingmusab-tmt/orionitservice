@@ -52,7 +52,7 @@ const contactSchema = {
     "@type": "LocalBusiness",
     "@id": "https://www.orionitservice.com/#organization",
     name: "Orion IT Service",
-    telephone: "+1-888-841-2885",
+    telephone: "+1-888-210-4378",
     email: "info@orionitservice.com",
     address: {
       "@type": "PostalAddress",
@@ -142,10 +142,10 @@ export default function Contact() {
                   <Phone color="primary" sx={{ mr: 1.5 }} />
                   <Typography
                     component="a"
-                    href="tel:+1 888 841 2885"
+                    href="tel:+1 888 210 4378"
                     sx={{ textDecoration: "none", color: "inherit" }}
                   >
-                    +1 888 841 2885
+                    +1 888 210 4378
                   </Typography>
                 </Box>
 

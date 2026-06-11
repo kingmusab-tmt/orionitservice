@@ -291,7 +291,7 @@ export default function BackupRecoveryContent() {
                 </CTAButton>
                 <SecondaryCtaButton
                   variant="outlined"
-                  href="tel:+1888412885"
+                  href="tel:+18882104378"
                   size="large"
                   sx={{
                     borderColor: "white",
@@ -501,7 +501,7 @@ export default function BackupRecoveryContent() {
             </CTAButton>
             <SecondaryCtaButton
               variant="outlined"
-              href="tel:+1888412885"
+              href="tel:+18882104378"
               size="large"
               sx={{
                 borderColor: "white",
@@ -516,7 +516,7 @@ export default function BackupRecoveryContent() {
                 },
               }}
             >
-              (888) 412-2885
+              (888) 210-4378
             </SecondaryCtaButton>
           </Stack>
         </Container>

@@ -32,7 +32,7 @@ export default function EndpointProtectionLandingPage() {
           description:
             "Professional endpoint protection and EDR services in Las Vegas",
           url: "https://www.orionitservice.com/endpoint-protection-las-vegas",
-          telephone: "+1-888-841-2885",
+          telephone: "+1-888-210-4378",
           areaServed: {
             "@type": "City",
             name: "Las Vegas",

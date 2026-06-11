@@ -135,8 +135,8 @@ const Footer = () => {
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
               <Phone sx={{ mr: 1 }} aria-hidden="true" />
-              <Link href="tel:+18888412885" color="inherit" underline="hover">
-                <Typography variant="body2">+1 888 841 2885</Typography>
+              <Link href="tel:+18882104378" color="inherit" underline="hover">
+                <Typography variant="body2">+1 888 210 4378</Typography>
               </Link>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>

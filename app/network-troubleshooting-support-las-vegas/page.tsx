@@ -33,7 +33,7 @@ export default function NetworkTroubleshootingLandingPage() {
           description:
             "Professional 24/7 network troubleshooting and support services in Las Vegas",
           url: "https://www.orionitservice.com/network-troubleshooting-support-las-vegas",
-          telephone: "+1-888-841-2885",
+          telephone: "+1-888-210-4378",
           areaServed: {
             "@type": "City",
             name: "Las Vegas",

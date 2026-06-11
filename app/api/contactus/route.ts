@@ -64,7 +64,7 @@ export async function POST(req: NextRequest) {
           body.message || "No additional message"
         }</li>
         </ul>
-        <p>If you have any immediate questions, please reply to this email or call us at +1 888 841 2885.</p>
+        <p>If you have any immediate questions, please reply to this email or call us at +1 888 210 4378.</p>
         <br/>
         <p>Best regards,</p>
         <p>The Orion IT Team</p>

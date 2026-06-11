@@ -225,7 +225,7 @@ export default function PrivacyPolicy() {
               privacy@orionitservice.com
             </Link>
             <br />
-            Phone: +1 888 841 2885
+            Phone: +1 888 210 4378
             <br />
             Address: 3305 Sky County ln 201, Las Vegas, NV 89117, United States
           </Typography>

@@ -31,7 +31,7 @@ export default function RemoteITSupportLandingPage() {
           description:
             "24/7 Remote IT support services for Las Vegas businesses",
           url: "https://www.orionitservice.com/remote-it-support-las-vegas",
-          telephone: "+1-888-841-2885",
+          telephone: "+1-888-210-4378",
           areaServed: {
             "@type": "City",
             name: "Las Vegas",

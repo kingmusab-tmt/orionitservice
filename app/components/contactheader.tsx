@@ -79,11 +79,11 @@ const SmallHeader = () => {
             />
             <Typography variant="caption" component="span">
               <Link
-                href="tel:+1 888 841 2885"
+                href="tel:+1 888 210 4378"
                 color="inherit"
                 underline="hover"
               >
-                +1 888 841 2885
+                +1 888 210 4378
               </Link>
             </Typography>
           </Box>

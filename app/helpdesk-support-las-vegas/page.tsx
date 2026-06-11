@@ -31,7 +31,7 @@ export default function HelpdeskSupportLandingPage() {
           description:
             "Professional 24/7 helpdesk support services in Las Vegas",
           url: "https://www.orionitservice.com/helpdesk-support-las-vegas",
-          telephone: "+1-888-841-2885",
+          telephone: "+1-888-210-4378",
           areaServed: {
             "@type": "City",
             name: "Las Vegas",
