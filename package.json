@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && node scripts/submit-to-indexnow.js --domain orionitservice.com",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
