@@ -95,7 +95,7 @@ export default function Home() {
     },
     {
       title: " IT Services",
-      description: "Proactive IT management so you can focus on your business",
+      description: "Reliable IT support so you can focus on your business",
       icon: <ComputerIcon fontSize="large" color="primary" />,
       link: "/services/it-support",
       features: [
@@ -275,12 +275,12 @@ export default function Home() {
                 </Typography>
                 <List>
                   {[
-                    "Integrated IT management keeps your networks, security, infrastructure, and digital presence aligned with business goals",
+                    "Integrated IT support keeps your networks, security, infrastructure, and digital presence aligned with business goals",
                     "Reduced operational risk through layered cybersecurity, reliable infrastructure, and strategic IT planning",
                     "Faster time-to-resolution with expert diagnostics and rapid response across all service areas",
                     "Improved uptime and system performance through continuous monitoring and proactive maintenance",
                     "Enhanced online presence with modern websites, SEO optimization, and user-focused digital experiences",
-                    "Cost-effective, flexible engagement models supporting managed services, on-demand support, and project-based work",
+                    "Cost-effective, flexible engagement models supporting ongoing support, on-demand assistance, and project-based work",
                   ].map((item, index) => (
                     <ListItem
                       key={index}
@@ -580,7 +580,7 @@ export default function Home() {
               >
                 Businesses searching for IT Services in Las Vegas choose us to
                 eliminate recurring downtime, reduce support delays, and improve
-                system reliability. We provide proactive IT management, rapid
+                system reliability. We provide proactive IT support, rapid
                 troubleshooting, and strategic planning that keeps teams
                 productive and operations stable. While Las Vegas is a key
                 service hub, we support companies across the entire US and UK,

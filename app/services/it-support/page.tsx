@@ -39,14 +39,15 @@ const RemoteItSupport = () => {
   const coreServices = [
     {
       icon: <MonitorIcon color="primary" sx={{ fontSize: 50 }} />,
-      title: "Proactive Monitoring",
-      description: "24/7 system oversight to prevent issues before they occur",
+      title: "User Productivity Enablement",
+      description:
+        "Support services designed to keep employees efficient across devices and cloud tools",
       features: [
-        "Network performance tracking",
-        "Device health monitoring",
-        "Automated alert system",
-        "Monthly health reports",
-        "Capacity planning",
+        "New-hire setup and role-based access",
+        "Collaboration suite support",
+        "Secure remote work setup",
+        "Workflow and performance tuning",
+        "User guidance and knowledge transfer",
       ],
       //   cta: "See Monitoring Demo",
     },
@@ -128,7 +129,7 @@ const RemoteItSupport = () => {
         "Remote IT support typically includes proactive monitoring, patching, endpoint protection, help desk support, backup oversight, and strategic guidance. We customize scope based on your business priorities and technology environment.",
     },
     {
-      question: "Can managed IT reduce downtime for my business?",
+      question: "Can remote IT support reduce downtime for my business?",
       answer:
         "Yes. Continuous monitoring, preventative maintenance, and faster incident response reduce unplanned outages and improve system reliability over time.",
     },
@@ -200,8 +201,8 @@ const RemoteItSupport = () => {
   return (
     <>
       <HeroBanner
-        title="Stress-Free IT Management"
-        subtitle="Proactive technology support so you can focus on growing your business"
+        title="Stress-Free Remote IT Support"
+        subtitle="Proactive remote technology support so you can focus on growing your business"
         ctaText="Get Your Free IT Assessment"
         ctaLink="/contact"
       />
@@ -251,8 +252,9 @@ const RemoteItSupport = () => {
           >
             Our team works as an extension of your business, handling day-to-day
             technical needs while helping leadership make smarter long-term IT
-            decisions. Whether you need full-service support or co-managed IT,
-            we align technology performance with your business goals.
+            decisions. Whether you need fully outsourced remote support or a
+            collaborative model alongside your in-house team, we align
+            technology performance with your business goals.
           </Typography>
         </Box>
 
@@ -278,7 +280,7 @@ const RemoteItSupport = () => {
               fontSize: { xs: "2rem", md: "2.8rem" },
             }}
           >
-            Your Complete IT Department Replacement
+            Reliable Remote IT Coverage for Your Team
           </Typography>
           <Typography
             variant="h6"
@@ -290,7 +292,7 @@ const RemoteItSupport = () => {
               color: "text.secondary",
             }}
           >
-            We become your technology partner, handling everything from daily
+            question: "Can remote IT support reduce downtime for my business?",
             maintenance to strategic planning.
           </Typography>
 
@@ -552,7 +554,7 @@ const RemoteItSupport = () => {
               textAlign: "center",
             }}
           >
-            Comprehensive IT Management
+            Comprehensive Remote IT Coverage
           </Typography>
           <Grid container spacing={3}>
             {additionalBenefits.map((service, index) => (

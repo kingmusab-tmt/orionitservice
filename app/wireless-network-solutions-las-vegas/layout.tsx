@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Wireless Network Solutions Las Vegas | Orion IT",
   description:
-    "Professional wireless network solutions in Las Vegas. Enterprise Wi-Fi design, implementation, and management.",
+    "Professional wireless network solutions in Las Vegas. Enterprise Wi-Fi design, implementation, and support.",
   alternates: {
     canonical: "/wireless-network-solutions-las-vegas",
   },

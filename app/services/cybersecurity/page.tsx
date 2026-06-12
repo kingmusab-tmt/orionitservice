@@ -209,9 +209,9 @@ const CybersecurityServices = () => {
     },
     {
       question:
-        "Can managed cybersecurity services replace an internal IT team?",
+        "Can cybersecurity support services replace an internal IT team?",
       answer:
-        "Managed cybersecurity services can complement or extend internal teams by providing monitoring, specialized expertise, and incident response support. Many organizations use a hybrid model for stronger coverage.",
+        "Cybersecurity support services can complement or extend internal teams by providing monitoring, specialized expertise, and incident response support. Many organizations use a hybrid model for stronger coverage.",
     },
     {
       question: "How does security awareness training reduce cyber risk?",

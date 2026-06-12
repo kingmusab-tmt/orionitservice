@@ -32,7 +32,7 @@ export default function GetQuote() {
     services: {
       cybersecurity: false,
       networking: false,
-      managedit: false,
+      itSupport: false,
       websiteDevelopment: false,
       backup: false,
       other: false,
@@ -125,7 +125,7 @@ export default function GetQuote() {
         services: {
           cybersecurity: false,
           networking: false,
-          managedit: false,
+          itSupport: false,
           websiteDevelopment: false,
           backup: false,
           other: false,
@@ -289,9 +289,9 @@ export default function GetQuote() {
                         <FormControlLabel
                           control={
                             <Checkbox
-                              checked={formData.services.managedit}
+                              checked={formData.services.itSupport}
                               onChange={handleServiceChange}
-                              name="managedit"
+                              name="itSupport"
                               color="primary"
                             />
                           }
@@ -535,8 +535,7 @@ export default function GetQuote() {
                         Remote IT Support Solutions
                       </Typography>
                       <Typography variant="body2">
-                        Proactive IT management so you can focus on your
-                        business
+                        Reliable IT support so you can focus on your business
                       </Typography>
                     </Box>
                   </Box>
@@ -591,7 +590,7 @@ export default function GetQuote() {
                 <li>
                   <Typography variant="body1">
                     <strong>Comprehensive IT Proposal:</strong> You'll receive a
-                    detailed, transparent proposal outlining recommended managed
+                    detailed, transparent proposal outlining recommended
                     services, hardware, software, and pricing.
                   </Typography>
                 </li>

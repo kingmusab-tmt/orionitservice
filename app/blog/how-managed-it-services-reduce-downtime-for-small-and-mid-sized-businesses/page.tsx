@@ -163,7 +163,7 @@ export default function RemoteItSupportDowntimeArticle() {
               often lead to failure. Slow storage, aging hardware, unstable
               internet links, overloaded devices, and security alerts can all be
               identified earlier when the environment is being monitored
-              properly. Managed services use that visibility to create a
+              properly. Proactive support services use that visibility to create a
               response process that prioritizes the right issues at the right
               time. That helps businesses avoid long delays, repeated outages,
               and avoidable performance problems that can quietly drain
@@ -247,7 +247,7 @@ export default function RemoteItSupportDowntimeArticle() {
               Over time, updates are delayed, backups are not reviewed
               regularly, and the network begins to slow down in the afternoon.
               Staff members start reporting dropped connections and repeated
-              login issues. A managed IT provider steps in, discovers the root
+              login issues. A remote IT support provider steps in, discovers the root
               causes, standardizes maintenance, updates policies, improves
               network stability, and builds a support process that keeps
               recurring issues from resurfacing. Instead of reacting to weekly

@@ -89,7 +89,8 @@ export default function Services() {
 
     {
       title: "IT Support",
-      description: "Proactive IT management so you can focus on your business",
+      description:
+        "Reliable IT support to keep your team productive and your systems stable",
       icon: <ComputerIcon sx={{ fontSize: 60 }} />,
       link: "/services/it-support",
       features: [

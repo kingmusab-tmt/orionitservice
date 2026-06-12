@@ -658,8 +658,8 @@ export default function BlogPage() {
           </Typography>
           <Typography variant="body1" sx={{ maxWidth: 760, mx: "auto", mb: 3 }}>
             Our team helps businesses turn technical challenges into clear
-            action plans. Talk to us about cybersecurity, networking, managed
-            IT, or website development.
+            action plans. Talk to us about cybersecurity, networking, IT
+            support, or website development.
           </Typography>
           <Button
             variant="contained"

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "Network Design & Implementation Las Vegas | Enterprise-Grade Solutions | Orion IT",
   description:
-    "Professional network design, implementation, and management in Las Vegas. Secure, scalable, high-performance networks for businesses of all sizes.",
+    "Professional network design, implementation, and support services in Las Vegas. Secure, scalable, high-performance networks for businesses of all sizes.",
   keywords:
     "network design Las Vegas, network implementation,  enterprise network, network security, network infrastructure, wireless networks",
   openGraph: {
@@ -60,7 +60,7 @@ export default function NetworkDesignLandingPage() {
           "@type": "Service",
           name: "Network Design & Implementation",
           description:
-            "Custom network design, implementation, security, and management for enterprise-grade performance and reliability",
+            "Custom network design, implementation, security, and support for enterprise-grade performance and reliability",
           provider: {
             "@type": "LocalBusiness",
             name: "Orion IT Service",

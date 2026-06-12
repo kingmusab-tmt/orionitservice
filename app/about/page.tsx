@@ -17,7 +17,7 @@ export default function About() {
     {
       title: "United States (All States)",
       description:
-        "We support businesses across the U.S. with remote IT management, cybersecurity, and network services.",
+        "We support businesses across the U.S. with remote IT support, cybersecurity, and network services.",
     },
     {
       title: "United Kingdom",

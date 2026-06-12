@@ -278,9 +278,9 @@ export default function WebsiteMaintenanceContent() {
                   lineHeight: 1.6,
                 }}
               >
-                Managed website maintenance & support. Secure. Fast. Always up.
-                Let us handle updates, backups, security, and support so you
-                focus on your business.
+                Website maintenance & support. Secure. Fast. Always up. Let us
+                handle updates, backups, security, and support so you focus on
+                your business.
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
                 <CTAButton

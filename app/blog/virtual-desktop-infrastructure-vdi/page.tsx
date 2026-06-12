@@ -243,7 +243,7 @@ export default function VDIArticle() {
               Support complexity can be high. VDI infrastructure requires
               skilled administrators. If something goes wrong with the
               infrastructure, many users are affected. Organizations often use
-              managed services rather than managing VDI in-house.
+              outsourced support services rather than managing VDI in-house.
             </Typography>
 
             <Divider sx={{ my: 4 }} />

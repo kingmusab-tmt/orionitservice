@@ -4,11 +4,11 @@ import JsonLd from "@/app/components/JsonLd";
 
 export const metadata: Metadata = {
   title:
-    "Website Maintenance & Support Las Vegas | Managed Website Services | Orion IT",
+    "Website Maintenance & Support Las Vegas | Website Support Services | Orion IT",
   description:
-    "Professional website maintenance and support services in Las Vegas. Keep your website secure, fast, and up-to-date. Managed hosting and ongoing support.",
+    "Professional website maintenance and support services in Las Vegas. Keep your website secure, fast, and up-to-date with reliable hosting and ongoing support.",
   keywords:
-    "website maintenance, website support, managed hosting, website updates, website security, site maintenance, website hosting support",
+    "website maintenance, website support, website hosting support, website updates, website security, site maintenance, reliable hosting",
   openGraph: {
     title: "Website Maintenance & Support Las Vegas | Orion IT Service",
     description:

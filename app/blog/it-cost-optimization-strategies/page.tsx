@@ -255,9 +255,9 @@ export default function CostOptimizationArticle() {
               variant="body1"
               sx={{ color: "text.secondary", lineHeight: 1.9, mb: 3 }}
             >
-              Managed services can be more cost-effective than in-house staff
+              Dedicated IT support services can be more cost-effective than in-house staff
               for specialized functions. Instead of hiring to maintain a
-              specific system, a managed service provider can do it for less.
+              specific system, a specialized support provider can do it for less.
             </Typography>
 
             <Divider sx={{ my: 4 }} />

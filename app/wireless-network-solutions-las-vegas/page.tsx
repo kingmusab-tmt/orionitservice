@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wireless Network Solutions Las Vegas | Orion IT Service",
     description:
-      "Enterprise-grade wireless networks with complete coverage, security, and performance. Professional design, implementation, and management.",
+      "Enterprise-grade wireless networks with complete coverage, security, and performance. Professional design, implementation, and support.",
     url: "https://www.orionitservice.com/wireless-network-solutions-las-vegas",
     type: "website",
   },
@@ -81,7 +81,7 @@ export default function WirelessNetworkLandingPage() {
               name: "What's the difference between consumer and enterprise Wi-Fi?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Consumer Wi-Fi (standard routers) is for light use and provides poor coverage. Enterprise Wi-Fi uses managed access points for complete coverage, seamless roaming, security features, and can handle hundreds of simultaneous users.",
+                text: "Consumer Wi-Fi (standard routers) is for light use and provides poor coverage. Enterprise Wi-Fi uses centrally configured access points for complete coverage, seamless roaming, security features, and can handle hundreds of simultaneous users.",
               },
             },
             {

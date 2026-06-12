@@ -1,8 +1,8 @@
 export const blogArticles = [
   {
     slug: "break-fix-vs-managed-it-which-model-saves-more-over-time",
-    title: "Break-Fix vs Managed IT: Which Model Saves More Over Time?",
-    category: "Managed IT",
+    title: "Break-Fix vs Remote IT Support: Which Model Saves More Over Time?",
+    category: "IT Support",
   },
   {
     slug: "cloud-security-best-practices-for-microsoft-365-environments",
@@ -99,55 +99,55 @@ export const blogArticles = [
   {
     slug: "it-help-desk-support-services",
     title: "IT Help Desk Support: Efficient User Issue Resolution",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "it-system-monitoring-maintenance",
     title:
       "IT System Monitoring and Maintenance: Proactive Infrastructure Management",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "data-backup-disaster-recovery",
     title: "Data Backup and Disaster Recovery: Business Continuity Planning",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "it-infrastructure-upgrade-migration",
     title: "IT Infrastructure Upgrade and Migration: System Modernization",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "it-cost-optimization-strategies",
     title:
       "IT Cost Optimization: Reducing Technology Spending While Improving Services",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "mobile-device-management-mdm",
     title: "Mobile Device Management for Business: BYOD and Device Security",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "it-change-management-best-practices",
     title:
       "IT Change Management: Controlled System Updates and Configuration Changes",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "virtual-desktop-infrastructure-vdi",
     title: "Virtual Desktop Infrastructure for Remote Work: VDI Solutions",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "it-service-level-agreements-sla",
     title: "IT Service Level Agreements: SLA Best Practices for IT Support",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "it-asset-management-inventory",
     title: "IT Asset Management and Inventory: Equipment Lifecycle Management",
-    category: "Managed IT",
+    category: "IT Support",
   },
   {
     slug: "how-to-build-a-practical-it-roadmap-for-business-growth",

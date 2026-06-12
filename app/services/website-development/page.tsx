@@ -116,7 +116,7 @@ const WebsiteDevelopment = () => {
     {
       question: "What's included in your maintenance and support?",
       answer:
-        "Our support packages include regular updates, security patches, backups, performance monitoring, and technical assistance. We offer flexible plans from basic support to comprehensive managed services.",
+        "Our support packages include regular updates, security patches, backups, performance monitoring, and technical assistance. We offer flexible plans from basic support to comprehensive ongoing service coverage.",
     },
     {
       question: "Will my website be mobile-friendly?",

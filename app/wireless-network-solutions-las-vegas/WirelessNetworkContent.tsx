@@ -184,7 +184,7 @@ export default function WirelessNetworkContent() {
     {
       question: "What's the difference between consumer and enterprise Wi-Fi?",
       answer:
-        "Consumer Wi-Fi (standard routers) is meant for light use and provides poor coverage. Enterprise Wi-Fi uses multiple managed access points for complete coverage, seamless roaming between APs, enterprise security features (WPA3, certificates), and can reliably handle hundreds of simultaneous users.",
+        "Consumer Wi-Fi (standard routers) is meant for light use and provides poor coverage. Enterprise Wi-Fi uses multiple centrally configured access points for complete coverage, seamless roaming between APs, enterprise security features (WPA3, certificates), and can reliably handle hundreds of simultaneous users.",
     },
     {
       question: "How much does enterprise wireless cost?",
@@ -247,7 +247,7 @@ export default function WirelessNetworkContent() {
     { value: "520+", label: "Wi-Fi Deployments" },
     { value: "99.5%", label: "Network Availability" },
     { value: "100%", label: "Coverage Guarantee" },
-    { value: "2000+", label: "APs Managed" },
+    { value: "2000+", label: "APs Supported" },
   ];
 
   return (

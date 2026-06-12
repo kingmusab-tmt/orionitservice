@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Website Maintenance & Support Las Vegas | Orion IT Cybersecurity",
     description:
-      "Managed website maintenance and support. Security, speed, and reliability.",
+      "Website maintenance and support focused on security, speed, and reliability.",
     url: "https://www.orionitservice.com/website-maintenance-support-las-vegas",
   },
 };
