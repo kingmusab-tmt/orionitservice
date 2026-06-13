@@ -143,6 +143,11 @@ export default function Contact() {
               Open a support request, receive a ticket code, and track updates
               without logging in.
             </Typography>
+            <Typography sx={{ opacity: 0.95 }}>
+              <Typography sx={{ opacity: 0.95 }}>
+                Ticketing for both New and Existing Customers
+              </Typography>
+            </Typography>
           </Stack>
 
           <Button

@@ -249,10 +249,10 @@ export async function notifyTicketCreated(ticket: TicketDocument) {
         eyebrow: "Ticket Received",
         title: `We received your request`,
         intro:
-          "Thank you for reaching out to Orion IT Service. Your support ticket has been created and our team will review it shortly.",
+          "Thank you for reaching out Orion IT Service. Your support ticket has been created and our team will review it shortly.",
         rows: [
           {
-            label: "Ticket code",
+            label: "Ticket csode",
             value: `<span style="font-size:18px; font-weight:800; letter-spacing:0.5px; color:${BRAND.header};">${escapeHtml(ticket.code)}</span>`,
           },
           { label: "Subject", value: escapeHtml(ticket.subject) },
