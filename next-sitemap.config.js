@@ -2,7 +2,7 @@ module.exports = {
   siteUrl: "https://www.orionitservice.com",
   generateRobotsTxt: false, // robots.txt is managed manually in /public
   sitemapSize: 7000,
-  exclude: ["/404", "/admin/*", "/private/*", "/api/*"],
+  exclude: ["/404", "/admin/*", "/private/*", "/api/*", "/tickets/admin"],
   outDir: "public",
   transform: async (config, path) => {
     // Set appropriate priorities and change frequencies per path type

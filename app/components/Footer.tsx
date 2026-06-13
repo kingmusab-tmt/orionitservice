@@ -103,6 +103,12 @@ const Footer = () => {
                 Contact
               </NextLink>
               <NextLink
+                href="/tickets"
+                style={{ color: "inherit", marginBottom: 8, display: "block" }}
+              >
+                Tickets
+              </NextLink>
+              <NextLink
                 href="/privacy-policy"
                 style={{ color: "inherit", display: "block" }}
               >

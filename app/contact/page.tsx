@@ -1,6 +1,6 @@
 import ContactForm from "../components/ContactForm";
 import HeroBanner from "../components/HeroBanner";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Button, Stack } from "@mui/material";
 import { Phone, Email, LocationOn } from "@mui/icons-material";
 import JsonLd from "../components/JsonLd";
 
@@ -105,6 +105,58 @@ export default function Contact() {
         subtitle="Get in touch with our IT experts"
         image="/images/avatar6.webp"
       />
+
+      <Box
+        component="section"
+        sx={{
+          maxWidth: 1200,
+          mx: "auto",
+          px: { xs: 2, md: 4 },
+          pt: 4,
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            alignItems: { xs: "flex-start", md: "center" },
+            justifyContent: "space-between",
+            gap: 2,
+            p: { xs: 3, md: 3.5 },
+            borderRadius: 3,
+            bgcolor: "primary.main",
+            color: "primary.contrastText",
+            boxShadow: 2,
+          }}
+        >
+          <Stack spacing={0.5} sx={{ maxWidth: 760 }}>
+            <Typography
+              variant="overline"
+              sx={{ letterSpacing: 1.6, opacity: 0.9 }}
+            >
+              Need support fast?
+            </Typography>
+            <Typography variant="h5" component="h2" sx={{ fontWeight: 700 }}>
+              Create a Ticket
+            </Typography>
+            <Typography sx={{ opacity: 0.95 }}>
+              Open a support request, receive a ticket code, and track updates
+              without logging in.
+            </Typography>
+          </Stack>
+
+          <Button
+            component="a"
+            href="/tickets"
+            variant="contained"
+            color="secondary"
+            size="large"
+            sx={{ whiteSpace: "nowrap", px: 3, fontWeight: 700 }}
+          >
+            Create a Ticket
+          </Button>
+        </Box>
+      </Box>
 
       <Box
         component="section"
