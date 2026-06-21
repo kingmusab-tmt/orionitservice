@@ -25,13 +25,24 @@ import {
   Lock,
   Google,
 } from "@mui/icons-material";
-import type { PublicTicket, TicketPriority, TicketStatus } from "@/lib/tickets";
+import {
+  getTicketElapsedWorkMs,
+  getTicketTotalCharge,
+  type PublicTicket,
+  type TicketBillingType,
+  type TicketCurrency,
+  type TicketPriority,
+  type TicketStatus,
+} from "@/lib/tickets";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 type AdminFormState = {
   code: string;
   status: TicketStatus;
   priority: TicketPriority;
+  billingType: "" | TicketBillingType;
+  billingAmount: string;
+  billingCurrency: TicketCurrency;
   assignedTo: string;
   response: string;
   supportName: string;
@@ -58,6 +69,9 @@ const defaultAdminForm: AdminFormState = {
   code: "",
   status: "open",
   priority: "normal",
+  billingType: "",
+  billingAmount: "",
+  billingCurrency: "USD",
   assignedTo: "",
   response: "",
   supportName: "Orion IT Support",
@@ -75,6 +89,29 @@ const statusOptions: TicketStatus[] = [
 
 const priorityOptions: TicketPriority[] = ["low", "normal", "high", "urgent"];
 
+function formatDuration(totalMs: number): string {
+  const totalSeconds = Math.floor(Math.max(0, totalMs) / 1000);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  return `${hours.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+}
+
+function formatMoney(amount: number | null, currency = "USD"): string {
+  if (amount === null || !Number.isFinite(amount)) {
+    return "-";
+  }
+
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(amount);
+}
+
 export default function TicketAdminDashboard() {
   const [form, setForm] = useState<AdminFormState>(defaultAdminForm);
   const [ticket, setTicket] = useState<PublicTicket | null>(null);
@@ -84,6 +121,8 @@ export default function TicketAdminDashboard() {
   const [success, setSuccess] = useState("");
   const [loadingTicket, setLoadingTicket] = useState(false);
   const [loadingSave, setLoadingSave] = useState(false);
+  const [loadingTimerAction, setLoadingTimerAction] = useState(false);
+  const [clockNow, setClockNow] = useState(() => Date.now());
   const { data: session, status } = useSession();
   const adminEmail = session?.user?.email || "";
 
@@ -120,10 +159,33 @@ export default function TicketAdminDashboard() {
       ...current,
       status: ticket.status,
       priority: ticket.priority,
+      billingType: ticket.billingType ?? "",
+      billingAmount:
+        typeof ticket.billingAmount === "number"
+          ? String(ticket.billingAmount)
+          : "",
+      billingCurrency: ticket.billingCurrency || "USD",
       assignedTo: ticket.assignedTo || "",
       email: ticket.email,
       phone: ticket.phone,
     }));
+  }, [ticket]);
+
+  useEffect(() => {
+    if (
+      !ticket ||
+      ticket.status !== "in_progress" ||
+      ticket.workTimerRunning !== true ||
+      !ticket.workTimerStartedAt
+    ) {
+      return;
+    }
+
+    const timerId = window.setInterval(() => {
+      setClockNow(Date.now());
+    }, 1000);
+
+    return () => window.clearInterval(timerId);
   }, [ticket]);
 
   useEffect(() => {
@@ -248,10 +310,27 @@ export default function TicketAdminDashboard() {
     setLoadingSave(true);
 
     try {
+      if (form.status === "in_progress") {
+        if (!form.billingType) {
+          throw new Error("Select billing type when status is in progress");
+        }
+
+        const amount = Number(form.billingAmount);
+        if (!Number.isFinite(amount) || amount <= 0) {
+          throw new Error("Enter a billing amount greater than 0");
+        }
+      }
+
       const payload: Record<string, string> = {
         status: form.status,
         priority: form.priority,
       };
+
+      if (form.status === "in_progress") {
+        payload.billingType = form.billingType;
+        payload.billingAmount = String(Number(form.billingAmount));
+        payload.billingCurrency = form.billingCurrency;
+      }
 
       if (form.assignedTo.trim()) {
         payload.assignedTo = form.assignedTo.trim();
@@ -298,6 +377,47 @@ export default function TicketAdminDashboard() {
       );
     } finally {
       setLoadingSave(false);
+    }
+  };
+
+  const handleTimerAction = async (action: "pause" | "resume") => {
+    if (!ticket) {
+      return;
+    }
+
+    setError("");
+    setSuccess("");
+    setLoadingTimerAction(true);
+
+    try {
+      const response = await fetch(
+        `/api/tickets/${encodeURIComponent(ticket.code)}`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            workTimerAction: action,
+          }),
+        },
+      );
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to update work timer");
+      }
+
+      setTicket(data.ticket);
+      setSuccess(
+        action === "pause" ? "Work timer paused" : "Work timer resumed",
+      );
+    } catch (timerError) {
+      setError(
+        timerError instanceof Error
+          ? timerError.message
+          : "Failed to update work timer",
+      );
+    } finally {
+      setLoadingTimerAction(false);
     }
   };
 
@@ -357,6 +477,9 @@ export default function TicketAdminDashboard() {
       </Box>
     );
   }
+
+  const elapsedWorkMs = ticket ? getTicketElapsedWorkMs(ticket, clockNow) : 0;
+  const totalCharge = ticket ? getTicketTotalCharge(ticket, clockNow) : null;
 
   return (
     <Box
@@ -599,6 +722,72 @@ export default function TicketAdminDashboard() {
                           ))}
                         </TextField>
                       </Grid>
+                      {form.status === "in_progress" && (
+                        <>
+                          <Grid size={{ xs: 12, md: 6 }}>
+                            <TextField
+                              fullWidth
+                              label="Payment type"
+                              select
+                              required
+                              SelectProps={{ native: true }}
+                              value={form.billingType}
+                              onChange={(event) =>
+                                handleChange(
+                                  "billingType",
+                                  event.target.value as "" | TicketBillingType,
+                                )
+                              }
+                            >
+                              <option value="">Select payment type</option>
+                              <option value="fixed">Fixed</option>
+                              <option value="hourly">Hourly</option>
+                            </TextField>
+                          </Grid>
+                          {form.billingType && (
+                            <Grid size={{ xs: 12, md: 6 }}>
+                              <TextField
+                                fullWidth
+                                required
+                                type="number"
+                                inputProps={{ min: 0, step: "0.01" }}
+                                label={
+                                  form.billingType === "hourly"
+                                    ? "Hourly amount"
+                                    : "Fixed amount"
+                                }
+                                value={form.billingAmount}
+                                onChange={(event) =>
+                                  handleChange(
+                                    "billingAmount",
+                                    event.target.value,
+                                  )
+                                }
+                              />
+                            </Grid>
+                          )}
+                          <Grid size={{ xs: 12, md: 6 }}>
+                            <TextField
+                              fullWidth
+                              label="Currency"
+                              select
+                              SelectProps={{ native: true }}
+                              value={form.billingCurrency}
+                              onChange={(event) =>
+                                handleChange(
+                                  "billingCurrency",
+                                  event.target.value as TicketCurrency,
+                                )
+                              }
+                            >
+                              <option value="USD">USD</option>
+                              <option value="EUR">EUR</option>
+                              <option value="GBP">GBP</option>
+                              <option value="NGN">NGN</option>
+                            </TextField>
+                          </Grid>
+                        </>
+                      )}
                       <Grid size={{ xs: 12, md: 6 }}>
                         <TextField
                           fullWidth
@@ -638,6 +827,42 @@ export default function TicketAdminDashboard() {
                             handleChange("supportName", event.target.value)
                           }
                         />
+                      </Grid>
+                      <Grid size={{ xs: 12 }}>
+                        <Alert severity="info" sx={{ mb: 2 }}>
+                          <Typography sx={{ fontWeight: 700 }}>
+                            Work timer: {formatDuration(elapsedWorkMs)}
+                          </Typography>
+                          <Typography variant="body2">
+                            Total charge:{" "}
+                            {formatMoney(
+                              totalCharge,
+                              ticket.billingCurrency || "USD",
+                            )}
+                            {ticket.billingType === "hourly" &&
+                              typeof ticket.hourlyRatePerMinute === "number" &&
+                              ` (${formatMoney(ticket.hourlyRatePerMinute, ticket.billingCurrency || "USD")}/min)`}
+                          </Typography>
+                          {ticket.status === "in_progress" && (
+                            <Button
+                              sx={{ mt: 1.5 }}
+                              size="small"
+                              variant="outlined"
+                              disabled={loadingTimerAction}
+                              onClick={() =>
+                                void handleTimerAction(
+                                  ticket.workTimerRunning ? "pause" : "resume",
+                                )
+                              }
+                            >
+                              {loadingTimerAction
+                                ? "Updating..."
+                                : ticket.workTimerRunning
+                                  ? "Pause work"
+                                  : "Resume work"}
+                            </Button>
+                          )}
+                        </Alert>
                       </Grid>
                       <Grid size={{ xs: 12 }}>
                         <TextField
@@ -724,6 +949,48 @@ export default function TicketAdminDashboard() {
                           </Typography>
                         </Box>
                       ))}
+                    </Stack>
+
+                    <Divider sx={{ my: 3 }} />
+
+                    <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                      Activity history
+                    </Typography>
+                    <Stack
+                      spacing={1.25}
+                      sx={{ maxHeight: 260, overflow: "auto", pr: 1 }}
+                    >
+                      {[...ticket.activity]
+                        .sort(
+                          (a, b) =>
+                            new Date(b.createdAt).getTime() -
+                            new Date(a.createdAt).getTime(),
+                        )
+                        .map((entry) => (
+                          <Box
+                            key={entry.id}
+                            sx={{
+                              p: 1.5,
+                              borderRadius: 2,
+                              bgcolor: "grey.50",
+                              border: "1px solid",
+                              borderColor: "divider",
+                            }}
+                          >
+                            <Typography
+                              variant="body2"
+                              sx={{ fontWeight: 600 }}
+                            >
+                              {entry.message}
+                            </Typography>
+                            <Typography
+                              variant="caption"
+                              color="text.secondary"
+                            >
+                              {new Date(entry.createdAt).toLocaleString()}
+                            </Typography>
+                          </Box>
+                        ))}
                     </Stack>
                   </Box>
                 ) : (

@@ -1,10 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomBytes } from "crypto";
 import {
+  TICKET_CURRENCIES,
+  buildBillingActivity,
   buildStatusActivity,
+  buildWorkTimerActivity,
   isValidEmail,
   normalizeTicketCode,
   toPublicTicket,
+  type TicketBillingType,
+  type TicketCurrency,
   type TicketDocument,
   type TicketPriority,
   type TicketStatus,
@@ -23,6 +28,9 @@ import {
 export const runtime = "nodejs";
 
 const allowedPriorities: TicketPriority[] = ["low", "normal", "high", "urgent"];
+const allowedBillingTypes: TicketBillingType[] = ["fixed", "hourly"];
+const allowedCurrencies: readonly TicketCurrency[] = TICKET_CURRENCIES;
+const allowedWorkTimerActions = ["pause", "resume"] as const;
 const allowedStatuses: TicketStatus[] = [
   "open",
   "in_progress",
@@ -90,7 +98,6 @@ export async function PATCH(
     const updates: Partial<TicketDocument> = { updatedAt: new Date() };
     const activity = [...ticket.activity];
     const previousStatus = ticket.status;
-    let nextStatusValue: TicketStatus | null = null;
     const changeSummary: string[] = [];
 
     if (body.status) {
@@ -107,7 +114,6 @@ export async function PATCH(
       const nextStatus = body.status as TicketStatus;
       if (ticket.status !== nextStatus) {
         updates.status = nextStatus;
-        nextStatusValue = nextStatus;
         changeSummary.push(
           `Status updated from ${ticket.status.replace(/_/g, " ")} to ${nextStatus.replace(/_/g, " ")}`,
         );
@@ -117,6 +123,76 @@ export async function PATCH(
             message: `Status updated to ${nextStatus.replace(/_/g, " ")}`,
           }),
         );
+      }
+    }
+
+    if (body.billingType !== undefined || body.billingAmount !== undefined) {
+      const nextBillingType =
+        body.billingType !== undefined
+          ? body.billingType
+          : (ticket.billingType ?? null);
+      const nextBillingAmount =
+        body.billingAmount !== undefined
+          ? body.billingAmount
+          : (ticket.billingAmount ?? null);
+
+      if (
+        typeof nextBillingType !== "string" ||
+        !allowedBillingTypes.includes(nextBillingType as TicketBillingType)
+      ) {
+        return NextResponse.json(
+          { error: "billingType must be fixed or hourly" },
+          { status: 400 },
+        );
+      }
+
+      const parsedAmount =
+        typeof nextBillingAmount === "number"
+          ? nextBillingAmount
+          : typeof nextBillingAmount === "string"
+            ? Number(nextBillingAmount)
+            : NaN;
+
+      if (!Number.isFinite(parsedAmount) || parsedAmount <= 0) {
+        return NextResponse.json(
+          { error: "billingAmount must be a number greater than 0" },
+          { status: 400 },
+        );
+      }
+
+      const normalizedBillingType = nextBillingType as TicketBillingType;
+      const nextBillingCurrency =
+        body.billingCurrency !== undefined
+          ? body.billingCurrency
+          : (ticket.billingCurrency ?? "USD");
+
+      if (
+        typeof nextBillingCurrency !== "string" ||
+        !allowedCurrencies.includes(nextBillingCurrency as TicketCurrency)
+      ) {
+        return NextResponse.json(
+          { error: "billingCurrency must be one of USD, EUR, GBP, or NGN" },
+          { status: 400 },
+        );
+      }
+
+      updates.billingType = normalizedBillingType;
+      updates.billingAmount = parsedAmount;
+      updates.billingCurrency = nextBillingCurrency as TicketCurrency;
+      updates.hourlyRatePerMinute =
+        normalizedBillingType === "hourly" ? parsedAmount / 60 : null;
+
+      if (
+        ticket.billingType !== normalizedBillingType ||
+        ticket.billingAmount !== parsedAmount ||
+        (ticket.billingCurrency ?? "USD") !== nextBillingCurrency
+      ) {
+        const billingSummary =
+          normalizedBillingType === "hourly"
+            ? `Billing updated to hourly (${nextBillingCurrency} ${parsedAmount}/hour, ${nextBillingCurrency} ${(parsedAmount / 60).toFixed(4)}/minute)`
+            : `Billing updated to fixed (${nextBillingCurrency} ${parsedAmount})`;
+        changeSummary.push(billingSummary);
+        activity.push(buildBillingActivity(billingSummary));
       }
     }
 
@@ -192,6 +268,95 @@ export async function PATCH(
       });
       if (!updates.status) {
         updates.status = "awaiting_customer";
+      }
+    }
+
+    const nowMs = Date.now();
+    const nextStatus = updates.status ?? ticket.status;
+    const wasInProgress = previousStatus === "in_progress";
+    const willBeInProgress = nextStatus === "in_progress";
+
+    if (!wasInProgress && willBeInProgress) {
+      updates.workTimerRunning = true;
+      updates.workTimerStartedAt = new Date(nowMs);
+      if (typeof ticket.workTimeMs !== "number") {
+        updates.workTimeMs = 0;
+      }
+      changeSummary.push("Work timer started");
+      activity.push(buildWorkTimerActivity("Work timer started"));
+    }
+
+    if (wasInProgress && !willBeInProgress) {
+      const startMs = ticket.workTimerStartedAt
+        ? new Date(ticket.workTimerStartedAt).getTime()
+        : null;
+      const additionalMs = startMs ? Math.max(0, nowMs - startMs) : 0;
+
+      updates.workTimeMs = Math.max(0, (ticket.workTimeMs ?? 0) + additionalMs);
+      updates.workTimerRunning = false;
+      updates.workTimerStartedAt = null;
+      changeSummary.push("Work timer stopped");
+      activity.push(buildWorkTimerActivity("Work timer stopped"));
+    }
+
+    if (body.workTimerAction !== undefined) {
+      if (
+        typeof body.workTimerAction !== "string" ||
+        !allowedWorkTimerActions.includes(
+          body.workTimerAction as (typeof allowedWorkTimerActions)[number],
+        )
+      ) {
+        return NextResponse.json(
+          { error: "workTimerAction must be pause or resume" },
+          { status: 400 },
+        );
+      }
+
+      if (nextStatus !== "in_progress") {
+        return NextResponse.json(
+          {
+            error:
+              "workTimerAction can only be used when ticket status is in progress",
+          },
+          { status: 400 },
+        );
+      }
+
+      const action = body.workTimerAction as "pause" | "resume";
+      const currentRunning =
+        updates.workTimerRunning !== undefined
+          ? updates.workTimerRunning === true
+          : ticket.workTimerRunning === true;
+      const currentWorkTimeMs = Math.max(
+        0,
+        updates.workTimeMs ?? ticket.workTimeMs ?? 0,
+      );
+      const currentStart =
+        updates.workTimerStartedAt !== undefined
+          ? updates.workTimerStartedAt
+          : (ticket.workTimerStartedAt ?? null);
+
+      if (action === "pause" && currentRunning) {
+        const startMs = currentStart ? new Date(currentStart).getTime() : null;
+        const additionalMs = startMs ? Math.max(0, nowMs - startMs) : 0;
+        updates.workTimeMs = currentWorkTimeMs + additionalMs;
+        updates.workTimerRunning = false;
+        updates.workTimerStartedAt = null;
+        changeSummary.push("Work timer paused");
+        activity.push(buildWorkTimerActivity("Work timer paused"));
+      }
+
+      if (action === "resume" && !currentRunning) {
+        updates.workTimerRunning = true;
+        updates.workTimerStartedAt = new Date(nowMs);
+        if (
+          updates.workTimeMs === undefined &&
+          typeof ticket.workTimeMs !== "number"
+        ) {
+          updates.workTimeMs = 0;
+        }
+        changeSummary.push("Work timer resumed");
+        activity.push(buildWorkTimerActivity("Work timer resumed"));
       }
     }
 

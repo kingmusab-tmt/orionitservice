@@ -46,18 +46,30 @@ export async function POST(
     };
 
     const now = new Date();
+    const nextStatus =
+      ticket.status === "resolved" || ticket.status === "closed"
+        ? "in_progress"
+        : ticket.status;
+
+    const setUpdates: Record<string, unknown> = {
+      replies: [...ticket.replies, reply],
+      status: nextStatus,
+      updatedAt: now,
+      lastCustomerReplyAt: now,
+    };
+
+    if (ticket.status !== "in_progress" && nextStatus === "in_progress") {
+      setUpdates.workTimerRunning = true;
+      setUpdates.workTimerStartedAt = now;
+      if (typeof ticket.workTimeMs !== "number") {
+        setUpdates.workTimeMs = 0;
+      }
+    }
+
     await ticketsCollection.updateOne(
       { code: ticket.code },
       {
-        $set: {
-          replies: [...ticket.replies, reply],
-          status:
-            ticket.status === "resolved" || ticket.status === "closed"
-              ? "in_progress"
-              : ticket.status,
-          updatedAt: now,
-          lastCustomerReplyAt: now,
-        },
+        $set: setUpdates,
         $push: {
           activity: buildReplyActivity({
             type: "customer_reply",

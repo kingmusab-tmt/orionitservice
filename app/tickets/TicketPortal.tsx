@@ -1,6 +1,12 @@
 "use client";
 
-import { useMemo, useState, type FormEvent, type ReactNode } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+  type FormEvent,
+  type ReactNode,
+} from "react";
 import {
   Alert,
   Box,
@@ -22,7 +28,13 @@ import {
   QueryBuilder,
   SupportAgent,
 } from "@mui/icons-material";
-import type { PublicTicket, TicketPriority, TicketStatus } from "@/lib/tickets";
+import {
+  getTicketElapsedWorkMs,
+  getTicketTotalCharge,
+  type PublicTicket,
+  type TicketPriority,
+  type TicketStatus,
+} from "@/lib/tickets";
 
 type CreateFormState = {
   name: string;
@@ -84,6 +96,35 @@ const ticketStatuses: TicketStatus[] = [
   "closed",
 ];
 
+const billingFinalizedStatuses: TicketStatus[] = [
+  "awaiting_customer",
+  "resolved",
+  "closed",
+];
+
+function formatDuration(totalMs: number): string {
+  const totalSeconds = Math.floor(Math.max(0, totalMs) / 1000);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  return `${hours.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+}
+
+function formatMoney(amount: number | null, currency = "USD"): string {
+  if (amount === null || !Number.isFinite(amount)) {
+    return "-";
+  }
+
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(amount);
+}
+
 export default function TicketPortal() {
   const [createForm, setCreateForm] =
     useState<CreateFormState>(initialCreateForm);
@@ -101,6 +142,7 @@ export default function TicketPortal() {
   const [loadingTrack, setLoadingTrack] = useState(false);
   const [loadingReply, setLoadingReply] = useState(false);
   const [customCategory, setCustomCategory] = useState("");
+  const [clockNow, setClockNow] = useState(() => Date.now());
 
   const statusMeta = useMemo(
     () => ({
@@ -249,6 +291,34 @@ export default function TicketPortal() {
   };
 
   const visibleTicket = trackedTicket || createdTicket;
+
+  useEffect(() => {
+    if (
+      !visibleTicket ||
+      visibleTicket.status !== "in_progress" ||
+      visibleTicket.workTimerRunning !== true ||
+      !visibleTicket.workTimerStartedAt
+    ) {
+      return;
+    }
+
+    const timerId = window.setInterval(() => {
+      setClockNow(Date.now());
+    }, 1000);
+
+    return () => window.clearInterval(timerId);
+  }, [visibleTicket]);
+
+  const elapsedWorkMs = visibleTicket
+    ? getTicketElapsedWorkMs(visibleTicket, clockNow)
+    : 0;
+  const totalCharge = visibleTicket
+    ? getTicketTotalCharge(visibleTicket, clockNow)
+    : null;
+  const isBillingFinalized =
+    !!visibleTicket &&
+    billingFinalizedStatuses.includes(visibleTicket.status) &&
+    (visibleTicket.billingType !== null || visibleTicket.workTimeMs > 0);
 
   return (
     <Box
@@ -552,6 +622,13 @@ export default function TicketPortal() {
                         icon={<ConfirmationNumber />}
                         variant="outlined"
                       />
+                      {isBillingFinalized && (
+                        <Chip
+                          label="Billing Finalized"
+                          color="success"
+                          variant="outlined"
+                        />
+                      )}
                     </Stack>
 
                     <Typography
@@ -565,6 +642,41 @@ export default function TicketPortal() {
                       Category: {visibleTicket.category} | Created by{" "}
                       {visibleTicket.name}
                     </Typography>
+
+                    {(visibleTicket.status === "in_progress" ||
+                      visibleTicket.billingType ||
+                      visibleTicket.workTimeMs > 0) && (
+                      <Alert severity="info" sx={{ mb: 3 }}>
+                        <Typography sx={{ fontWeight: 700 }}>
+                          Work timer: {formatDuration(elapsedWorkMs)}
+                        </Typography>
+                        {visibleTicket.status === "in_progress" && (
+                          <Typography variant="body2">
+                            Timer state:{" "}
+                            {visibleTicket.workTimerRunning
+                              ? "Running"
+                              : "Paused"}
+                          </Typography>
+                        )}
+                        <Typography variant="body2">
+                          Billing type:{" "}
+                          {visibleTicket.billingType
+                            ? visibleTicket.billingType
+                            : "Not set yet"}
+                        </Typography>
+                        <Typography variant="body2">
+                          Total charge:{" "}
+                          {formatMoney(
+                            totalCharge,
+                            visibleTicket.billingCurrency || "USD",
+                          )}
+                          {visibleTicket.billingType === "hourly" &&
+                            typeof visibleTicket.hourlyRatePerMinute ===
+                              "number" &&
+                            ` (${formatMoney(visibleTicket.hourlyRatePerMinute, visibleTicket.billingCurrency || "USD")}/min)`}
+                        </Typography>
+                      </Alert>
+                    )}
 
                     <Box sx={{ mb: 3 }}>
                       <Typography
@@ -604,6 +716,51 @@ export default function TicketPortal() {
                         })}
                       </Stack>
                     </Box>
+
+                    <Divider sx={{ my: 3 }} />
+
+                    <Typography
+                      variant="subtitle1"
+                      sx={{ fontWeight: 700, mb: 2 }}
+                    >
+                      Activity history
+                    </Typography>
+                    <Stack
+                      spacing={1.25}
+                      sx={{ maxHeight: 220, overflow: "auto", pr: 1 }}
+                    >
+                      {[...visibleTicket.activity]
+                        .sort(
+                          (a, b) =>
+                            new Date(b.createdAt).getTime() -
+                            new Date(a.createdAt).getTime(),
+                        )
+                        .map((entry) => (
+                          <Box
+                            key={entry.id}
+                            sx={{
+                              p: 1.5,
+                              borderRadius: 2,
+                              bgcolor: "grey.50",
+                              border: "1px solid",
+                              borderColor: "divider",
+                            }}
+                          >
+                            <Typography
+                              variant="body2"
+                              sx={{ fontWeight: 600 }}
+                            >
+                              {entry.message}
+                            </Typography>
+                            <Typography
+                              variant="caption"
+                              color="text.secondary"
+                            >
+                              {new Date(entry.createdAt).toLocaleString()}
+                            </Typography>
+                          </Box>
+                        ))}
+                    </Stack>
 
                     <Divider sx={{ my: 3 }} />
 
