@@ -675,6 +675,19 @@ export default function TicketPortal() {
                               "number" &&
                             ` (${formatMoney(visibleTicket.hourlyRatePerMinute, visibleTicket.billingCurrency || "USD")}/min)`}
                         </Typography>
+                        {visibleTicket.billingType === "hourly" && (
+                          <Typography
+                            variant="caption"
+                            sx={{
+                              mt: 1,
+                              display: "block",
+                              color: "text.secondary",
+                              fontStyle: "italic",
+                            }}
+                          >
+                            Note: A minimum charge of one hour is applicable. Whether the issue is resolved in less than one hour or takes the full hour, you will be charged for one hour. Any work time beyond the first hour will be charged on a per-minute basis.
+                          </Typography>
+                        )}
                       </Alert>
                     )}
 
