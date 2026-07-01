@@ -1,11 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
+Disallow: /tickets
 
-# Host
-Host: https://www.orionitservice.com
 
 # Sitemaps
 Sitemap: https://www.orionitservice.com/sitemap.xml

@@ -36,18 +36,18 @@ function loadEnv() {
 
 const env = loadEnv();
 const API_KEY =
-  env.NEXT_PUBLIC_INDEXNOW_KEY || "a7ea15a328334de0bcd5588ccc19fa69";
+  env.NEXT_PUBLIC_INDEXNOW_KEY || "803954bdf4c84521b349995dc0bfb9b2";
 const INDEXNOW_API_ENDPOINT = "https://api.indexnow.org/indexnow";
 
 // Get domain from args or use localhost for testing
 const args = process.argv.slice(2);
 const domainIndex = args.indexOf("--domain");
 const domain =
-  domainIndex !== -1 ? args[domainIndex + 1] : "orionitservice.com";
+  domainIndex !== -1 ? args[domainIndex + 1] : "www.orionitservice.com";
 
 const protocol = "https";
 const host = domain;
-const keyLocation = `${protocol}://${host}/a63aa23fab5445f0bc6be82cbf7cfe1c.txt`;
+const keyLocation = `${protocol}://${host}/803954bdf4c84521b349995dc0bfb9b2.txt`;
 
 /**
  * Parse URLs from sitemap.xml
@@ -225,6 +225,12 @@ async function main() {
       console.error("No URLs found in sitemap");
       process.exit(1);
     }
+
+    console.log("\n📝 URLs to be sent to IndexNow:");
+    urls.forEach((url, index) => {
+      console.log(`${index + 1}. ${url}`);
+    });
+    console.log("");
 
     await submitToIndexNow(urls);
 
