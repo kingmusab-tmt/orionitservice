@@ -598,7 +598,7 @@ const RemoteItSupport = () => {
         <Box
           mb={10}
           sx={{
-            backgroundColor: "grey.50",
+            backgroundColor: "background.subtle",
             p: 6,
             borderRadius: 2,
           }}

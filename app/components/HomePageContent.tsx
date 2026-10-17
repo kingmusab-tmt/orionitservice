@@ -17,7 +17,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import { styled } from "@mui/system";
+import { styled } from "@mui/material/styles";
 import {
   Security as SecurityIcon,
   Lan as NetworkIcon,
@@ -34,7 +34,7 @@ const StyledSection = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     padding: theme.spacing(10, 0),
   },
-  backgroundColor: theme.palette.background.default,
+  backgroundColor: (theme.vars || theme).palette.background.default,
 }));
 
 const StyledCTASection = styled(Box)(({ theme }) => ({
@@ -43,8 +43,8 @@ const StyledCTASection = styled(Box)(({ theme }) => ({
     padding: theme.spacing(12, 0),
   },
   textAlign: "center",
-  background: "white",
-  color: theme.palette.primary.contrastText,
+  background: (theme.vars || theme).palette.background.paper,
+  color: (theme.vars || theme).palette.primary.contrastText,
 }));
 
 const FeatureCard = styled(Paper)(({ theme }) => ({
@@ -156,8 +156,8 @@ export default function Home() {
           [theme.breakpoints.up("md")]: {
             py: 4,
           },
-          backgroundColor: theme.palette.primary.light,
-          color: theme.palette.primary.contrastText,
+          backgroundColor: (theme.vars || theme).palette.primary.light,
+          color: (theme.vars || theme).palette.primary.contrastText,
         }}
       >
         <Container maxWidth="lg">
@@ -183,7 +183,7 @@ export default function Home() {
           </Grid>
         </Container>
       </Paper>
-      <StyledSection sx={{ backgroundColor: theme.palette.grey[50] }}>
+      <StyledSection sx={{ backgroundColor: "background.subtle" }}>
         <Container maxWidth="lg">
           <Box textAlign="center" mb={6}>
             <Chip
@@ -397,7 +397,7 @@ export default function Home() {
       {/* Value Proposition */}
       <StyledSection
         as="section"
-        sx={{ backgroundColor: theme.palette.grey[50] }}
+        sx={{ backgroundColor: "background.subtle" }}
       >
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
@@ -531,7 +531,7 @@ export default function Home() {
                   <Box
                     sx={{
                       bgcolor: "primary.main",
-                      color: "white",
+                      color: "primary.contrastText",
                       width: 50,
                       height: 50,
                       borderRadius: "50%",
@@ -651,7 +651,7 @@ export default function Home() {
       <StyledCTASection
         as="section"
         sx={{
-          backgroundColor: "white",
+          backgroundColor: "background.paper",
           color: "primary.main",
         }}
       >

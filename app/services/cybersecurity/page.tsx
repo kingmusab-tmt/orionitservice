@@ -56,7 +56,7 @@ const CybersecurityServices = () => {
     {
       title: "Cloud Security",
       icon: (
-        <CloudIcon sx={{ fontSize: 40, color: theme.palette.primary.main }} />
+        <CloudIcon sx={{ fontSize: 40, color: (theme.vars || theme).palette.primary.main }} />
       ),
       intro:
         "Cloud security protects the data, apps, and services your business depends on every day. We help secure Microsoft 365, SharePoint, OneDrive, Teams, and other cloud-based tools so they stay accessible, controlled, and harder to exploit.",
@@ -70,7 +70,7 @@ const CybersecurityServices = () => {
     {
       title: "Network Security",
       icon: (
-        <LanIcon sx={{ fontSize: 40, color: theme.palette.primary.main }} />
+        <LanIcon sx={{ fontSize: 40, color: (theme.vars || theme).palette.primary.main }} />
       ),
       intro:
         "Your network is the path attackers try to use when they want to reach critical systems. We help defend that path with firewall management, segmentation, remote access controls, and ongoing security review.",
@@ -84,7 +84,7 @@ const CybersecurityServices = () => {
     {
       title: "Endpoint Protection",
       icon: (
-        <DevicesIcon sx={{ fontSize: 40, color: theme.palette.primary.main }} />
+        <DevicesIcon sx={{ fontSize: 40, color: (theme.vars || theme).palette.primary.main }} />
       ),
       intro:
         "Every laptop, desktop, and mobile device is a possible entry point. Endpoint protection helps defend those devices from ransomware, malware, phishing payloads, and unauthorized changes.",
@@ -99,7 +99,7 @@ const CybersecurityServices = () => {
       title: "Risk Management and Training",
       icon: (
         <AssessmentIcon
-          sx={{ fontSize: 40, color: theme.palette.primary.main }}
+          sx={{ fontSize: 40, color: (theme.vars || theme).palette.primary.main }}
         />
       ),
       intro:
@@ -253,7 +253,7 @@ const CybersecurityServices = () => {
               variant="body1"
               sx={{
                 maxWidth: 980,
-                color: theme.palette.text.secondary,
+                color: (theme.vars || theme).palette.text.secondary,
                 lineHeight: 1.9,
                 fontSize: "1.08rem",
               }}
@@ -277,7 +277,7 @@ const CybersecurityServices = () => {
                 <SecurityIcon
                   sx={{
                     fontSize: 40,
-                    color: theme.palette.primary.main,
+                    color: (theme.vars || theme).palette.primary.main,
                     mb: 2,
                   }}
                 />
@@ -290,7 +290,7 @@ const CybersecurityServices = () => {
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: theme.palette.text.secondary, lineHeight: 1.8 }}
+                  sx={{ color: (theme.vars || theme).palette.text.secondary, lineHeight: 1.8 }}
                 >
                   We combine cloud security, network security, endpoint
                   protection, and user awareness into one coordinated strategy.
@@ -302,7 +302,7 @@ const CybersecurityServices = () => {
                 <ShieldIcon
                   sx={{
                     fontSize: 40,
-                    color: theme.palette.primary.main,
+                    color: (theme.vars || theme).palette.primary.main,
                     mb: 2,
                   }}
                 />
@@ -315,7 +315,7 @@ const CybersecurityServices = () => {
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: theme.palette.text.secondary, lineHeight: 1.8 }}
+                  sx={{ color: (theme.vars || theme).palette.text.secondary, lineHeight: 1.8 }}
                 >
                   We help you spot gaps early, strengthen defenses, and create a
                   repeatable process for security review and response.
@@ -327,7 +327,7 @@ const CybersecurityServices = () => {
                 <PeopleIcon
                   sx={{
                     fontSize: 40,
-                    color: theme.palette.primary.main,
+                    color: (theme.vars || theme).palette.primary.main,
                     mb: 2,
                   }}
                 />
@@ -340,7 +340,7 @@ const CybersecurityServices = () => {
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: theme.palette.text.secondary, lineHeight: 1.8 }}
+                  sx={{ color: (theme.vars || theme).palette.text.secondary, lineHeight: 1.8 }}
                 >
                   Security awareness training helps teams avoid phishing,
                   credential theft, and social engineering attacks.
@@ -368,7 +368,7 @@ const CybersecurityServices = () => {
               sx={{
                 maxWidth: 880,
                 mx: "auto",
-                color: theme.palette.text.secondary,
+                color: (theme.vars || theme).palette.text.secondary,
                 lineHeight: 1.9,
               }}
             >
@@ -397,7 +397,7 @@ const CybersecurityServices = () => {
                     <Typography
                       variant="body1"
                       sx={{
-                        color: theme.palette.text.secondary,
+                        color: (theme.vars || theme).palette.text.secondary,
                         lineHeight: 1.85,
                         mb: 2,
                       }}
@@ -413,7 +413,7 @@ const CybersecurityServices = () => {
 
         <StyledSection
           sx={{
-            backgroundColor: theme.palette.grey[50],
+            backgroundColor: "background.subtle",
             px: { xs: 2, md: 4 },
             borderRadius: 2,
           }}
@@ -436,7 +436,7 @@ const CybersecurityServices = () => {
               maxWidth: 900,
               mx: "auto",
               mb: 5,
-              color: theme.palette.text.secondary,
+              color: (theme.vars || theme).palette.text.secondary,
               lineHeight: 1.9,
               textAlign: "center",
             }}
@@ -454,7 +454,7 @@ const CybersecurityServices = () => {
                 <Paper elevation={2} sx={{ p: 3, height: "100%" }}>
                   <Box sx={{ display: "flex", gap: 2 }}>
                     <CheckIcon
-                      sx={{ color: theme.palette.success.main, mt: 0.2 }}
+                      sx={{ color: (theme.vars || theme).palette.success.main, mt: 0.2 }}
                     />
                     <Box>
                       <Typography
@@ -467,7 +467,7 @@ const CybersecurityServices = () => {
                       <Typography
                         variant="body2"
                         sx={{
-                          color: theme.palette.text.secondary,
+                          color: (theme.vars || theme).palette.text.secondary,
                           lineHeight: 1.8,
                         }}
                       >
@@ -502,7 +502,7 @@ const CybersecurityServices = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: theme.palette.text.secondary,
+                  color: (theme.vars || theme).palette.text.secondary,
                   lineHeight: 1.9,
                   mb: 3,
                 }}
@@ -529,7 +529,7 @@ const CybersecurityServices = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: theme.palette.text.secondary,
+                    color: (theme.vars || theme).palette.text.secondary,
                     lineHeight: 1.85,
                     mb: 2,
                   }}
@@ -542,7 +542,7 @@ const CybersecurityServices = () => {
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: theme.palette.text.secondary, lineHeight: 1.8 }}
+                  sx={{ color: (theme.vars || theme).palette.text.secondary, lineHeight: 1.8 }}
                 >
                   Whether you need cloud hardening, network segmentation,
                   endpoint defense, or practical security awareness training,
@@ -557,7 +557,7 @@ const CybersecurityServices = () => {
 
         <StyledSection
           sx={{
-            backgroundColor: theme.palette.grey[50],
+            backgroundColor: "background.subtle",
             px: { xs: 2, md: 4 },
             borderRadius: 2,
           }}
@@ -587,7 +587,7 @@ const CybersecurityServices = () => {
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ color: theme.palette.text.secondary, lineHeight: 1.9 }}
+                  sx={{ color: (theme.vars || theme).palette.text.secondary, lineHeight: 1.9 }}
                 >
                   We focus on the controls that matter most: access management,
                   device protection, user awareness, logging, monitoring, and
@@ -607,7 +607,7 @@ const CybersecurityServices = () => {
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ color: theme.palette.text.secondary, lineHeight: 1.9 }}
+                  sx={{ color: (theme.vars || theme).palette.text.secondary, lineHeight: 1.9 }}
                 >
                   We do more than identify risk. We explain what it means,
                   prioritize what should happen next, and help you take the
@@ -627,7 +627,7 @@ const CybersecurityServices = () => {
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ color: theme.palette.text.secondary, lineHeight: 1.9 }}
+                  sx={{ color: (theme.vars || theme).palette.text.secondary, lineHeight: 1.9 }}
                 >
                   Partnering with Orion IT Service means building a resilient
                   defense against cyber threats. From one-time assessments to
@@ -669,7 +669,7 @@ const CybersecurityServices = () => {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: theme.palette.text.secondary,
+                      color: (theme.vars || theme).palette.text.secondary,
                       lineHeight: 1.85,
                     }}
                   >
@@ -684,7 +684,7 @@ const CybersecurityServices = () => {
         <Paper
           elevation={3}
           sx={{
-            background: `linear-gradient(135deg, ${theme.palette.primary.main}, ${theme.palette.primary.dark})`,
+            background: `linear-gradient(135deg, ${(theme.vars || theme).palette.primary.main}, ${(theme.vars || theme).palette.primary.dark})`,
             color: "white",
             p: { xs: 4, md: 6 },
             textAlign: "center",

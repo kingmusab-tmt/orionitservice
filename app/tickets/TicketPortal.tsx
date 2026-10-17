@@ -22,6 +22,7 @@ import {
   Typography,
   CircularProgress,
 } from "@mui/material";
+import { alpha } from "@mui/material/styles";
 import {
   CheckCircle,
   ConfirmationNumber,
@@ -758,7 +759,7 @@ export default function TicketPortal() {
                             sx={{
                               p: 1.5,
                               borderRadius: 2,
-                              bgcolor: "grey.50",
+                              bgcolor: "action.hover",
                               border: "1px solid",
                               borderColor: "divider",
                             }}
@@ -797,10 +798,10 @@ export default function TicketPortal() {
                           sx={{
                             p: 2,
                             borderRadius: 2,
-                            bgcolor:
+                            bgcolor: (theme) =>
                               reply.authorType === "support"
-                                ? "primary.50"
-                                : "grey.50",
+                                ? alpha(theme.palette.primary.main, 0.08)
+                                : (theme.vars || theme).palette.action.hover,
                             border: "1px solid",
                             borderColor: "divider",
                           }}

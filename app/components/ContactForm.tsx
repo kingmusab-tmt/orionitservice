@@ -428,7 +428,7 @@ const ContactForm = () => {
             boxShadow: 24,
             p: 4,
             borderRadius: 1,
-            border: `1px solid ${theme.palette.divider}`,
+            border: `1px solid ${(theme.vars || theme).palette.divider}`,
           }}
         >
           <Typography

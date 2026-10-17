@@ -1,26 +1,42 @@
 import { createTheme } from "@mui/material/styles";
 
+declare module "@mui/material/styles" {
+  interface TypeBackground {
+    // Alternating section backgrounds that stay readable in both modes
+    subtle: string;
+    muted: string;
+    footer: string;
+  }
+}
+
+// Colors are emitted as CSS variables and switched by the visitor's
+// prefers-color-scheme setting in CSS, so the correct scheme is applied
+// on first paint with no flash. Read palette values in styles via
+// `(theme.vars || theme).palette` so they follow the active scheme.
 const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#1976d2",
-      light: "#42a5f5",
-      dark: "#1565c0",
-      contrastText: "#ffffff",
+  cssVariables: true,
+  colorSchemes: {
+    light: {
+      palette: {
+        background: {
+          default: "#f5f5f5",
+          paper: "#ffffff",
+          subtle: "#fafafa",
+          muted: "#f5f5f5",
+          footer: "#1976d2",
+        },
+      },
     },
-    secondary: {
-      main: "#9c27b0",
-      light: "#ba68c8",
-      dark: "#7b1fa2",
-      contrastText: "#ffffff",
-    },
-    background: {
-      default: "#f5f5f5",
-      paper: "#ffffff",
-    },
-    text: {
-      primary: "#212121",
-      secondary: "#757575",
+    dark: {
+      palette: {
+        background: {
+          default: "#121212",
+          paper: "#1e1e1e",
+          subtle: "#1e1e1e",
+          muted: "#1e1e1e",
+          footer: "#1e1e1e",
+        },
+      },
     },
   },
   typography: {

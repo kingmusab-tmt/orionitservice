@@ -15,8 +15,12 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "primary.main",
-        color: "white",
+        // Brand blue in light mode, dark surface in dark mode; text stays
+        // white on both (dark-mode primary.main is too light for white text)
+        backgroundColor: "background.footer",
+        color: "common.white",
+        borderTop: 1,
+        borderColor: "divider",
         py: 6,
         mt: "auto",
       }}

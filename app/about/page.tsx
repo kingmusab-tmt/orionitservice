@@ -118,7 +118,7 @@ export default function About() {
                   borderRadius: 2,
                   overflow: "hidden",
                   boxShadow: 3,
-                  border: `1px solid ${theme.palette.divider}`,
+                  border: `1px solid ${(theme.vars || theme).palette.divider}`,
                 }}
               >
                 <Image
@@ -135,7 +135,7 @@ export default function About() {
           </Grid>
         </Box>
 
-        <Divider sx={{ my: 8, borderColor: theme.palette.divider }} />
+        <Divider sx={{ my: 8, borderColor: (theme.vars || theme).palette.divider }} />
 
         <Box sx={{ mb: 8 }}>
           <Grid container spacing={4}>
@@ -144,7 +144,7 @@ export default function About() {
                 sx={{
                   p: 4,
                   borderRadius: 2,
-                  border: `1px solid ${theme.palette.divider}`,
+                  border: `1px solid ${(theme.vars || theme).palette.divider}`,
                   backgroundColor: "background.paper",
                   height: "100%",
                 }}
@@ -176,7 +176,7 @@ export default function About() {
                 sx={{
                   p: 4,
                   borderRadius: 2,
-                  border: `1px solid ${theme.palette.divider}`,
+                  border: `1px solid ${(theme.vars || theme).palette.divider}`,
                   backgroundColor: "background.paper",
                   height: "100%",
                 }}
@@ -206,7 +206,7 @@ export default function About() {
           </Grid>
         </Box>
 
-        <Divider sx={{ my: 8, borderColor: theme.palette.divider }} />
+        <Divider sx={{ my: 8, borderColor: (theme.vars || theme).palette.divider }} />
 
         <Box sx={{ mb: 8 }}>
           <Typography
@@ -224,7 +224,7 @@ export default function About() {
                   sx={{
                     p: 3,
                     borderRadius: 2,
-                    border: `1px solid ${theme.palette.divider}`,
+                    border: `1px solid ${(theme.vars || theme).palette.divider}`,
                     backgroundColor: "background.paper",
                     height: "100%",
                   }}

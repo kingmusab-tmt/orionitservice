@@ -320,7 +320,7 @@ const ConsultationPage = () => {
               sx={{
                 p: isMobile ? 3 : 4,
                 mb: 4,
-                backgroundColor: theme.palette.primary.light,
+                backgroundColor: (theme.vars || theme).palette.primary.light,
                 color: "primary.contrastText",
               }}
             >

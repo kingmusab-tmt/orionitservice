@@ -597,7 +597,7 @@ const WebsiteDevelopment = () => {
         <Box
           mb={10}
           sx={{
-            backgroundColor: "grey.50",
+            backgroundColor: "background.subtle",
             p: 6,
             borderRadius: 2,
           }}
@@ -650,7 +650,7 @@ const WebsiteDevelopment = () => {
                         width: 50,
                         height: 50,
                         backgroundColor: "primary.main",
-                        color: "white",
+                        color: "primary.contrastText",
                         borderRadius: "50%",
                         display: "flex",
                         alignItems: "center",

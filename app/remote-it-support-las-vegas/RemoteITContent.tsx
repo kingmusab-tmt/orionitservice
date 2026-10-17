@@ -18,7 +18,7 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
-import { styled } from "@mui/system";
+import { styled } from "@mui/material/styles";
 import LandingPageContactForm from "@/app/components/LandingPageContactForm";
 import {
   CheckCircle as CheckIcon,
@@ -62,7 +62,7 @@ const BenefitCard = styled(Card)(({ theme }) => ({
   height: "100%",
   transition: "all 0.3s ease",
   border: "1px solid",
-  borderColor: theme.palette.divider,
+  borderColor: (theme.vars || theme).palette.divider,
   "&:hover": {
     transform: "translateY(-8px)",
     boxShadow: "0 12px 20px rgba(0,0,0,0.1)",
@@ -218,7 +218,7 @@ export default function RemoteITContent() {
       {/* Trust Indicators */}
       <Box
         sx={{
-          background: "#f5f5f5",
+          bgcolor: "background.muted",
           py: 3,
         }}
       >
@@ -270,7 +270,7 @@ export default function RemoteITContent() {
       </Box>
 
       {/* Benefits Section */}
-      <StyledSection sx={{ backgroundColor: "#fafafa" }}>
+      <StyledSection sx={{ backgroundColor: "background.subtle" }}>
         <Container maxWidth="lg">
           <Typography
             variant="h2"
@@ -390,7 +390,7 @@ export default function RemoteITContent() {
       </StyledSection>
 
       {/* Services Covered */}
-      <StyledSection sx={{ backgroundColor: "#f5f5f5" }}>
+      <StyledSection sx={{ backgroundColor: "background.muted" }}>
         <Container maxWidth="lg">
           <Typography
             variant="h2"

@@ -60,9 +60,14 @@ const Header = () => {
       suppressHydrationWarning
       sx={{
         backdropFilter: scrolled ? "blur(10px)" : "none",
-        backgroundColor: scrolled ? "rgba(255, 255, 255, 0.9)" : "transparent",
+        // Translucent paper color: white in light mode, dark grey in dark mode
+        backgroundColor: scrolled
+          ? "rgba(var(--mui-palette-background-paperChannel) / 0.9)"
+          : "transparent",
         transition: "all 0.3s ease",
         boxShadow: scrolled ? "0 2px 10px rgba(0, 0, 0, 0.1)" : "none",
+        borderBottom: "1px solid",
+        borderColor: scrolled ? "divider" : "transparent",
         py: scrolled ? 0 : 1,
       }}
     >
@@ -84,7 +89,7 @@ const Header = () => {
               sx={{
                 ml: 2,
                 fontWeight: "bold",
-                color: scrolled ? "primary.main" : "primary.main",
+                color: "primary.main",
               }}
             >
               Orion IT Service

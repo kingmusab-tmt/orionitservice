@@ -38,7 +38,7 @@ const SmallHeader = () => {
         backgroundColor: "background.default",
         color: "text.primary",
         boxShadow: "none",
-        borderBottom: `1px solid ${theme.palette.divider}`,
+        borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
         py: 0.5,
         top: 0,
         zIndex: theme.zIndex.appBar,
@@ -158,7 +158,7 @@ const SmallHeader = () => {
             sx={{
               color: "text.secondary",
               "&:hover": {
-                color: theme.palette.mode === "dark" ? "#1877F2" : "#1877F2",
+                color: "#1877F2",
               },
             }}
           >
@@ -172,7 +172,7 @@ const SmallHeader = () => {
             sx={{
               color: "text.secondary",
               "&:hover": {
-                color: theme.palette.mode === "dark" ? "#1DA1F2" : "#1DA1F2",
+                color: "#1DA1F2",
               },
             }}
           >
@@ -186,7 +186,7 @@ const SmallHeader = () => {
             sx={{
               color: "text.secondary",
               "&:hover": {
-                color: theme.palette.mode === "dark" ? "#0A66C2" : "#0A66C2",
+                color: "#0A66C2",
               },
             }}
           >

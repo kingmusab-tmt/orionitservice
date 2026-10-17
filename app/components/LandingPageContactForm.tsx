@@ -12,6 +12,11 @@ import {
   Grid,
 } from "@mui/material";
 import { styled } from "@mui/system";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+// The form card is always white, so keep its inputs and text on a light
+// palette even when the site is in dark mode.
+const lightTheme = createTheme({ palette: { mode: "light" } });
 
 const SubmitButton = styled(Button)(({ theme }) => ({
   background: "linear-gradient(135deg, #1a237e 0%, #0d47a1 100%)",
@@ -121,11 +126,12 @@ const LandingPageContactForm = () => {
   };
 
   return (
-    <>
+    <ThemeProvider theme={lightTheme}>
       <Box
         component="form"
         onSubmit={handleSubmit}
         sx={{
+          color: "text.primary",
           backgroundColor: "rgba(255, 255, 255, 0.95)",
           padding: 4,
           borderRadius: "12px",
@@ -289,6 +295,7 @@ const LandingPageContactForm = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
+            color: "text.primary",
             backgroundColor: "white",
             padding: 4,
             borderRadius: "12px",
@@ -315,7 +322,7 @@ const LandingPageContactForm = () => {
           </Button>
         </Box>
       </Modal>
-    </>
+    </ThemeProvider>
   );
 };
 

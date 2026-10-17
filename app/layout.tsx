@@ -6,7 +6,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./components/provider";
 import SmallHeader from "./components/contactheader";
-import ThemeRegistry from "./components/themeregistry";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import JsonLd from "./components/JsonLd";
 
@@ -214,12 +213,10 @@ export default function RootLayout({
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <AppRouterCacheProvider>
           <Providers>
-            <ThemeRegistry>
-              <SmallHeader />
-              <Header />
-              {children}
-              <Footer />
-            </ThemeRegistry>
+            <SmallHeader />
+            <Header />
+            {children}
+            <Footer />
           </Providers>
         </AppRouterCacheProvider>
       </body>
