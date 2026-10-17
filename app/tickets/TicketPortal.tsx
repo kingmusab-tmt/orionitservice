@@ -22,7 +22,6 @@ import {
   Typography,
   CircularProgress,
 } from "@mui/material";
-import { alpha } from "@mui/material/styles";
 import {
   CheckCircle,
   ConfirmationNumber,
@@ -323,10 +322,16 @@ export default function TicketPortal() {
 
   return (
     <Box
-      sx={{
-        py: { xs: 4, md: 8 },
-        background: "linear-gradient(180deg, #f5f8ff 0%, #ffffff 100%)",
-      }}
+      sx={[
+        {
+          py: { xs: 4, md: 8 },
+          background: "linear-gradient(180deg, #f5f8ff 0%, #ffffff 100%)",
+        },
+        (theme) =>
+          theme.applyStyles("dark", {
+            background: "linear-gradient(180deg, #0f1726 0%, #121212 100%)",
+          }),
+      ]}
     >
       <Container maxWidth="lg">
         <Box sx={{ textAlign: "center", mb: { xs: 4, md: 6 } }}>
@@ -798,10 +803,10 @@ export default function TicketPortal() {
                           sx={{
                             p: 2,
                             borderRadius: 2,
-                            bgcolor: (theme) =>
+                            bgcolor:
                               reply.authorType === "support"
-                                ? alpha(theme.palette.primary.main, 0.08)
-                                : (theme.vars || theme).palette.action.hover,
+                                ? "rgba(var(--mui-palette-primary-mainChannel) / 0.08)"
+                                : "action.hover",
                             border: "1px solid",
                             borderColor: "divider",
                           }}

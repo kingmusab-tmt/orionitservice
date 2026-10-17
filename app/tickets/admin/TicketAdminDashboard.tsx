@@ -16,7 +16,6 @@ import {
   Typography,
   CircularProgress,
 } from "@mui/material";
-import { alpha } from "@mui/material/styles";
 import {
   AssignmentTurnedIn,
   ConfirmationNumber,
@@ -433,14 +432,21 @@ export default function TicketAdminDashboard() {
   if (status !== "authenticated") {
     return (
       <Box
-        sx={{
-          minHeight: "100vh",
-          display: "grid",
-          placeItems: "center",
-          px: 2,
-          background:
-            "linear-gradient(180deg, #0b1220 0%, #111827 35%, #f7f9fc 35%, #f7f9fc 100%)",
-        }}
+        sx={[
+          {
+            minHeight: "100vh",
+            display: "grid",
+            placeItems: "center",
+            px: 2,
+            background:
+              "linear-gradient(180deg, #0b1220 0%, #111827 35%, #f7f9fc 35%, #f7f9fc 100%)",
+          },
+          (theme) =>
+            theme.applyStyles("dark", {
+              background:
+                "linear-gradient(180deg, #0b1220 0%, #111827 35%, #121212 35%, #121212 100%)",
+            }),
+        ]}
       >
         <Card
           sx={{ maxWidth: 640, width: "100%", borderRadius: 4, boxShadow: 10 }}
@@ -484,11 +490,18 @@ export default function TicketAdminDashboard() {
 
   return (
     <Box
-      sx={{
-        py: { xs: 4, md: 8 },
-        background:
-          "linear-gradient(180deg, #0b1220 0%, #111827 35%, #f7f9fc 35%, #f7f9fc 100%)",
-      }}
+      sx={[
+        {
+          py: { xs: 4, md: 8 },
+          background:
+            "linear-gradient(180deg, #0b1220 0%, #111827 35%, #f7f9fc 35%, #f7f9fc 100%)",
+        },
+        (theme) =>
+          theme.applyStyles("dark", {
+            background:
+              "linear-gradient(180deg, #0b1220 0%, #111827 35%, #121212 35%, #121212 100%)",
+          }),
+      ]}
     >
       <Container maxWidth="lg">
         <Box sx={{ mb: 4, color: "white" }}>
@@ -578,7 +591,7 @@ export default function TicketAdminDashboard() {
                                   : "divider",
                               bgcolor:
                                 ticket?.code === item.code
-                                  ? "primary.50"
+                                  ? "rgba(var(--mui-palette-primary-mainChannel) / 0.08)"
                                   : "background.paper",
                               transition: "all 0.2s ease",
                               "&:hover": {
@@ -908,10 +921,10 @@ export default function TicketAdminDashboard() {
                           sx={{
                             p: 2,
                             borderRadius: 2,
-                            bgcolor: (theme) =>
+                            bgcolor:
                               reply.authorType === "support"
-                                ? alpha(theme.palette.primary.main, 0.08)
-                                : (theme.vars || theme).palette.action.hover,
+                                ? "rgba(var(--mui-palette-primary-mainChannel) / 0.08)"
+                                : "action.hover",
                             border: "1px solid",
                             borderColor: "divider",
                           }}
