@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Technology Budget Planning and ROI | IT Investment Strategy",
   description:
     "Learn how to plan technology budgets, evaluate IT investments, calculate ROI, and align spending with business goals and priorities.",
   alternates: {
     canonical: "/blog/technology-budget-planning-roi",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-05",
+  modifiedTime: "2026-05-05",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function TechBudgetArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function TechBudgetArticle() {
     dateModified: "2026-05-05",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/technology-budget-planning-roi",
-    image: ["https://www.orionitservice.com/images/strategy.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

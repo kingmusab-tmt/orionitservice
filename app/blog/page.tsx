@@ -97,7 +97,7 @@ export default function BlogPage() {
     {
       title: "Phishing Attacks: How to Protect Your Business in 2026",
       excerpt:
-        "Learn how to protect your business from phishing attacks with email security, employee training, and technical controls. Real-world examples and prevention strategies.",
+        "Protect your business from phishing with email security, employee training, and technical controls, plus real-world examples and prevention strategies.",
       category: "Cybersecurity",
       author: "Orion IT Service Team",
       date: "June 9, 2026",
@@ -343,7 +343,7 @@ export default function BlogPage() {
     {
       title: "GRC in Cybersecurity: Governance, Risk, and Compliance Strategy",
       excerpt:
-        "Understand GRC frameworks for managing security risks, compliance requirements, and business governance. Essential for regulated industries and growing businesses.",
+        "Understand GRC frameworks for managing security risk, compliance requirements, and governance, essential for regulated industries and growing businesses.",
       category: "Cybersecurity",
       author: "Orion IT Service Team",
       date: "April 1, 2026",

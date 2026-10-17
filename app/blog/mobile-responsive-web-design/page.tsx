@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Mobile-Responsive Web Design | Mobile-First Development",
   description:
     "Build websites that work perfectly on all devices with mobile-responsive design, flexible layouts, and mobile-first approach.",
   alternates: {
     canonical: "/blog/mobile-responsive-web-design",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-06-06",
+  modifiedTime: "2026-06-06",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function MobileResponsiveArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function MobileResponsiveArticle() {
     dateModified: "2026-06-06",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/mobile-responsive-web-design",
-    image: ["https://www.orionitservice.com/images/design.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

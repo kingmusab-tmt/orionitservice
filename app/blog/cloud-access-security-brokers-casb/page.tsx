@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Cloud Access Security Brokers (CASB) | SaaS Security Solutions",
+export const metadata: Metadata = pageMetadata({
+  title: "Cloud Access Security Brokers (CASB) for SaaS Security",
   description:
     "Learn how Cloud Access Security Brokers (CASB) protect your SaaS applications and enforce security policies across cloud services.",
   alternates: {
     canonical: "/blog/cloud-access-security-brokers-casb",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-10",
+  modifiedTime: "2026-04-10",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function CASBArticle() {
   const articleSchema = {
@@ -45,7 +51,7 @@ export default function CASBArticle() {
     dateModified: "2026-04-10",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/cloud-access-security-brokers-casb",
-    image: ["https://www.orionitservice.com/images/cloud-security.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

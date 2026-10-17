@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Office WiFi Fixes | Boost Speed, Coverage, and Reliability",
   description:
     "Learn the common causes of slow office WiFi and the practical fixes that improve wireless speed, coverage, and reliability.",
   alternates: {
     canonical: "/blog/why-your-office-wifi-is-slow-and-how-to-fix-it",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-12",
+  modifiedTime: "2026-04-12",
+  image: "https://www.orionitservice.com/images/serveroom2.webp",
+});
 
 export default function OfficeWifiArticle() {
   const articleSchema = {

@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import EndpointProtectionContent from "./EndpointProtectionContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Endpoint Protection Las Vegas | Ransomware & Malware Defense | Orion IT",
+    "Endpoint Protection Las Vegas | Malware Defense | Orion IT",
   description:
     "Advanced endpoint protection for Las Vegas businesses. Defend against ransomware, malware, and zero-day threats. Real-time monitoring & instant response.",
-  keywords:
-    "endpoint protection Las Vegas, EDR, endpoint detection and response, ransomware protection, malware defense, endpoint security, threat detection",
   openGraph: {
     title: "Endpoint Protection Las Vegas | Orion IT Service",
     description:
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.orionitservice.com/endpoint-protection-las-vegas",
   },
-};
+});
 
 export default function EndpointProtectionLandingPage() {
   return (
@@ -45,11 +44,6 @@ export default function EndpointProtectionLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "55+",
-          },
         }}
       />
 

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import HelpdeskSupportContent from "./HelpdeskSupportContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Helpdesk Support Las Vegas | 24/7 IT Help Desk | Orion IT",
   description:
     "Professional helpdesk support in Las Vegas. 24/7 IT support for employees. Fast ticket resolution, user support, and technical assistance.",
-  keywords:
-    "helpdesk support, IT helpdesk, user support, technical support, IT help desk, employee support, ticket management",
   openGraph: {
     title: "Helpdesk Support Las Vegas | Orion IT Service",
     description:
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.orionitservice.com/helpdesk-support-las-vegas",
   },
-};
+});
 
 export default function HelpdeskSupportLandingPage() {
   return (
@@ -44,11 +43,6 @@ export default function HelpdeskSupportLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "95+",
-          },
         }}
       />
 

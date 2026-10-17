@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Business Continuity and Disaster Recovery | Operational Resilience",
+export const metadata: Metadata = pageMetadata({
+  title: "Business Continuity & Disaster Recovery Planning",
   description:
     "Learn business continuity and disaster recovery planning to protect operations from disruptions and recover quickly from unexpected events.",
   alternates: {
     canonical: "/blog/business-continuity-disaster-recovery-planning",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-18",
+  modifiedTime: "2026-05-18",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function BCDRArticle() {
   const articleSchema = {
@@ -45,7 +51,7 @@ export default function BCDRArticle() {
     dateModified: "2026-05-18",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/business-continuity-disaster-recovery-planning",
-    image: ["https://www.orionitservice.com/images/strategy.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

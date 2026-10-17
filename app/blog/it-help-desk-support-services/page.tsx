@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "IT Help Desk Support | Efficient User Issue Resolution",
   description:
     "Learn how IT help desk support improves productivity, reduces downtime, and keeps your team productive. From ticketing systems to expert support.",
   alternates: {
     canonical: "/blog/it-help-desk-support-services",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-01-15",
+  modifiedTime: "2026-01-15",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function HelpDeskArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function HelpDeskArticle() {
     dateModified: "2026-01-15",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/it-help-desk-support-services",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

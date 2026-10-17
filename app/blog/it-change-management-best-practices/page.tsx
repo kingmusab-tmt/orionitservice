@@ -15,16 +15,22 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "IT Change Management | Controlled System Updates and Configuration Changes",
+    "IT Change Management Best Practices",
   description:
     "Learn change management best practices to implement system updates and configuration changes with minimal disruption and risk.",
   alternates: {
     canonical: "/blog/it-change-management-best-practices",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-03-05",
+  modifiedTime: "2026-03-05",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function ChangeManagementArticle() {
   const articleSchema = {
@@ -46,7 +52,7 @@ export default function ChangeManagementArticle() {
     dateModified: "2026-03-05",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/it-change-management-best-practices",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

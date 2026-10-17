@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About Orion IT Service | Las Vegas IT Experts & Mission",
   description:
-    "Orion IT Service is a Las Vegas-based IT company delivering cybersecurity training, IT support, network engineering, and website development with a security-first approach.",
-  keywords:
-    "about Orion IT Service, Las Vegas IT company, Henderson IT company, North Las Vegas IT company, Summerlin IT company, Boulder City IT company, Pahrump IT company, Los Angeles IT company, Phoenix IT company, Salt Lake City IT company, Reno IT company, Dallas IT company, Austin IT company, Houston IT company, Denver IT company, Seattle IT company, Chicago IT company, Atlanta IT company, Miami IT company, New York IT company, Nevada IT services, IT company Las Vegas, cybersecurity company Las Vegas, IT support provider Nevada",
+    "Orion IT Service is a Las Vegas IT company providing cybersecurity training, IT support, network engineering, and web development, security-first.",
   alternates: {
     canonical: "https://www.orionitservice.com/about",
   },
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
     images: ["/images/og-image.webp"],
   },
   robots: { index: true, follow: true },
-};
+});
 
 export default function AboutLayout({
   children,

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import StrategicITPlanningContent from "./StrategicITPlanningContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Strategic IT Planning Las Vegas | IT Roadmap & Strategy | Orion IT",
+export const metadata: Metadata = pageMetadata({
+  title: "Strategic IT Planning & Roadmaps Las Vegas | Orion IT",
   description:
     "Professional strategic IT planning services in Las Vegas. Develop IT roadmaps, technology strategy, digital transformation, and business technology alignment.",
-  keywords:
-    "strategic IT planning, IT roadmap, IT strategy, technology strategy, digital transformation, IT consulting, business technology alignment",
   openGraph: {
     title: "Strategic IT Planning Las Vegas | Orion IT Service",
     description:
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.orionitservice.com/strategic-it-planning-las-vegas",
   },
-};
+});
 
 export default function StrategicITPlanningLandingPage() {
   return (
@@ -44,11 +43,6 @@ export default function StrategicITPlanningLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "110+",
-          },
         }}
       />
 

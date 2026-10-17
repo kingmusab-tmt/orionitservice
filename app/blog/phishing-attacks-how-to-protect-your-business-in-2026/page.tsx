@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Phishing Attacks: How to Protect Your Business in 2026",
   description:
-    "Learn how to protect your business from phishing attacks with email security, employee training, and technical controls. Real-world examples and prevention strategies.",
+    "Protect your business from phishing with email security, employee training, and technical controls, plus real-world examples and prevention strategies.",
   alternates: {
     canonical: "/blog/phishing-attacks-how-to-protect-your-business-in-2026",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-06-09",
+  modifiedTime: "2026-06-09",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function PhishingProtectionArticle() {
   const articleSchema = {
@@ -31,7 +37,7 @@ export default function PhishingProtectionArticle() {
     "@type": "BlogPosting",
     headline: "Phishing Attacks: How to Protect Your Business in 2026",
     description:
-      "Learn how to protect your business from phishing attacks with email security, employee training, and technical controls. Real-world examples and prevention strategies.",
+      "Protect your business from phishing with email security, employee training, and technical controls, plus real-world examples and prevention strategies.",
     author: {
       "@type": "Organization",
       name: "Orion IT Service",

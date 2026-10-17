@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Web Framework Selection Guide | React Vue Angular",
   description:
     "Compare popular web frameworks like React, Vue, and Angular to choose the right technology for your web development project.",
   alternates: {
     canonical: "/blog/web-framework-selection-guide",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-06-09",
+  modifiedTime: "2026-06-09",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function FrameworkSelectionArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function FrameworkSelectionArticle() {
     dateModified: "2026-06-09",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/web-framework-selection-guide",
-    image: ["https://www.orionitservice.com/images/development.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

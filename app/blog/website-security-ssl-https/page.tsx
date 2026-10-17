@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Website Security and SSL/TLS | HTTPS Implementation",
   description:
     "Protect website visitors with SSL/TLS encryption, HTTPS configuration, security certificates, and best practices for website security.",
   alternates: {
     canonical: "/blog/website-security-ssl-https",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-06-02",
+  modifiedTime: "2026-06-02",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function WebsiteSecurityArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function WebsiteSecurityArticle() {
     dateModified: "2026-06-02",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/website-security-ssl-https",
-    image: ["https://www.orionitservice.com/images/security.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

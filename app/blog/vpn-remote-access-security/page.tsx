@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "VPN and Remote Access Security | Secure Remote Connectivity",
   description:
     "Learn how to secure remote access with VPN technology, multi-factor authentication, and network access controls to protect remote work connectivity.",
   alternates: {
     canonical: "/blog/vpn-remote-access-security",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-15",
+  modifiedTime: "2026-05-15",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function VPNRemoteAccessArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function VPNRemoteAccessArticle() {
     dateModified: "2026-05-15",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/vpn-remote-access-security",
-    image: ["https://www.orionitservice.com/images/networking.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

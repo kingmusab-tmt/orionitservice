@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Threat Modeling for Cybersecurity | Proactive Risk Analysis",
   description:
     "Understand threat modeling methodology for identifying potential attack vectors early. STRIDE, DFD, and practical implementation for business security.",
   alternates: {
     canonical: "/blog/threat-modeling-for-proactive-cybersecurity",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-02-20",
+  modifiedTime: "2026-02-20",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function ThreatModelingArticle() {
   const articleSchema = {

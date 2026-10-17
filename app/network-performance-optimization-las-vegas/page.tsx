@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import NetworkPerformanceContent from "./NetworkPerformanceContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Network Performance Optimization Las Vegas | Speed & Efficiency | Orion IT",
+    "Network Performance Optimization Las Vegas | Orion IT",
   description:
     "Professional network performance optimization in Las Vegas. Reduce latency, increase speed, maximize bandwidth. Improve productivity and save costs.",
-  keywords:
-    "network performance optimization, network speed, latency reduction, bandwidth optimization, network efficiency, network tuning, network performance",
   openGraph: {
     title: "Network Performance Optimization Las Vegas | Orion IT Service",
     description:
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/network-performance-optimization-las-vegas",
   },
-};
+});
 
 export default function NetworkPerformanceLandingPage() {
   return (
@@ -46,11 +45,6 @@ export default function NetworkPerformanceLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "85+",
-          },
         }}
       />
 

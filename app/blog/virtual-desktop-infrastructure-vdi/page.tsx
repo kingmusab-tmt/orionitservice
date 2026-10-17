@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Virtual Desktop Infrastructure for Remote Work | VDI Solutions",
+export const metadata: Metadata = pageMetadata({
+  title: "Virtual Desktop Infrastructure (VDI) for Remote Work",
   description:
     "Learn how virtual desktop infrastructure enables secure remote work, simplifies management, and improves employee flexibility and productivity.",
   alternates: {
     canonical: "/blog/virtual-desktop-infrastructure-vdi",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-03-12",
+  modifiedTime: "2026-03-12",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function VDIArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function VDIArticle() {
     dateModified: "2026-03-12",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/virtual-desktop-infrastructure-vdi",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

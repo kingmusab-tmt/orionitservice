@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Security Audit for Businesses | Compliance and Control Verification",
+export const metadata: Metadata = pageMetadata({
+  title: "Security Audits: Compliance & Control Verification",
   description:
     "Learn what security audits are, how they differ from assessments, and why independent verification of controls matters for compliance and risk management.",
   alternates: {
     canonical: "/blog/security-audit-compliance-verification",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-28",
+  modifiedTime: "2026-05-28",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function SecurityAuditArticle() {
   const articleSchema = {

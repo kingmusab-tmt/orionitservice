@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import BackupRecoveryContent from "./BackupRecoveryContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Backup and Recovery Solutions Las Vegas | Data Protection | Orion IT",
+export const metadata: Metadata = pageMetadata({
+  title: "Backup & Recovery Solutions Las Vegas | Orion IT",
   description:
     "Professional backup and recovery solutions in Las Vegas. Protect your data with automated backups, disaster recovery, and ransomware protection.",
-  keywords:
-    "backup and recovery, data backup, disaster recovery, ransomware protection, data protection, cloud backup, backup solutions",
   openGraph: {
     title: "Backup and Recovery Solutions Las Vegas | Orion IT Service",
     description:
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/backup-recovery-solutions-las-vegas",
   },
-};
+});
 
 export default function BackupRecoveryLandingPage() {
   return (
@@ -45,11 +44,6 @@ export default function BackupRecoveryLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "100+",
-          },
         }}
       />
 

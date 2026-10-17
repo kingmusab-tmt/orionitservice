@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import NetworkDesignContent from "./NetworkDesignContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Network Design & Implementation Las Vegas | Enterprise-Grade Solutions | Orion IT",
+    "Network Design & Implementation Las Vegas | Orion IT",
   description:
     "Professional network design, implementation, and support services in Las Vegas. Secure, scalable, high-performance networks for businesses of all sizes.",
-  keywords:
-    "network design Las Vegas, network implementation,  enterprise network, network security, network infrastructure, wireless networks",
   openGraph: {
     title: "Network Design & Implementation Las Vegas | Orion IT Service",
     description:
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/network-design-implementation-las-vegas",
   },
-};
+});
 
 export default function NetworkDesignLandingPage() {
   return (
@@ -46,11 +45,6 @@ export default function NetworkDesignLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "80+",
-          },
         }}
       />
 

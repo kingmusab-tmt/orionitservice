@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import SEOOptimizationContent from "./SEOOptimizationContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "SEO Optimization Support Las Vegas | Google Rankings | Orion IT",
+export const metadata: Metadata = pageMetadata({
+  title: "SEO Services Las Vegas | Google Rankings | Orion IT",
   description:
     "Professional SEO optimization services in Las Vegas. Improve Google rankings, increase organic traffic, and grow your business with proven SEO strategies.",
-  keywords:
-    "SEO optimization, SEO services, Google rankings, search engine optimization, organic traffic, SEO Las Vegas, local SEO, SEO marketing",
   openGraph: {
     title: "SEO Optimization Support Las Vegas | Orion IT Service",
     description:
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/seo-optimization-support-las-vegas",
   },
-};
+});
 
 export default function SEOOptimizationLandingPage() {
   return (
@@ -45,11 +44,6 @@ export default function SEOOptimizationLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "120+",
-          },
         }}
       />
 

@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import WebsiteMaintenanceContent from "./WebsiteMaintenanceContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Website Maintenance & Support Las Vegas | Website Support Services | Orion IT",
+    "Website Maintenance & Support Las Vegas | Orion IT",
   description:
     "Professional website maintenance and support services in Las Vegas. Keep your website secure, fast, and up-to-date with reliable hosting and ongoing support.",
-  keywords:
-    "website maintenance, website support, website hosting support, website updates, website security, site maintenance, reliable hosting",
   openGraph: {
     title: "Website Maintenance & Support Las Vegas | Orion IT Service",
     description:
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/website-maintenance-support-las-vegas",
   },
-};
+});
 
 export default function WebsiteMaintenanceLandingPage() {
   return (
@@ -46,11 +45,6 @@ export default function WebsiteMaintenanceLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "125+",
-          },
         }}
       />
 

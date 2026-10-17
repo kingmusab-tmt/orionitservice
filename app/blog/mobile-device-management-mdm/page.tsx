@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Mobile Device Management for Business | BYOD and Device Security",
+export const metadata: Metadata = pageMetadata({
+  title: "Mobile Device Management (MDM) & BYOD Security",
   description:
     "Learn mobile device management strategies to secure employee phones and tablets while supporting BYOD policies and improving productivity.",
   alternates: {
     canonical: "/blog/mobile-device-management-mdm",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-02-25",
+  modifiedTime: "2026-02-25",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function MDMArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function MDMArticle() {
     dateModified: "2026-02-25",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/mobile-device-management-mdm",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

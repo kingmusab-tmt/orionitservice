@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "CMS Platforms and Website Maintenance | Content Management",
   description:
     "Choose the right CMS platform for your business needs and implement effective website maintenance and update strategies.",
   alternates: {
     canonical: "/blog/cms-platforms-website-maintenance",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-06-08",
+  modifiedTime: "2026-06-08",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function CMSArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function CMSArticle() {
     dateModified: "2026-06-08",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/cms-platforms-website-maintenance",
-    image: ["https://www.orionitservice.com/images/development.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

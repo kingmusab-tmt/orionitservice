@@ -19,13 +19,12 @@ import {
   Computer as ComputerIcon,
   Language as WebIcon,
 } from "@mui/icons-material";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "IT Services Las Vegas | IT, Cybersecurity, Web",
   description:
-    "Comprehensive IT services for Las Vegas businesses — cybersecurity awareness training, IT support, network engineering, and website development. Tailored solutions for every business size.",
-  keywords:
-    "IT services Las Vegas, IT services provider near me, IT services Henderson, IT services North Las Vegas, IT services Summerlin, IT services Boulder City, IT services Pahrump, IT services Los Angeles, IT services Phoenix, IT services Salt Lake City, IT services Reno, IT services Dallas, IT services Austin, IT services Houston, IT services Denver, IT services Seattle, IT services Chicago, IT services Atlanta, IT services Miami, IT services New York, cybersecurity solutions Nevada, IT services Las Vegas, network engineering Nevada, website development Las Vegas, IT support small business, business technology solutions Nevada",
+    "IT services for Las Vegas businesses: cybersecurity awareness training, IT support, network engineering, and website development, tailored to your size.",
   alternates: {
     canonical: "https://www.orionitservice.com/services",
   },
@@ -54,7 +53,7 @@ export const metadata = {
     index: true,
     follow: true,
   },
-};
+});
 
 export default function Services() {
   const services = [

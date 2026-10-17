@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "GRC in Cybersecurity | Governance, Risk, and Compliance Strategy",
+export const metadata: Metadata = pageMetadata({
+  title: "GRC Strategy: Governance, Risk & Compliance Guide",
   description:
-    "Understand GRC frameworks for managing security risks, compliance requirements, and business governance. Essential for regulated industries and growing businesses.",
+    "Understand GRC frameworks for managing security risk, compliance requirements, and governance, essential for regulated industries and growing businesses.",
   alternates: {
     canonical: "/blog/grc-governance-risk-compliance-strategy",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-01",
+  modifiedTime: "2026-04-01",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function GRCArticle() {
   const articleSchema = {
@@ -31,7 +37,7 @@ export default function GRCArticle() {
     "@type": "BlogPosting",
     headline: "GRC in Cybersecurity: Governance, Risk, and Compliance Strategy",
     description:
-      "Understand GRC frameworks for managing security risks, compliance requirements, and business governance. Essential for regulated industries and growing businesses.",
+      "Understand GRC frameworks for managing security risk, compliance requirements, and governance, essential for regulated industries and growing businesses.",
     author: {
       "@type": "Organization",
       name: "Orion IT Service",

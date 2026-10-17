@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import CustomWebAppsContent from "./CustomWebAppsContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Custom Web Applications Development Las Vegas | Business Software | Orion IT",
+    "Custom Web Application Development Las Vegas | Orion IT",
   description:
     "Custom web application development in Las Vegas. Built for your business. Scalable, secure, and designed to solve your unique challenges.",
-  keywords:
-    "custom web applications, web app development, business software, custom software, web development, application development, SaaS development",
   openGraph: {
     title: "Custom Web Applications Development Las Vegas | Orion IT Service",
     description:
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/custom-web-applications-development-las-vegas",
   },
-};
+});
 
 export default function CustomWebAppsDevelopmentLandingPage() {
   return (
@@ -46,11 +45,6 @@ export default function CustomWebAppsDevelopmentLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "115+",
-          },
         }}
       />
 

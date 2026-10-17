@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Network Monitoring and Threat Detection | Real-Time Visibility",
+export const metadata: Metadata = pageMetadata({
+  title: "Network Monitoring & Real-Time Threat Detection",
   description:
     "Learn network monitoring tools and techniques to detect threats, identify anomalies, and respond to security incidents in real-time.",
   alternates: {
     canonical: "/blog/network-monitoring-threat-detection",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-30",
+  modifiedTime: "2026-05-30",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function NetworkMonitoringArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function NetworkMonitoringArticle() {
     dateModified: "2026-05-30",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/network-monitoring-threat-detection",
-    image: ["https://www.orionitservice.com/images/networking.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

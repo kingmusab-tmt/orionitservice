@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import WebDesignContent from "./WebDesignContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Web Design & Development Las Vegas | Convert More Customers | Orion IT",
+    "Web Design & Development Las Vegas | Orion IT",
   description:
     "Professional web design & development in Las Vegas. Custom, fast, mobile-responsive websites that convert. Get your free design consultation today!",
-  keywords:
-    "web design Las Vegas, web development Las Vegas, website design, website development, custom website, responsive web design, Las Vegas web designer",
   openGraph: {
     title: "Web Design & Development Las Vegas | Orion IT Service",
     description:
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/web-design-development-las-vegas",
   },
-};
+});
 
 export default function WebDesignLandingPage() {
   return (
@@ -46,11 +45,6 @@ export default function WebDesignLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "40+",
-          },
         }}
       />
 

@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "How to Reduce Human Error in Cybersecurity | Best Practices",
   description:
     "Learn proven strategies to reduce human error in cybersecurity. From training to automation to culture change, discover what actually works.",
   alternates: {
     canonical: "/blog/how-to-reduce-human-error-in-cybersecurity",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-06-09",
+  modifiedTime: "2026-06-09",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function HumanErrorReductionArticle() {
   const articleSchema = {

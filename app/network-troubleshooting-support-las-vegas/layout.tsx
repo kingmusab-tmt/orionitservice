@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Network Troubleshooting & Support Las Vegas | Orion IT",
   description:
     "24/7 network troubleshooting and support in Las Vegas. Fast resolution for network issues and outages.",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
       "24/7 network support with fast resolution. Expert troubleshooting for all network issues.",
     url: "https://www.orionitservice.com/network-troubleshooting-support-las-vegas",
   },
-};
+});
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

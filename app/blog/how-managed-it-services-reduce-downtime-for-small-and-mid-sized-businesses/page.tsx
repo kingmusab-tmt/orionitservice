@@ -15,16 +15,22 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Remote IT Support for SMBs | Reduce Downtime and Improve Uptime",
+export const metadata: Metadata = pageMetadata({
+  title: "How Remote IT Support Reduces Downtime for SMBs",
   description:
     "Learn how proactive monitoring, patch management, maintenance, and strategic planning reduce downtime for small and mid-sized businesses.",
   alternates: {
     canonical:
       "/blog/how-managed-it-services-reduce-downtime-for-small-and-mid-sized-businesses",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-17",
+  modifiedTime: "2026-04-17",
+  image: "https://www.orionitservice.com/images/serveroom2.webp",
+});
 
 export default function RemoteItSupportDowntimeArticle() {
   const articleSchema = {

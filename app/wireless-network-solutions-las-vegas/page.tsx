@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import WirelessNetworkContent from "./WirelessNetworkContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Wireless Network Solutions Las Vegas | Enterprise Wi-Fi | Orion IT",
+export const metadata: Metadata = pageMetadata({
+  title: "Wireless Network Solutions Las Vegas | Business Wi-Fi",
   description:
-    "Professional wireless network design and implementation in Las Vegas. Enterprise-grade Wi-Fi with security, coverage, and reliability. Fast, secure, scalable wireless networks.",
-  keywords:
-    "wireless network Las Vegas, Wi-Fi solutions, enterprise wireless, secure Wi-Fi, wireless coverage, mesh networks, access points, wireless security",
+    "Wireless network design and installation in Las Vegas: secure, reliable business Wi-Fi with full coverage that scales as your business grows.",
   openGraph: {
     title: "Wireless Network Solutions Las Vegas | Orion IT Service",
     description:
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/wireless-network-solutions-las-vegas",
   },
-};
+});
 
 export default function WirelessNetworkLandingPage() {
   return (
@@ -45,11 +44,6 @@ export default function WirelessNetworkLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "75+",
-          },
         }}
       />
 

@@ -15,16 +15,22 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "IT Cost Optimization | Reducing Technology Spending While Improving Services",
+    "IT Cost Optimization: Cut Spending, Improve Service",
   description:
     "Learn strategies for reducing IT costs including cloud usage optimization, vendor management, and efficiency improvements without sacrificing security.",
   alternates: {
     canonical: "/blog/it-cost-optimization-strategies",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-02-18",
+  modifiedTime: "2026-02-18",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function CostOptimizationArticle() {
   const articleSchema = {
@@ -46,7 +52,7 @@ export default function CostOptimizationArticle() {
     dateModified: "2026-02-18",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/it-cost-optimization-strategies",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

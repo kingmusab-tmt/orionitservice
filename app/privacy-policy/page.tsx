@@ -1,10 +1,11 @@
 import { Container, Typography, Box, Link } from "@mui/material";
 import HeroBanner from "../components/HeroBanner";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Privacy Policy | Orion IT Service Data Protection Terms",
   description:
-    "Read Orion IT Service's Privacy Policy detailing how we collect, use, and protect your personal information. Learn about your data rights and our security measures.",
+    "How Orion IT Service collects, uses, and protects your personal information, plus your data rights and the security measures we use.",
   alternates: {
     canonical: "https://www.orionitservice.com/privacy-policy",
   },
@@ -26,7 +27,7 @@ export const metadata = {
     index: true, // Typically you want privacy pages indexed
     follow: true,
   },
-};
+});
 
 export default function PrivacyPolicy() {
   return (

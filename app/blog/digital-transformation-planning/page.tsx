@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Digital Transformation Planning | Business Technology Strategy",
+export const metadata: Metadata = pageMetadata({
+  title: "Digital Transformation Planning for Businesses",
   description:
     "Learn how to plan digital transformation initiatives to modernize business processes, improve efficiency, and drive competitive advantage.",
   alternates: {
     canonical: "/blog/digital-transformation-planning",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-05",
+  modifiedTime: "2026-04-05",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function DigitalTransformationArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function DigitalTransformationArticle() {
     dateModified: "2026-04-05",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/digital-transformation-planning",
-    image: ["https://www.orionitservice.com/images/strategy.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

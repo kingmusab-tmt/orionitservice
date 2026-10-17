@@ -15,16 +15,22 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Penetration Testing for Business Security | Authorized Security Testing",
+    "Penetration Testing for Business Security",
   description:
     "Learn what penetration testing is, how it differs from vulnerability assessment, and why authorized security testing helps identify real-world risks.",
   alternates: {
     canonical: "/blog/penetration-testing-authorized-security-assessment",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-05",
+  modifiedTime: "2026-05-05",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function PenetrationTestingArticle() {
   const articleSchema = {

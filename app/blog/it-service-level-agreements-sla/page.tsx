@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "IT Service Level Agreements | SLA Best Practices for IT Support",
+export const metadata: Metadata = pageMetadata({
+  title: "IT Service Level Agreements: SLA Best Practices",
   description:
     "Learn how to define, implement, and monitor IT service level agreements to set clear expectations and improve service delivery performance.",
   alternates: {
     canonical: "/blog/it-service-level-agreements-sla",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-03-20",
+  modifiedTime: "2026-03-20",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function SLAArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function SLAArticle() {
     dateModified: "2026-03-20",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/it-service-level-agreements-sla",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

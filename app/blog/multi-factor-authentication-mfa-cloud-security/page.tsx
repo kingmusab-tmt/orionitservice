@@ -15,16 +15,22 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Multi-Factor Authentication (MFA) for Cloud | Enhanced Cloud Security",
+    "Multi-Factor Authentication (MFA) for Cloud Security",
   description:
     "Learn how MFA strengthens cloud security by requiring multiple verification methods, reducing account compromise risks across cloud applications.",
   alternates: {
     canonical: "/blog/multi-factor-authentication-mfa-cloud-security",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-15",
+  modifiedTime: "2026-04-15",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function MFACloudArticle() {
   const articleSchema = {
@@ -46,7 +52,7 @@ export default function MFACloudArticle() {
     dateModified: "2026-04-15",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/multi-factor-authentication-mfa-cloud-security",
-    image: ["https://www.orionitservice.com/images/cloud-security.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

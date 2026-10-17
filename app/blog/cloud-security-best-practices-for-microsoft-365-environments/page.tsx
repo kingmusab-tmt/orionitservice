@@ -16,8 +16,9 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Microsoft 365 Security | Cloud Protection Best Practices",
   description:
     "Practical cloud security guidance for Microsoft 365 environments, including identity protection, permissions, monitoring, and backup planning.",
@@ -25,7 +26,12 @@ export const metadata: Metadata = {
     canonical:
       "/blog/cloud-security-best-practices-for-microsoft-365-environments",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-03",
+  modifiedTime: "2026-04-03",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function CloudSecurityArticle() {
   const articleSchema = {

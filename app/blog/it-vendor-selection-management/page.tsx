@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "IT Vendor Selection and Management | Technology Partnerships",
   description:
     "Learn how to select IT vendors strategically, negotiate contracts, and manage vendor relationships to get best value and support.",
   alternates: {
     canonical: "/blog/it-vendor-selection-management",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-12",
+  modifiedTime: "2026-05-12",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function VendorSelectionArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function VendorSelectionArticle() {
     dateModified: "2026-05-12",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/it-vendor-selection-management",
-    image: ["https://www.orionitservice.com/images/strategy.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

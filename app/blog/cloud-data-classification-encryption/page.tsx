@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Cloud Data Classification and Encryption | Protect Sensitive Data",
+export const metadata: Metadata = pageMetadata({
+  title: "Cloud Data Classification & Encryption Guide",
   description:
     "Learn data classification and encryption strategies to protect sensitive information stored in cloud environments and comply with privacy regulations.",
   alternates: {
     canonical: "/blog/cloud-data-classification-encryption",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-20",
+  modifiedTime: "2026-04-20",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function CloudDataEncryptionArticle() {
   const articleSchema = {
@@ -45,7 +51,7 @@ export default function CloudDataEncryptionArticle() {
     dateModified: "2026-04-20",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/cloud-data-classification-encryption",
-    image: ["https://www.orionitservice.com/images/cloud-security.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

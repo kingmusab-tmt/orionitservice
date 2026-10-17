@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "WiFi 6 and Modern Wireless Security | Enterprise WiFi",
   description:
     "Learn about WiFi 6 technology and wireless security best practices including WPA3 encryption, network monitoring, and secure SSID configuration.",
   alternates: {
     canonical: "/blog/wifi-6-wireless-security",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-25",
+  modifiedTime: "2026-05-25",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function WiFi6SecurityArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function WiFi6SecurityArticle() {
     dateModified: "2026-05-25",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/wifi-6-wireless-security",
-    image: ["https://www.orionitservice.com/images/networking.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

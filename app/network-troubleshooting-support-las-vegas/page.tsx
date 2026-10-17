@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import NetworkTroubleshootingContent from "./NetworkTroubleshootingContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Network Troubleshooting & Support Las Vegas | 24/7 Support | Orion IT",
+    "Network Troubleshooting & Support Las Vegas | Orion IT",
   description:
     "Professional network troubleshooting and 24/7 support in Las Vegas. Fast resolution for network issues, connectivity problems, and outages.",
-  keywords:
-    "network troubleshooting, network support, network issues, connectivity problems, network outage, network repair, IT support las vegas",
   openGraph: {
     title: "Network Troubleshooting & Support Las Vegas | Orion IT Service",
     description:
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/network-troubleshooting-support-las-vegas",
   },
-};
+});
 
 export default function NetworkTroubleshootingLandingPage() {
   return (
@@ -46,11 +45,6 @@ export default function NetworkTroubleshootingLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "90+",
-          },
         }}
       />
 

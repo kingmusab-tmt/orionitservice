@@ -15,16 +15,22 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Ransomware Protection Strategies for Businesses | Prevention & Recovery",
+    "Ransomware Protection: Prevention & Recovery Guide",
   description:
     "Protect your business from ransomware attacks with backup strategies, endpoint protection, and incident response. Essential prevention and recovery steps.",
   alternates: {
     canonical: "/blog/ransomware-protection-strategies-for-businesses",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-06-09",
+  modifiedTime: "2026-06-09",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function RansomwareProtectionArticle() {
   const articleSchema = {

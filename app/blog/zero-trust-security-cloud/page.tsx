@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Zero Trust Security for Cloud | Modern Cloud Architecture",
   description:
     "Learn Zero Trust security principles and how to implement never-trust-always-verify approach for cloud environments and hybrid infrastructure.",
   alternates: {
     canonical: "/blog/zero-trust-security-cloud",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-01",
+  modifiedTime: "2026-05-01",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function ZeroTrustCloudArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function ZeroTrustCloudArticle() {
     dateModified: "2026-05-01",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/zero-trust-security-cloud",
-    image: ["https://www.orionitservice.com/images/cloud-security.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

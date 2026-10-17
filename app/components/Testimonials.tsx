@@ -25,7 +25,7 @@ const testimonials = [
     content:
       "Their team understood our unique needs and delivered customized solutions that have significantly improved our operational efficiency.",
     rating: 4,
-    avatar: "/images/avatar3..webp",
+    avatar: "/images/avatar3.webp",
   },
 ];
 

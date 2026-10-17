@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import SecurityAwarenessContent from "./SecurityAwarenessContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "Security Awareness Training Las Vegas | Protect Your Business | Orion IT",
+    "Security Awareness Training Las Vegas | Orion IT",
   description:
     "Employee security awareness training in Las Vegas. Reduce human error, prevent data breaches, and protect your business. HIPAA, PCI, SOC 2 compliant training.",
-  keywords:
-    "security awareness training Las Vegas, cybersecurity training, employee training, phishing training, data breach prevention, security compliance training",
   openGraph: {
     title: "Security Awareness Training Las Vegas | Orion IT Service",
     description:
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/security-awareness-training-las-vegas",
   },
-};
+});
 
 export default function SecurityAwarenessLandingPage() {
   return (
@@ -46,11 +45,6 @@ export default function SecurityAwarenessLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "60+",
-          },
         }}
       />
 

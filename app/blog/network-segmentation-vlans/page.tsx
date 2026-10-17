@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Network Segmentation and VLANs | Advanced Network Architecture",
+export const metadata: Metadata = pageMetadata({
+  title: "Network Segmentation & VLANs: A Practical Guide",
   description:
     "Learn network segmentation and VLAN implementation strategies to isolate systems, limit lateral movement, and improve security and performance.",
   alternates: {
     canonical: "/blog/network-segmentation-vlans",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-20",
+  modifiedTime: "2026-05-20",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function NetworkSegmentationArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function NetworkSegmentationArticle() {
     dateModified: "2026-05-20",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/network-segmentation-vlans",
-    image: ["https://www.orionitservice.com/images/networking.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

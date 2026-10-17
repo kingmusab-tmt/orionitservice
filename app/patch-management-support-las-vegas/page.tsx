@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import PatchManagementContent from "./PatchManagementContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Patch Management IT Support Las Vegas | Security Updates | Orion IT",
+export const metadata: Metadata = pageMetadata({
+  title: "Patch Management Services Las Vegas | Orion IT",
   description:
     "Professional patch management services in Las Vegas. Automated security updates, vulnerability patching, compliance, and system maintenance.",
-  keywords:
-    "patch management, security updates, vulnerability patches, software patching, system updates, patch deployment, compliance patching",
   openGraph: {
     title: "Patch Management IT Support Las Vegas | Orion IT Service",
     description:
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/patch-management-support-las-vegas",
   },
-};
+});
 
 export default function PatchManagementLandingPage() {
   return (
@@ -45,11 +44,6 @@ export default function PatchManagementLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "105+",
-          },
         }}
       />
 

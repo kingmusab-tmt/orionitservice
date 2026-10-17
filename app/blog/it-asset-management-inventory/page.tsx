@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "IT Asset Management and Inventory | Equipment Lifecycle Management",
+export const metadata: Metadata = pageMetadata({
+  title: "IT Asset Management & Equipment Lifecycle Guide",
   description:
     "Learn IT asset management practices to track hardware and software, optimize spending, and ensure compliance with licensing requirements.",
   alternates: {
     canonical: "/blog/it-asset-management-inventory",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-03-28",
+  modifiedTime: "2026-03-28",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function AssetManagementArticle() {
   const articleSchema = {
@@ -45,7 +51,7 @@ export default function AssetManagementArticle() {
     dateModified: "2026-03-28",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/it-asset-management-inventory",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

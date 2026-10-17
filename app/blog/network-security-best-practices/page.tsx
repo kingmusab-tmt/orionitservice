@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Network Security Best Practices | Enterprise Security Architecture",
+export const metadata: Metadata = pageMetadata({
+  title: "Network Security Best Practices for Businesses",
   description:
     "Learn network security best practices including firewalls, intrusion detection, network segmentation, and monitoring to protect business infrastructure.",
   alternates: {
     canonical: "/blog/network-security-best-practices",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-10",
+  modifiedTime: "2026-05-10",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function NetworkSecurityArticle() {
   const articleSchema = {
@@ -45,7 +51,7 @@ export default function NetworkSecurityArticle() {
     dateModified: "2026-05-10",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/network-security-best-practices",
-    image: ["https://www.orionitservice.com/images/networking.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

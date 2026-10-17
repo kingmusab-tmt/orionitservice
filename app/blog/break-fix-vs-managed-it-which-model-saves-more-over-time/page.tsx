@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Break-Fix vs Remote IT Support | Cost, Risk, and Downtime Guide",
+export const metadata: Metadata = pageMetadata({
+  title: "Break-Fix vs Remote IT Support: Cost, Risk & Downtime",
   description:
     "Compare break-fix support with remote IT support to understand cost, downtime, security, and long-term value.",
   alternates: {
     canonical: "/blog/break-fix-vs-managed-it-which-model-saves-more-over-time",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-03-30",
+  modifiedTime: "2026-03-30",
+  image: "https://www.orionitservice.com/images/serveroom2.webp",
+});
 
 export default function BreakFixVsRemoteItArticle() {
   const articleSchema = {

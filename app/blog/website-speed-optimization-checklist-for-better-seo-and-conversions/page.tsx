@@ -15,8 +15,9 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Website Speed Checklist | Better SEO and More Conversions",
   description:
     "A practical checklist for improving load times, user experience, SEO, and conversion performance on your website.",
@@ -24,7 +25,12 @@ export const metadata: Metadata = {
     canonical:
       "/blog/website-speed-optimization-checklist-for-better-seo-and-conversions",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-09",
+  modifiedTime: "2026-04-09",
+  image: "https://www.orionitservice.com/images/serveroom2.webp",
+});
 
 export default function WebsiteSpeedArticle() {
   const articleSchema = {

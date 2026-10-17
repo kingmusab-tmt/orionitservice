@@ -3,13 +3,12 @@ import HeroBanner from "../components/HeroBanner";
 import { Box, Typography, Grid, Button, Stack } from "@mui/material";
 import { Phone, Email, LocationOn } from "@mui/icons-material";
 import JsonLd from "../components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Contact Orion IT Service | Las Vegas IT Support Team",
   description:
     "Contact Orion IT Service for expert IT support in Las Vegas — cybersecurity, network engineering, or website development. Call, email, or message us today.",
-  keywords:
-    "contact IT support Las Vegas, contact IT support Henderson, contact IT support North Las Vegas, contact IT support Summerlin, contact IT support Boulder City, contact IT support Pahrump, contact IT support Los Angeles, contact IT support Phoenix, contact IT support Salt Lake City, contact IT support Reno, contact IT support Dallas, contact IT support Austin, contact IT support Houston, contact IT support Denver, contact IT support Seattle, contact IT support Chicago, contact IT support Atlanta, contact IT support Miami, contact IT support New York, IT helpdesk Nevada, cybersecurity support contact, IT services contact, IT consultation Las Vegas",
   alternates: {
     canonical: "https://www.orionitservice.com/contact",
   },
@@ -38,7 +37,7 @@ export const metadata = {
     index: true,
     follow: true,
   },
-};
+});
 
 const contactSchema = {
   "@context": "https://schema.org",

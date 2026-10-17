@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import RemoteITContent from "./RemoteITContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "24/7 Remote IT Support Las Vegas | Orion IT Service",
   description:
     "Expert remote IT support available 24/7 in Las Vegas. Get instant troubleshooting without on-site visits. 99.9% uptime guarantee. No downtime. Call now!",
-  keywords:
-    "remote IT support Las Vegas, remote IT services, 24/7 IT support, remote computer support, IT help desk, remote troubleshooting",
   openGraph: {
     title: "24/7 Remote IT Support Las Vegas | Orion IT Service",
     description:
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.orionitservice.com/remote-it-support-las-vegas",
   },
-};
+});
 
 export default function RemoteITSupportLandingPage() {
   return (
@@ -44,11 +43,6 @@ export default function RemoteITSupportLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "50+",
-          },
         }}
       />
 

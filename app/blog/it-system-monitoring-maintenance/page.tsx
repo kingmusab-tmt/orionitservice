@@ -15,16 +15,22 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title:
-    "IT System Monitoring and Maintenance | Proactive Infrastructure Management",
+    "Proactive IT System Monitoring & Maintenance",
   description:
     "Learn how proactive system monitoring and maintenance prevents outages, extends hardware life, and improves overall IT performance.",
   alternates: {
     canonical: "/blog/it-system-monitoring-maintenance",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-01-20",
+  modifiedTime: "2026-01-20",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function SystemMonitoringArticle() {
   const articleSchema = {
@@ -46,7 +52,7 @@ export default function SystemMonitoringArticle() {
     dateModified: "2026-01-20",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/it-system-monitoring-maintenance",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Website Development Las Vegas | SEO-Ready Next.js Sites",
   description:
-    "Custom website design and development for Las Vegas businesses. Orion IT Service builds fast, mobile-responsive, SEO-optimized websites using Next.js and React — from small business sites to enterprise platforms.",
-  keywords:
-    "website development Las Vegas, website development Henderson, website development North Las Vegas, website development Summerlin, website development Boulder City, website development Pahrump, website development Los Angeles, website development Phoenix, website development Salt Lake City, website development Reno, website development Dallas, website development Austin, website development Houston, website development Denver, website development Seattle, website development Chicago, website development Atlanta, website development Miami, website development New York, custom web application Nevada, Next.js development, React website development, small business website Las Vegas, e-commerce development Nevada, SEO website design, mobile responsive website Las Vegas",
+    "Custom website design and development for Las Vegas businesses: fast, mobile-friendly, SEO-optimized Next.js and React sites for any size business.",
   alternates: {
     canonical: "https://www.orionitservice.com/services/website-development",
   },
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
     images: ["/images/og-image.webp"],
   },
   robots: { index: true, follow: true },
-};
+});
 
 export default function WebsiteDevelopmentLayout({
   children,

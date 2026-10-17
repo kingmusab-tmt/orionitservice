@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Web Accessibility and WCAG Compliance | Inclusive Design",
   description:
     "Build inclusive websites meeting WCAG standards, improving accessibility for users with disabilities and expanding audience reach.",
   alternates: {
     canonical: "/blog/web-accessibility-wcag-compliance",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-06-04",
+  modifiedTime: "2026-06-04",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function AccessibilityArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function AccessibilityArticle() {
     dateModified: "2026-06-04",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/web-accessibility-wcag-compliance",
-    image: ["https://www.orionitservice.com/images/design.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

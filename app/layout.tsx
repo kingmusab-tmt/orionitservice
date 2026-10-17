@@ -2,22 +2,11 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Header from "./components/header";
 import Footer from "./components/Footer";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./components/provider";
 import SmallHeader from "./components/contactheader";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import JsonLd from "./components/JsonLd";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.orionitservice.com"),
@@ -27,16 +16,11 @@ export const metadata: Metadata = {
   },
   description:
     "IT Support Services in Las Vegas from Orion IT Service — network solutions, cybersecurity, help desk support, and website development. Serving businesses across the US and UK globally.",
-  keywords:
-    "IT support Las Vegas, IT support Henderson, IT support North Las Vegas, IT support Summerlin, IT support Boulder City, IT support Pahrump, IT support Los Angeles, IT support Phoenix, IT support Salt Lake City, IT support Reno, IT support Dallas, IT support Austin, IT support Houston, IT support Denver, IT support Seattle, IT support Chicago, IT support Atlanta, IT support Miami, IT support New York, network solutions, cybersecurity solutions, IT consulting, business IT support, network infrastructure, help desk support, IT support, cybersecurity awareness training, phishing prevention, IT compliance, website development, Las Vegas IT company, IT service provider, remote IT networking support for small business owners, cheap remote network support for startups USA, outsourced IT networking for small companies nationwide, remote network setup for new business USA,small business network security remote support, remote WiFi and LAN setup for offices nationwide, remote IT helpdesk for networking issues small business, on demand remote network engineer for small office, remote VPN setup service for small business USA,network optimization services remote for small companies, remote network monitoring and maintenance for small business USA, remote network documentation and reporting service for small companies nationwide, remote network upgrade and migration services for small business USA, remote network performance optimization service for small companies nationwide, remote network security services for small business USA, remote network troubleshooting service for small companies nationwide, urgent remote network repair service USA, fix slow office network remote IT support,remote internet connectivity troubleshooting business, emergency remote network support nationwide, remote DNS and routing issue troubleshooting, fix VPN connection issues remote IT expert, remote network outage support service USA, quick remote network diagnostics service, remote IT help for network downtime business,remote packet loss troubleshooting service",
   authors: [
     { name: "Orion IT Service", url: "https://www.orionitservice.com" },
   ],
   creator: "Orion IT Service",
   publisher: "Orion IT Service",
-  alternates: {
-    canonical: "https://www.orionitservice.com",
-  },
   robots: {
     index: true,
     follow: true,
@@ -207,9 +191,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <AppRouterCacheProvider>
           <Providers>

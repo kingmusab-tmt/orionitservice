@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "IT Roadmap for Growth | Practical Planning for Business",
   description:
     "Learn how to build a business-focused IT roadmap that supports security, planning, budgeting, and long-term growth.",
   alternates: {
     canonical: "/blog/how-to-build-a-practical-it-roadmap-for-business-growth",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-06",
+  modifiedTime: "2026-04-06",
+  image: "https://www.orionitservice.com/images/serveroom2.webp",
+});
 
 export default function ITRoadmapArticle() {
   const articleSchema = {

@@ -15,8 +15,9 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Cybersecurity Basics 2026 | Essential Controls for Business",
   description:
     "A practical guide to multi-factor authentication, endpoint protection, phishing awareness, backups, and cloud security basics.",
@@ -24,7 +25,12 @@ export const metadata: Metadata = {
     canonical:
       "/blog/cybersecurity-basics-every-business-should-implement-in-2026",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-14",
+  modifiedTime: "2026-04-14",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function CybersecurityBasicsArticle() {
   const articleSchema = {

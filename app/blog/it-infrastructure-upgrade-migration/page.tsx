@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "IT Infrastructure Upgrade and Migration | System Modernization",
+export const metadata: Metadata = pageMetadata({
+  title: "IT Infrastructure Upgrade & Migration Guide",
   description:
     "Plan IT infrastructure upgrades and migrations to reduce costs, improve performance, and stay current with technology while minimizing disruption.",
   alternates: {
     canonical: "/blog/it-infrastructure-upgrade-migration",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-02-10",
+  modifiedTime: "2026-02-10",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function InfrastructureUpgradeArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function InfrastructureUpgradeArticle() {
     dateModified: "2026-02-10",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/it-infrastructure-upgrade-migration",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Get Free IT Quote | IT, Security, and Web Plans",
   description:
-    "Request a free custom IT quote from Orion IT Service. Select the services you need — cybersecurity, IT support, networking, or website development — and get a tailored proposal.",
-  keywords:
-    "IT quote Las Vegas, IT quote Henderson, IT quote North Las Vegas, IT quote Summerlin, IT quote Boulder City, IT quote Pahrump, IT quote Los Angeles, IT quote Phoenix, IT quote Salt Lake City, IT quote Reno, IT quote Dallas, IT quote Austin, IT quote Houston, IT quote Denver, IT quote Seattle, IT quote Chicago, IT quote Atlanta, IT quote Miami, IT quote New York, free IT estimate, IT support pricing Nevada, cybersecurity service quote, IT services cost Las Vegas, network solutions quote, website development quote Las Vegas",
+    "Request a free IT quote from Orion IT Service. Choose cybersecurity, IT support, networking, or website development and get a tailored proposal.",
   alternates: {
     canonical: "https://www.orionitservice.com/get-quote",
   },
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
     images: ["/images/og-image.webp"],
   },
   robots: { index: true, follow: true },
-};
+});
 
 export default function GetQuoteLayout({
   children,

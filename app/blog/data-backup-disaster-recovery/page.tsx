@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Data Backup and Disaster Recovery | Business Continuity Planning",
+export const metadata: Metadata = pageMetadata({
+  title: "Data Backup & Disaster Recovery for Businesses",
   description:
     "Learn backup strategies, recovery procedures, and disaster recovery planning to protect business data and minimize recovery time after failures.",
   alternates: {
     canonical: "/blog/data-backup-disaster-recovery",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-02-01",
+  modifiedTime: "2026-02-01",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function BackupRecoveryArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function BackupRecoveryArticle() {
     dateModified: "2026-02-01",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/data-backup-disaster-recovery",
-    image: ["https://www.orionitservice.com/images/it-support.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

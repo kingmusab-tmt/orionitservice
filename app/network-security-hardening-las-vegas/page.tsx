@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import NetworkSecurityHardeningContent from "./NetworkSecurityHardeningContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Network Security Hardening Las Vegas | Fortress Networks | Orion IT",
+export const metadata: Metadata = pageMetadata({
+  title: "Network Security Hardening Las Vegas | Orion IT",
   description:
     "Professional network security hardening services in Las Vegas. Strengthen your network defenses, close vulnerabilities, and protect against threats.",
-  keywords:
-    "network security hardening, network security, security hardening, vulnerability management, network defense, cybersecurity, firewall setup",
   openGraph: {
     title: "Network Security Hardening Las Vegas | Orion IT Service",
     description:
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.orionitservice.com/network-security-hardening-las-vegas",
   },
-};
+});
 
 export default function NetworkSecurityHardeningLandingPage() {
   return (
@@ -45,11 +44,6 @@ export default function NetworkSecurityHardeningLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "130+",
-          },
         }}
       />
 

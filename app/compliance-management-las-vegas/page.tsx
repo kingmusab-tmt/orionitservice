@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import ComplianceManagementContent from "./ComplianceManagementContent";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Compliance Management Las Vegas | HIPAA, PCI, SOC 2 | Orion IT",
+export const metadata: Metadata = pageMetadata({
+  title: "Compliance Management Las Vegas | HIPAA, PCI, SOC 2",
   description:
     "Expert compliance management for Las Vegas businesses. HIPAA, PCI DSS, SOC 2, NIST compliance. Audits, documentation, training, and continuous monitoring.",
-  keywords:
-    "compliance management Las Vegas, HIPAA compliance, PCI compliance, SOC 2, regulatory compliance, compliance audit, compliance consulting",
   openGraph: {
     title: "Compliance Management Las Vegas | Orion IT Service",
     description:
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.orionitservice.com/compliance-management-las-vegas",
   },
-};
+});
 
 export default function ComplianceLandingPage() {
   return (
@@ -44,11 +43,6 @@ export default function ComplianceLandingPage() {
           },
           priceRange: "$$",
           image: "https://www.orionitservice.com/images/og-image.webp",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "70+",
-          },
         }}
       />
 

@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Cloud Compliance and Data Residency | Regulatory Requirements",
+export const metadata: Metadata = pageMetadata({
+  title: "Cloud Compliance & Data Residency Requirements",
   description:
     "Learn how to meet cloud compliance requirements, understand data residency regulations, and ensure your cloud infrastructure complies with industry standards.",
   alternates: {
     canonical: "/blog/cloud-compliance-data-residency",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-04-25",
+  modifiedTime: "2026-04-25",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function CloudComplianceArticle() {
   const articleSchema = {
@@ -45,7 +51,7 @@ export default function CloudComplianceArticle() {
     dateModified: "2026-04-25",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/cloud-compliance-data-residency",
-    image: ["https://www.orionitservice.com/images/cloud-security.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

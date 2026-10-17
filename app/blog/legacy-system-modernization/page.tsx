@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Legacy System Modernization | Application Transformation",
   description:
     "Learn strategies for modernizing legacy systems—when to replace, when to migrate, how to manage transition risk, and maintain business continuity.",
   alternates: {
     canonical: "/blog/legacy-system-modernization",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-05-22",
+  modifiedTime: "2026-05-22",
+  image: "https://www.orionitservice.com/images/og-image.webp",
+});
 
 export default function LegacyModernizationArticle() {
   const articleSchema = {
@@ -44,7 +50,7 @@ export default function LegacyModernizationArticle() {
     dateModified: "2026-05-22",
     mainEntityOfPage:
       "https://www.orionitservice.com/blog/legacy-system-modernization",
-    image: ["https://www.orionitservice.com/images/strategy.webp"],
+    image: ["https://www.orionitservice.com/images/og-image.webp"],
   };
 
   const breadcrumbSchema = {

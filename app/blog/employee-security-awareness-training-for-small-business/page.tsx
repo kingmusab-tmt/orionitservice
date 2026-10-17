@@ -15,15 +15,21 @@ import {
   ArrowForward as ArrowIcon,
 } from "@mui/icons-material";
 import { getRelatedArticlesBySlug } from "../blogArticles";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Employee Security Awareness Training for Small Business | 2026",
+export const metadata: Metadata = pageMetadata({
+  title: "Security Awareness Training for Small Business (2026)",
   description:
     "Reduce security breaches and human error with effective employee cybersecurity awareness training. Best practices for small and mid-sized businesses.",
   alternates: {
     canonical: "/blog/employee-security-awareness-training-for-small-business",
   },
-};
+}, {
+  type: "article",
+  publishedTime: "2026-06-09",
+  modifiedTime: "2026-06-09",
+  image: "https://www.orionitservice.com/images/cyber.webp",
+});
 
 export default function EmployeeSecurityAwarenessArticle() {
   const articleSchema = {

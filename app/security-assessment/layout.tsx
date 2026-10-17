@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import JsonLd from "@/app/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Free Cybersecurity Assessment | Business Risk Scanner",
   description:
-    "Take Orion IT Service's free interactive cybersecurity risk assessment to identify vulnerabilities in your business. Get your security score and personalized recommendations in minutes.",
-  keywords:
-    "free security assessment, cybersecurity risk assessment, business security score, IT security quiz, cyber risk tool, vulnerability assessment Las Vegas, vulnerability assessment Henderson, vulnerability assessment North Las Vegas, vulnerability assessment Summerlin, vulnerability assessment Boulder City, vulnerability assessment Pahrump, vulnerability assessment Los Angeles, vulnerability assessment Phoenix, vulnerability assessment Salt Lake City, vulnerability assessment Reno, vulnerability assessment Dallas, vulnerability assessment Austin, vulnerability assessment Houston, vulnerability assessment Denver, vulnerability assessment Seattle, vulnerability assessment Chicago, vulnerability assessment Atlanta, vulnerability assessment Miami, vulnerability assessment New York, cybersecurity health check",
+    "Take our free cybersecurity risk assessment to find vulnerabilities in your business and get a security score with personalized recommendations in minutes.",
   alternates: {
     canonical: "https://www.orionitservice.com/security-assessment",
   },
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
     images: ["/images/cyber.webp"],
   },
   robots: { index: true, follow: true },
-};
+});
 
 export default function SecurityAssessmentLayout({
   children,
